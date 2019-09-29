@@ -1,0 +1,53 @@
+2019-09-29 00:01:58LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-09-29 00:01:58excel_case_data.pyget_case_data[line:61]INFO:{
+"tel":15703034351
+}
+2019-09-29 00:01:58excel_case_data.pyget_expect_data[line:102]DEBUG:=============Expect============__GetZoneResult_ = {
+    mts:'1570303',
+    province:'重庆',
+    catName:'中国移动',
+    telString:'15703034351',
+ areaVid:'29404',
+ ispVid:'3236139',
+ carrier:'重庆移动'
+2019-09-29 00:01:58connectionpool.py_new_conn[line:815]DEBUG:Starting new HTTPS connection (1): tcc.taobao.com:443
+2019-09-29 00:01:59connectionpool.py_make_request[line:396]DEBUG:https://tcc.taobao.com:443 "GET /cc/json/mobile_tel_segment.htm%0A%0A HTTP/1.1" 404 178
+2019-09-29 00:01:59excel_case_data.pyget_actual_data[line:119]DEBUG:===========实际返回的数据为：b'<!DOCTYPE html>\n<html>\n<head>\n    <meta http-equiv="Content-Type" content="text/html; charset=GB18030"/>\n    <title>Error!</title>\n</head>\n<body>\n<h2>Error!</h2>\n</body>\n</html>\n'============
+2019-09-29 00:01:59LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-09-29 00:01:59LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-09-29 00:01:59LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-09-29 00:04:37LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-09-29 00:04:37excel_case_data.pyget_case_data[line:61]INFO:{
+"tel":15703034351
+}
+2019-09-29 00:04:37excel_case_data.pyget_expect_data[line:102]DEBUG:=============Expect============__GetZoneResult_ = {
+    mts:'1570303',
+    province:'重庆',
+    catName:'中国移动',
+    telString:'15703034351',
+ areaVid:'29404',
+ ispVid:'3236139',
+ carrier:'重庆移动'
+2019-09-29 00:04:37connectionpool.py_new_conn[line:815]DEBUG:Starting new HTTPS connection (1): tcc.taobao.com:443
+2019-09-29 00:04:38connectionpool.py_make_request[line:396]DEBUG:https://tcc.taobao.com:443 "GET /cc/json/mobile_tel_segment.htm%0A%0A HTTP/1.1" 404 178
+2019-09-29 00:04:38LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-09-29 00:04:38LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-09-29 00:04:38LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-09-29 00:09:27LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-09-29 00:09:27excel_case_data.pyget_case_data[line:61]INFO:{
+"tel":15703034351
+}
+2019-09-29 00:09:27excel_case_data.pyget_expect_data[line:102]DEBUG:=============Expect============__GetZoneResult_ = {
+    mts:'1570303',
+    province:'重庆',
+    catName:'中国移动',
+    telString:'15703034351',
+ areaVid:'29404',
+ ispVid:'3236139',
+ carrier:'重庆移动'
+2019-09-29 00:09:27connectionpool.py_new_conn[line:815]DEBUG:Starting new HTTPS connection (1): tcc.taobao.com:443
+2019-09-29 00:09:28connectionpool.py_make_request[line:396]DEBUG:https://tcc.taobao.com:443 "GET /cc/json/mobile_tel_segment.htm%0A%0A HTTP/1.1" 404 178
+2019-09-29 00:09:28excel_case_data.pyget_actual_data[line:119]DEBUG:===========实际返回的数据为：b'<!DOCTYPE html>\n<html>\n<head>\n    <meta http-equiv="Content-Type" content="text/html; charset=GB18030"/>\n    <title>Error!</title>\n</head>\n<body>\n<h2>Error!</h2>\n</body>\n</html>\n'============
+2019-09-29 00:09:28LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-09-29 00:09:28LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-09-29 00:09:28LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
