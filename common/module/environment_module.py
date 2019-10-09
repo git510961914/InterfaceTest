@@ -1,6 +1,6 @@
 #!user/bin/python3
 #coding=utf-8
-from InterfaceTest.setting import ENVIRONMENT_CONFIG
+from setting import ENVIRONMENT_CONFIG
 
 class EnvironmentModule:
     def __init__(self):

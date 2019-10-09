@@ -28,7 +28,7 @@ ENVIRONMENT CONFIG
 '''
 ENVIRONMENT_CONFIG = {
     "interfaceUrl": {
-        "login": "https://tcc.taobao.com"
+        "login": "http://shuitupaycallbackpre.callme.work"  #https://tcc.taobao.com
     }
 }
 
@@ -37,7 +37,7 @@ ENVIRONMENT_CONFIG = {
 '''
 EMAIL_CONFIG = {
     'sender':'wcyhwcx@163.com',
-    'receiver':['510961914@qq.com','wangchengyin@huwochuxing.com'],
+    'receiver':['510961914@qq.com','wangchengyin@huwo.tech'],
     'subject':'接口测试报告',
     'smtpserver':'smtp.163.com',
     'username': 'wcyhwcx@163.com',

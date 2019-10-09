@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+a.popup_link:hover {
+    color: red;
+}
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+<div class='heading'>
+<h1>测试报告</h1>
+<p class='attribute'><strong>执行开始时间:</strong> 2019-10-09 20:54:18</p>
+<p class='attribute'><strong>执行用时:</strong> 0:00:07.780445</p>
+<p class='attribute'><strong>执行状态:</strong> 通过数 10</p>
+
+<p class='description'>用例执行情况</p>
+</div>
+
+
+<p id='show_detail_line'>展示方式
+<a href='javascript:showCase(0)'>概览</a>
+<a href='javascript:showCase(1)'>失败</a>
+<a href='javascript:showCase(2)'>全部</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>测试集群/测试用例</td>
+    <td>数量</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>报错</td>
+    <td>查看</td>
+</tr>
+
+<tr class='passClass'>
+    <td>LoginTest.LoginTest</td>
+    <td>10</td>
+    <td>10</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',10)">详情</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_01</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        通过</a>
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: 
+
+初始化数据
+Excel参数：{"appType":1,
+"clientId":"fe930a2670b97ea5c6c7285edbdce504",
+"imei":"867689026971962",
+"latitude":29.622034,
+"loginName":"15703034351",
+"loginPwd":"Fu5e8etldcZ1vSiyeWL8C0HKgu5/QPbVTU7EBJ8U41RVopdBFhMPjaBqbhAZVYFNqL6cOS/CKhwU\npjsQr/Ey5eqSh3GFXtykpFfhZ0Grf20kOHgMrpLaGkohHoBRFnzD1aWi00NsLzl2Iz2JabXsL55j\n75F0/m5h5+9elrID7HQ=\n",
+"longitude":106.491499,
+"mac":"0C:D6:BD:90:A5:52"}
+完整URL：http://shuitupaycallbackpre.callme.work/api/driver/login
+期望数据：{"DATA":{"id":253774,"type":2,"loginName":"15703034351","state":1,"ready":false,"passed":true,"realName":"王承印","icon":"2019/09/16/253774_1568605684797_jpg.jpg","iconURL":"http://fe-huwo-rs.test.huwo.io/fs/get?path=2019/09/16/253774_1568605684797_jpg.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE5LzA5LzE2LzI1Mzc3NF8xNTY4NjA1Njg0Nzk3X2pwZy5qcGdcIn0iLCJpc3MiOiJqZXNpciIsImV4cCI6MTU3MDUyMTczODMxMywiaWF0IjoxNTcwNTE5OTM4MzEzfQ.GUBiaPcLc4Y0s3GP8xbnj5_lgtd8Pn8Wu_c7TOheoBs","serviceNo":"4008187799","voice":0,"loginTime":1570519938313,"bizType":0,"department":28,"openBusiness":[2,1,9,5],"token":null},"error":0,"token":"s33e126cfcb2f1966","node":"0","message":null,"ts":1570519938313}
+
+开始post请求
+状态码为：200
+请求成功
+
+返回数据：{'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1570625663795, 'dataMap': {}, 'data': {'id': 253774, 'type': 2, 'loginName': '15703034351', 'state': 1, 'ready': False, 'passed': True, 'realName': '王承印', 'icon': 'pridev/2019/09/1008_156939228387187540.jpg', 'iconURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=pridev/2019/09/1008_156939228387187540.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCJwcmlkZXYvMjAxOS8wOS8xMDA4XzE1NjkzOTIyODM4NzE4NzU0MC5qcGdcIn0iLCJpc3MiOiJqZXNpciIsImV4cCI6MTU3MDYyNzQ2Mzc5NCwiaWF0IjoxNTcwNjI1NjYzNzk0fQ.XbVYEO_Xc9-1sAJtLmn7TDWI2rAOjowZDHWUy6K_ji8', 'serviceNo': '4008187799', 'voice': 0, 'loginTime': 1570625663795, 'bizType': 0, 'department': 28, 'openBusiness': [1, 2, 5], 'token': 's6fb4d6187cd390f6'}}
+
+清理数据
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_02</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        通过</a>
+    <div id='div_pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2: 
+
+初始化数据
+
+Excel参数：{"token":"s7f90ef6a91d44cde"}
+完整URL：http://shuitupaycallbackpre.callme.work/api/driver/getRuningOrder
+期望数据：{
+"sid":null,
+"code":0,
+"message":null,
+"success":true,
+"ts":1570526474149,
+"dataMap":{},
+"data":null
+}
+开始get请求
+状态码为：200
+请求成功
+返回数据：{'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1570625663904, 'dataMap': {}, 'data': None}
+
+清理数据
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_03</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        通过</a>
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: 
+
+初始化数据
+
+Excel参数：{"version":"3.7.0",
+"type":2,
+"token":"s7f90ef6a91d44cde"}
+完整URL：http://shuitupaycallbackpre.callme.work/api/pk/version/checkAppVersion
+期望数据：{
+"sid":null,
+"code":0,
+"message":null,
+"success":true,
+"ts":1570526474245,
+"dataMap":{},
+"data":{"hasNewVersion":false,"version":null,
+"description":null,
+"descriptions":null,
+"url":null,
+"type":null,
+"updateType":null}
+}
+开始get请求
+状态码为：200
+请求成功
+
+返回数据：{'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1570625663982, 'dataMap': {}, 'data': {'hasNewVersion': True, 'version': '9.9.9', 'description': '1.测试升级', 'descriptions': ['1.测试升级'], 'url': 'http://cdn1.huwochuxing.com/CallMeD2.0_09251517v_9.9.9.apk', 'type': 2, 'updateType': 0}}
+
+清理数据
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_04</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        通过</a>
+    <div id='div_pt1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.4: 
+
+初始化数据
+
+Excel参数：{"type":0,
+"lat":29.622034,
+"lng":106.491499,
+"imei":"867689026971962",
+"token":"s7f90ef6a91d44cde"}
+完整URL：http://shuitupaycallbackpre.callme.work/api/pk/ad/find
+期望数据：{
+"sid":null,
+"code":0,
+"message":null,
+"success":true,
+"ts":1570526474265,
+"dataMap":{},
+"data":[]
+}
+开始get请求
+状态码为：200
+请求成功
+
+返回数据：{'sid': None, 'code': 1, 'message': '用户类型不能为空！', 'success': False, 'ts': 1570625670021, 'dataMap': {}, 'data': None}
+
+清理数据
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_05</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        通过</a>
+    <div id='div_pt1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.5: 
+
+初始化数据
+
+Excel参数：{"token":"s7f90ef6a91d44cde"}
+完整URL：http://shuitupaycallbackpre.callme.work/api/pk/message/unRead/find
+期望数据：{
+"sid":null,
+"code":0,
+"message":null,
+"success":true,
+"ts":1570526474282,
+"dataMap":{},
+"data":{"sysCount":4,"actCount":1}
+}
+开始get请求
+状态码为：200
+请求成功
+
+返回数据：{'sid': None, 'code': 1, 'message': '用户类型不能为空！', 'success': False, 'ts': 1570625670071, 'dataMap': {}, 'data': None}
+
+清理数据
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_06</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6')" >
+        通过</a>
+    <div id='div_pt1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.6: 
+
+初始化数据
+Excel参数：{"token":"s7f90ef6a91d44cde"}
+完整URL：http://shuitupaycallbackpre.callme.work/api/driver/getFirstpageMessage
+期望数据：{
+"sid":null,
+"code":0,
+"message":null,
+"success":true,
+"ts":1570526474553,
+"dataMap":{},
+"data":{"secondsDate":35.0,"onlineDate":0.58,"driverState":false,"serveSubScorce":"100.0","orderSum":7,"sumIncome":138.6,"noPayOrderCount":0,"isPassed":true,"checkState":0,"callBean":1250,"callBTodayTotal":0,"callBTotal":1250,"dealRatio":0.74,"dayAccount":0.07}
+}
+开始get请求
+状态码为：200
+请求成功
+返回数据：{'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1570625670319, 'dataMap': {}, 'data': {'secondsDate': 30.0, 'onlineDate': 0.5, 'driverState': False, 'serveSubScorce': '100.0', 'orderSum': 0, 'sumIncome': 0.0, 'noPayOrderCount': 0, 'isPassed': True, 'checkState': 0, 'callBean': 1250, 'callBTodayTotal': 0, 'callBTotal': 1250, 'dealRatio': 0.74, 'dayAccount': 0.0}}
+
+清理数据
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_07</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.7')" >
+        通过</a>
+    <div id='div_pt1.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.7: 
+
+初始化数据
+Excel参数：{"pageNum":1,
+"pageSize":10,
+"token":"s4e58477b0f035280"}
+完整URL：http://shuitupaycallbackpre.callme.work/api/pk/message/system/find
+期望数据：{
+"sid":null,
+"code":0,
+"message":null,
+"success":true,
+"ts":1570526474553,
+"dataMap":{},
+"data":{"secondsDate":35.0,"onlineDate":0.58,"driverState":false,"serveSubScorce":"100.0","orderSum":7,"sumIncome":138.6,"noPayOrderCount":0,"isPassed":true,"checkState":0,"callBean":1250,"callBTodayTotal":0,"callBTotal":1250,"dealRatio":0.74,"dayAccount":0.07}
+}
+开始get请求
+状态码为：200
+请求成功
+返回数据：{'sid': None, 'code': 1, 'message': '用户类型不能为空！', 'success': False, 'ts': 1570625670669, 'dataMap': {}, 'currentPage': 1, 'pages': 1, 'total': 0, 'data': []}
+
+清理数据
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_08</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.8')" >
+        通过</a>
+    <div id='div_pt1.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.8: 
+
+初始化数据
+Excel参数：{"pageNum":1,
+"pageSize":10,
+"token":"s4e58477b0f035280"}
+完整URL：http://shuitupaycallbackpre.callme.work/api/pk/message/activity/find
+期望数据：{
+"sid":null,
+"code":0,
+"message":null,
+"success":true,
+"ts":1570526474553,
+"dataMap":{},
+"data":{"secondsDate":35.0,"onlineDate":0.58,"driverState":false,"serveSubScorce":"100.0","orderSum":7,"sumIncome":138.6,"noPayOrderCount":0,"isPassed":true,"checkState":0,"callBean":1250,"callBTodayTotal":0,"callBTotal":1250,"dealRatio":0.74,"dayAccount":0.07}
+}
+开始get请求
+状态码为：200
+请求成功
+返回数据：{'sid': None, 'code': 1, 'message': '用户类型不能为空！', 'success': False, 'ts': 1570625670729, 'dataMap': {}, 'currentPage': 1, 'pages': 1, 'total': 0, 'data': []}
+
+清理数据
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_09</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.9')" >
+        通过</a>
+    <div id='div_pt1.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.9: 
+
+初始化数据
+Excel参数：{"orderDate":"2019-10-09",
+"driverId":253774,
+"token":"s4e58477b0f035280"}
+完整URL：http://shuitupaycallbackpre.callme.work/getDriverSumAccount
+期望数据：{
+"sid":null,
+"code":0,
+"message":null,
+"success":true,
+"ts":1570526474553,
+"dataMap":{},
+"data":{"secondsDate":35.0,"onlineDate":0.58,"driverState":false,"serveSubScorce":"100.0","orderSum":7,"sumIncome":138.6,"noPayOrderCount":0,"isPassed":true,"checkState":0,"callBean":1250,"callBTodayTotal":0,"callBTotal":1250,"dealRatio":0.74,"dayAccount":0.07}
+}
+开始post请求
+状态码为：200
+请求成功
+返回数据：{'error': 1, 'data': '司机ID不能为空'}
+
+清理数据
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_10</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.10')" >
+        通过</a>
+    <div id='div_pt1.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.10: 
+
+初始化数据
+Excel参数：{"type":"", 
+"driverId":253774,
+"strCreateDate":"2019-10-09",
+"state":"", 
+"page":1,
+"pageSize":10,
+"token":"s4e58477b0f035280"}
+完整URL：http://shuitupaycallbackpre.callme.work/listIncomeToday
+期望数据：{
+"sid":null,
+"code":0,
+"message":null,
+"success":true,
+"ts":1570526474553,
+"dataMap":{},
+"data":{"secondsDate":35.0,"onlineDate":0.58,"driverState":false,"serveSubScorce":"100.0","orderSum":7,"sumIncome":138.6,"noPayOrderCount":0,"isPassed":true,"checkState":0,"callBean":1250,"callBTodayTotal":0,"callBTotal":1250,"dealRatio":0.74,"dayAccount":0.07}
+}
+开始get请求
+状态码为：200
+请求成功
+返回数据：{'error': 0, 'total': 1, 'rows': [{'no': 'PC1181845725223690240', 'appealTel': 4008187799, 'isDuty': '0', 'callBean': 0, 'subs': [{'actFee': 12, 'advanceNote': '是否申请垫付？', 'appealNote': '人工受理您的申述后，24个小时内将得到反馈结果', 'appealTel': 4008187799, 'appoint': True, 'appointDate': '2019-10-09 16:15:34', 'cancelPeople': '1', 'collectionNote': '是否向乘客发起短信催款？', 'countCollection': 0, 'createDate': '2019-10-09 16:15:37', 'daccountFee': '0.00', 'dateFrom': '2019-10-09 20:00:00', 'dateTo': '2019-10-09 20:00:00', 'driverId': 253774, 'dutyPeople': '1', 'eLocation': '邹容路113人民解放纪念碑', 'fee': 15, 'icon': None, 'id': 6541479, 'isDuty': '1', 'isPayFor': '0', 'masterId': 6541480, 'memberShipID': 4071018, 'no': 'PC1181845647837880320', 'payFor': 0, 'phoneNo': '177qqq23115716', 'sLocation': '重庆啤酒股份有限公司', 'score': 0, 'startDate': None, 'state': -22, 'stateAdvance': '0', 'stateAppeal': '0', 'stateCollection': '0', 'subCancelReason': '微信h5取消订单', 'type': 2, 'typePayFor': '0'}, {'actFee': 8.4, 'advanceNote': '是否申请垫付？', 'appealNote': '人工受理您的申述后，24个小时内将得到反馈结果', 'appealTel': 4008187799, 'appoint': True, 'appointDate': '2019-10-09 16:16:42', 'cancelPeople': '0', 'collectionNote': '是否向乘客发起短信催款？', 'countCollection': None, 'createDate': '2019-10-09 16:16:43', 'daccountFee': '0.00', 'dateFrom': '2019-10-09 20:00:00', 'dateTo': '2019-10-09 20:00:00', 'driverId': 253774, 'dutyPeople': '0', 'eLocation': '步行街重百大楼', 'fee': 14, 'icon': None, 'id': 6541481, 'isDuty': '0', 'isPayFor': '0', 'masterId': 6541480, 'memberShipID': 4071018, 'no': 'PC1181845930722713600', 'payFor': 0, 'phoneNo': '177qqq23115716', 'sLocation': '重庆啤酒股份有限公司', 'score': 0, 'startDate': '2019-10-09 16:41:12', 'state': 100, 'stateAdvance': '0', 'stateAppeal': '0', 'stateCollection': '0', 'subCancelReason': None, 'type': 2, 'typePayFor': '0'}, {'actFee': 20, 'advanceNote': '是否申请垫付？', 'appealNote': '人工受理您的申述后，24个小时内将得到反馈结果', 'appealTel': 4008187799, 'appoint': True, 'appointDate': '2019-10-09 16:17:59', 'cancelPeople': '1', 'collectionNote': '是否向乘客发起短信催款？', 'countCollection': 0, 'createDate': '2019-10-09 16:17:59', 'daccountFee': '0.00', 'dateFrom': '2019-10-09 20:00:00', 'dateTo': '2019-10-09 20:00:00', 'driverId': 253776, 'dutyPeople': '1', 'eLocation': '中华路23号八一广场', 'fee': 25, 'icon': None, 'id': 6541482, 'isDuty': '1', 'isPayFor': '0', 'masterId': 6541480, 'memberShipID': 4071018, 'no': 'PC1181846252190949376', 'payFor': 0, 'phoneNo': '177qqq23115716', 'sLocation': '两江新区互联网产业园二期', 'score': 0, 'startDate': None, 'state': -22, 'stateAdvance': '0', 'stateAppeal': '0', 'stateCollection': '0', 'subCancelReason': '微信h5取消订单', 'type': 2, 'typePayFor': '0'}, {'actFee': 7.8, 'advanceNote': '是否申请垫付？', 'appealNote': '人工受理您的申述后，24个小时内将得到反馈结果', 'appealTel': 4008187799, 'appoint': True, 'appointDate': '2019-10-09 16:20:36', 'cancelPeople': '0', 'collectionNote': '是否向乘客发起短信催款？', 'countCollection': None, 'createDate': '2019-10-09 16:20:37', 'daccountFee': '0.00', 'dateFrom': '2019-10-09 20:00:00', 'dateTo': '2019-10-09 20:00:00', 'driverId': 253774, 'dutyPeople': '0', 'eLocation': '解放碑地下环道重庆二十九中学(走读部校区)', 'fee': 13, 'icon': None, 'id': 6541483, 'isDuty': '0', 'isPayFor': '0', 'masterId': 6541480, 'memberShipID': 4071050, 'no': 'PC1181846913120985088', 'payFor': 0, 'phoneNo': '18523861998', 'sLocation': '嵩山中路', 'score': 0, 'startDate': '2019-10-09 16:41:12', 'state': 100, 'stateAdvance': '0', 'stateAppeal': '0', 'stateCollection': '0', 'subCancelReason': None, 'type': 2, 'typePayFor': '0'}], 'fee': 42, 'icon': None, 'discount': 0, 'type': 2, 'actFeeP': 13, 'appointDate': None, 'daccountFee': '0.00', 'phoneNo': None, 'typePayFor': '0', 'stateAdvance': '0', 'isPayFor': '0', 'score': 0, 'advanceNote': '是否申请垫付？', 'eLocation': '邹容路113人民解放纪念碑', 'stateAppeal': '0', 'state': 100, 'id': 6541480, 'appealNote': '人工受理您的申述后，24个小时内将得到反馈结果', 'realPayment': '13.00', 'strIsCash': '0', 'cancelReason': '系统关闭', 'dutyPeople': '0', 'createDate': '2019-10-09 16:16:00', 'countCollection': None, 'dateFrom': '2019-10-09 20:00:00', 'payFor': 0, 'memberShipID': None, 'sLocation': '重庆啤酒股份有限公司', 'driverId': 253774, 'cancelDate': '2019-10-09 16:44:10', 'collectionNote': '是否向乘客发起短信催款？', 'cancelPeople': '0', 'appoint': True, 'dateTo': '2019-10-09 20:00:00', 'stateCollection': '0', 'actFee': 7.8, 'startDate': '2019-10-09 16:41:12'}]}
+
+清理数据
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>总计</td>
+    <td>10</td>
+    <td>10</td>
+    <td>0</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+</body>
+</html>
