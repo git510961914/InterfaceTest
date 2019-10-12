@@ -43,3 +43,8 @@ EMAIL_CONFIG = {
     'username': 'wcyhwcx@163.com',
     'password': 'qaz3320197'
 }
+
+"""
+token
+"""
+TOKEN = {"token":""}

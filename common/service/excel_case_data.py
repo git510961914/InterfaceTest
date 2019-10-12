@@ -2,11 +2,10 @@
 #coding=utf-8
 import json
 import logging
+import string
 from common.module import excel_module
 from common.module import requests_module
 from common.module import environment_module
-
-token=''
 
 class ExcelData:
     def __init__(self):
@@ -57,14 +56,19 @@ class ExcelData:
                     # 如果传参key和发送内容key相同，则替换Excel表中的对应key的value
                     if i == j:
                         self.data[j] = kwargs[i]
-        global token
-        if token == '':  #strip()方法用于移除字符串头尾指定的字符（默认为空格或换行符）或字符序列
+        if self.get_token() == '':  #strip()方法用于移除字符串头尾指定的字符（默认为空格或换行符）或字符序列
             actual_res = self.get_actual_data()
-            dictoken = actual_res['data']
-            token = dictoken['token']
-            token = token
+            print(type(actual_res))
+            if type(actual_res) == "str":
+                actual_res = json.dumps(actual_res)
+            token = actual_res['data']['token']
+            self.set_token(token)
+        elif self.data == '':
+            actual_res = self.get_actual_data()
         else:
-            actual_res = self.get_actual_data(token)
+            actual_res = self.get_actual_data(self.get_token())
+            print(type(actual_res))
+            print("\n当前token为：" + self.get_token())
         return actual_res
 
     def get_case_input(self, file_name, sheet_index=0, row_id=0):
@@ -85,18 +89,29 @@ class ExcelData:
         self.url = environment_module.EnvironmentModule().get_env_url('login') + path
         return self.url
 
+    def get_token(self):
+        token = environment_module.EnvironmentModule().get_token()
+        return token
+
+    def set_token(self,token):
+        environment_module.EnvironmentModule().set_token(token)
+        print("token设置成功\n")
+
     def get_expect_data(self):
         logging.debug("=============Expect============" + self.expect_res)
         return self.expect_res.encode('utf-8')
 
     #发送请求并分析返回数据
-    def get_actual_data(self,token=None):
+    def get_actual_data(self,token=''):
         if token != '':
             self.data['token'] = token
         actual_res_handle = requests_module.GetResponse(self.url,self.method)
         actual_url = actual_res_handle.get_response(self.data)
         res_analysis = requests_module.AnalysisResponse(actual_url)
-        actual_res = res_analysis.dic_content
+        if '<!DOCTYPE html>' in res_analysis.ucontent:
+            actual_res = res_analysis.ucontent
+        else:
+            actual_res = res_analysis.dic_content
         #cookies = requests.utils.dict_from_cookiejar(res_analysis.cookies)
         # logging.debug(u"===============data==============") + json.dumps(self.data)
         logging.debug((u"===========实际返回的数据为：%s============") % actual_res)

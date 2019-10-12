@@ -70,6 +70,14 @@ class AnalysisResponse(object):
         return __str_content
 
     @property
+    def ucontent(self):
+        """
+        返回string类型的content
+        """
+        __u_content = str(self.__resp.content)
+        return __u_content
+
+    @property
     def dic_content(self):
         """
         将response转换成字典后返回
