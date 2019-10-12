@@ -11,11 +11,11 @@ class GetResponse:
         self.__method = method.lower()
         self.__resp = ''
 
-    def get_response(self,data):
+    def get_response(self,data,header):
         if self.__method == 'get':
             try:
                 print("开始get请求")
-                __resp = requests.get(self.__url,data)
+                __resp = requests.get(self.__url,data,headers=header)
                 print("状态码为：" + str(__resp.status_code))
                 if __resp.status_code == 200:
                     print("请求成功")
@@ -31,7 +31,7 @@ class GetResponse:
         if self.__method == 'post':
             try:
                 print("开始post请求")
-                __resp = requests.post(self.__url,None,data)
+                __resp = requests.post(self.__url,None,data,headers=header)
                 print("状态码为：" + str(__resp.status_code))
                 if __resp.status_code == 200:
                     print("请求成功")

@@ -2,7 +2,6 @@
 #coding=utf-8
 import json
 import logging
-import string
 from common.module import excel_module
 from common.module import requests_module
 from common.module import environment_module
@@ -17,6 +16,7 @@ class ExcelData:
         self.case_url = ''
         self.case_input = ''
         self.content_type = ''
+        self.header = {"c-st":"2"}
 
     def get_case_data(self, file_name, sheet_index=0, row_id=0, data=None, **kwargs):
         """
@@ -62,9 +62,12 @@ class ExcelData:
             if type(actual_res) == "str":
                 actual_res = json.dumps(actual_res)
             token = actual_res['data']['token']
+            print("最新token：" + token)
             self.set_token(token)
         elif self.data == '':
             actual_res = self.get_actual_data()
+            print(type(actual_res))
+            print("\n当前token为：" + self.get_token())
         else:
             actual_res = self.get_actual_data(self.get_token())
             print(type(actual_res))
@@ -106,7 +109,7 @@ class ExcelData:
         if token != '':
             self.data['token'] = token
         actual_res_handle = requests_module.GetResponse(self.url,self.method)
-        actual_url = actual_res_handle.get_response(self.data)
+        actual_url = actual_res_handle.get_response(self.data,self.header)
         res_analysis = requests_module.AnalysisResponse(actual_url)
         if '<!DOCTYPE html>' in res_analysis.ucontent:
             actual_res = res_analysis.ucontent
