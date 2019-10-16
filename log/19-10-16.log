@@ -1,0 +1,432 @@
+2019-10-16 17:30:10LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 17:30:10excel_case_data.pyget_case_data[line:49]INFO:{
+  "appType": 1,
+  "clientId": "fe930a2670b97ea5c6c7285edbdce504",
+  "imei": "867689026971962",
+  "latitude": 29.622034,
+  "loginName": "15703034351",
+  "loginPwd": "K1u6dce8E7zxxtvI/W9XdDy3M6N9KzE6yk2fPiM54zu3J7yR3NMg6OdcxU+pUYkdc1C82/WxdSux\nCvlx6JMWh04zqewBD/Ep3OJfFg2lTWJnUTA55i/uWoDFvcvu1OkUjts8t8d0jJ8rrG41LLmoj8Ce\nmvz0t98gPQ99lqzNKKg=\n",
+  "longitude": 106.491499,
+  "mac": "0C:D6:BD:90:A5:52"
+}
+2019-10-16 17:30:10connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-10-16 17:30:31requests_module.pyget_response[line:43]ERROR:网络连接失败或接口响应时间过长
+2019-10-16 17:30:31excel_case_data.pyget_actual_data[line:119]DEBUG:===========实际返回的数据为：None============
+2019-10-16 17:30:31LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-10-16 17:31:39LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 17:31:39excel_case_data.pyget_case_data[line:49]INFO:{
+  "appType": 1,
+  "clientId": "fe930a2670b97ea5c6c7285edbdce504",
+  "imei": "867689026971962",
+  "latitude": 29.622034,
+  "loginName": "15703034351",
+  "loginPwd": "K1u6dce8E7zxxtvI/W9XdDy3M6N9KzE6yk2fPiM54zu3J7yR3NMg6OdcxU+pUYkdc1C82/WxdSux\nCvlx6JMWh04zqewBD/Ep3OJfFg2lTWJnUTA55i/uWoDFvcvu1OkUjts8t8d0jJ8rrG41LLmoj8Ce\nmvz0t98gPQ99lqzNKKg=\n",
+  "longitude": 106.491499,
+  "mac": "0C:D6:BD:90:A5:52"
+}
+2019-10-16 17:33:38connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-10-16 17:33:38connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/driver/login HTTP/1.1" 200 None
+2019-10-16 17:33:45eucjpprober.pyfeed[line:62]DEBUG:EUC-JP Japanese prober hit error at byte 189
+2019-10-16 17:33:45mbcharsetprober.pyfeed[line:66]DEBUG:GB2312 Chinese prober hit error at byte 197
+2019-10-16 17:33:45mbcharsetprober.pyfeed[line:66]DEBUG:EUC-KR Korean prober hit error at byte 189
+2019-10-16 17:33:45mbcharsetprober.pyfeed[line:66]DEBUG:CP949 Korean prober hit error at byte 189
+2019-10-16 17:33:45mbcharsetprober.pyfeed[line:66]DEBUG:Big5 Chinese prober hit error at byte 190
+2019-10-16 17:33:45mbcharsetprober.pyfeed[line:66]DEBUG:EUC-TW Taiwan prober hit error at byte 189
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:100]DEBUG:utf-8  confidence = 0.87625
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:100]DEBUG:SHIFT_JIS Japanese confidence = 0.01
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-JP not active
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:97]DEBUG:GB2312 not active
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-KR not active
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:97]DEBUG:CP949 not active
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:97]DEBUG:Big5 not active
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-TW not active
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1251 Russian confidence = 0.01
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:100]DEBUG:KOI8-R Russian confidence = 0.01
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:100]DEBUG:ISO-8859-5 Russian confidence = 0.0
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:100]DEBUG:MacCyrillic Russian confidence = 0.0
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:100]DEBUG:IBM866 Russian confidence = 0.0
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:100]DEBUG:IBM855 Russian confidence = 0.01
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:100]DEBUG:ISO-8859-7 Greek confidence = 0.01
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1253 Greek confidence = 0.01
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:100]DEBUG:ISO-8859-5 Bulgairan confidence = 0.0
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1251 Bulgarian confidence = 0.01
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:100]DEBUG:TIS-620 Thai confidence = 0.01
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:100]DEBUG:ISO-8859-9 Turkish confidence = 0.2985682653616983
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1255 Hebrew confidence = 0.0
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1255 Hebrew confidence = 0.01
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1255 Hebrew confidence = 0.01
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:100]DEBUG:utf-8  confidence = 0.87625
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:100]DEBUG:SHIFT_JIS Japanese confidence = 0.01
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-JP not active
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:97]DEBUG:GB2312 not active
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-KR not active
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:97]DEBUG:CP949 not active
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:97]DEBUG:Big5 not active
+2019-10-16 17:33:45charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-TW not active
+2019-10-16 17:35:10eucjpprober.pyfeed[line:62]DEBUG:EUC-JP Japanese prober hit error at byte 189
+2019-10-16 17:35:10mbcharsetprober.pyfeed[line:66]DEBUG:GB2312 Chinese prober hit error at byte 197
+2019-10-16 17:35:10mbcharsetprober.pyfeed[line:66]DEBUG:EUC-KR Korean prober hit error at byte 189
+2019-10-16 17:35:10mbcharsetprober.pyfeed[line:66]DEBUG:CP949 Korean prober hit error at byte 189
+2019-10-16 17:35:10mbcharsetprober.pyfeed[line:66]DEBUG:Big5 Chinese prober hit error at byte 190
+2019-10-16 17:35:10mbcharsetprober.pyfeed[line:66]DEBUG:EUC-TW Taiwan prober hit error at byte 189
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:100]DEBUG:utf-8  confidence = 0.87625
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:100]DEBUG:SHIFT_JIS Japanese confidence = 0.01
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-JP not active
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:97]DEBUG:GB2312 not active
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-KR not active
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:97]DEBUG:CP949 not active
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:97]DEBUG:Big5 not active
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-TW not active
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1251 Russian confidence = 0.01
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:100]DEBUG:KOI8-R Russian confidence = 0.01
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:100]DEBUG:ISO-8859-5 Russian confidence = 0.0
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:100]DEBUG:MacCyrillic Russian confidence = 0.0
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:100]DEBUG:IBM866 Russian confidence = 0.0
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:100]DEBUG:IBM855 Russian confidence = 0.01
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:100]DEBUG:ISO-8859-7 Greek confidence = 0.01
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1253 Greek confidence = 0.01
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:100]DEBUG:ISO-8859-5 Bulgairan confidence = 0.0
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1251 Bulgarian confidence = 0.01
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:100]DEBUG:TIS-620 Thai confidence = 0.01
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:100]DEBUG:ISO-8859-9 Turkish confidence = 0.2985682653616983
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1255 Hebrew confidence = 0.0
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1255 Hebrew confidence = 0.01
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1255 Hebrew confidence = 0.01
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:100]DEBUG:utf-8  confidence = 0.87625
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:100]DEBUG:SHIFT_JIS Japanese confidence = 0.01
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-JP not active
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:97]DEBUG:GB2312 not active
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-KR not active
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:97]DEBUG:CP949 not active
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:97]DEBUG:Big5 not active
+2019-10-16 17:35:10charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-TW not active
+2019-10-16 17:35:17excel_case_data.pyget_actual_data[line:116]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-10-16 17:35:19eucjpprober.pyfeed[line:62]DEBUG:EUC-JP Japanese prober hit error at byte 189
+2019-10-16 17:35:19mbcharsetprober.pyfeed[line:66]DEBUG:GB2312 Chinese prober hit error at byte 197
+2019-10-16 17:35:19mbcharsetprober.pyfeed[line:66]DEBUG:EUC-KR Korean prober hit error at byte 189
+2019-10-16 17:35:19mbcharsetprober.pyfeed[line:66]DEBUG:CP949 Korean prober hit error at byte 189
+2019-10-16 17:35:19mbcharsetprober.pyfeed[line:66]DEBUG:Big5 Chinese prober hit error at byte 190
+2019-10-16 17:35:19mbcharsetprober.pyfeed[line:66]DEBUG:EUC-TW Taiwan prober hit error at byte 189
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:100]DEBUG:utf-8  confidence = 0.87625
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:100]DEBUG:SHIFT_JIS Japanese confidence = 0.01
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-JP not active
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:97]DEBUG:GB2312 not active
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-KR not active
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:97]DEBUG:CP949 not active
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:97]DEBUG:Big5 not active
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-TW not active
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1251 Russian confidence = 0.01
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:100]DEBUG:KOI8-R Russian confidence = 0.01
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:100]DEBUG:ISO-8859-5 Russian confidence = 0.0
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:100]DEBUG:MacCyrillic Russian confidence = 0.0
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:100]DEBUG:IBM866 Russian confidence = 0.0
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:100]DEBUG:IBM855 Russian confidence = 0.01
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:100]DEBUG:ISO-8859-7 Greek confidence = 0.01
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1253 Greek confidence = 0.01
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:100]DEBUG:ISO-8859-5 Bulgairan confidence = 0.0
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1251 Bulgarian confidence = 0.01
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:100]DEBUG:TIS-620 Thai confidence = 0.01
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:100]DEBUG:ISO-8859-9 Turkish confidence = 0.2985682653616983
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1255 Hebrew confidence = 0.0
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1255 Hebrew confidence = 0.01
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1255 Hebrew confidence = 0.01
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:100]DEBUG:utf-8  confidence = 0.87625
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:100]DEBUG:SHIFT_JIS Japanese confidence = 0.01
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-JP not active
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:97]DEBUG:GB2312 not active
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-KR not active
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:97]DEBUG:CP949 not active
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:97]DEBUG:Big5 not active
+2019-10-16 17:35:19charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-TW not active
+2019-10-16 17:35:57eucjpprober.pyfeed[line:62]DEBUG:EUC-JP Japanese prober hit error at byte 189
+2019-10-16 17:35:57mbcharsetprober.pyfeed[line:66]DEBUG:GB2312 Chinese prober hit error at byte 197
+2019-10-16 17:35:57mbcharsetprober.pyfeed[line:66]DEBUG:EUC-KR Korean prober hit error at byte 189
+2019-10-16 17:35:57mbcharsetprober.pyfeed[line:66]DEBUG:CP949 Korean prober hit error at byte 189
+2019-10-16 17:35:57mbcharsetprober.pyfeed[line:66]DEBUG:Big5 Chinese prober hit error at byte 190
+2019-10-16 17:35:57mbcharsetprober.pyfeed[line:66]DEBUG:EUC-TW Taiwan prober hit error at byte 189
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:100]DEBUG:utf-8  confidence = 0.87625
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:100]DEBUG:SHIFT_JIS Japanese confidence = 0.01
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-JP not active
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:97]DEBUG:GB2312 not active
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-KR not active
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:97]DEBUG:CP949 not active
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:97]DEBUG:Big5 not active
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-TW not active
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1251 Russian confidence = 0.01
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:100]DEBUG:KOI8-R Russian confidence = 0.01
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:100]DEBUG:ISO-8859-5 Russian confidence = 0.0
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:100]DEBUG:MacCyrillic Russian confidence = 0.0
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:100]DEBUG:IBM866 Russian confidence = 0.0
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:100]DEBUG:IBM855 Russian confidence = 0.01
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:100]DEBUG:ISO-8859-7 Greek confidence = 0.01
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1253 Greek confidence = 0.01
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:100]DEBUG:ISO-8859-5 Bulgairan confidence = 0.0
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1251 Bulgarian confidence = 0.01
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:100]DEBUG:TIS-620 Thai confidence = 0.01
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:100]DEBUG:ISO-8859-9 Turkish confidence = 0.2985682653616983
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1255 Hebrew confidence = 0.0
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1255 Hebrew confidence = 0.01
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1255 Hebrew confidence = 0.01
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:100]DEBUG:utf-8  confidence = 0.87625
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:100]DEBUG:SHIFT_JIS Japanese confidence = 0.01
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-JP not active
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:97]DEBUG:GB2312 not active
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-KR not active
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:97]DEBUG:CP949 not active
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:97]DEBUG:Big5 not active
+2019-10-16 17:35:57charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-TW not active
+2019-10-16 17:37:41LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 17:37:41excel_case_data.pyget_case_data[line:49]INFO:{
+  "appType": 1,
+  "clientId": "fe930a2670b97ea5c6c7285edbdce504",
+  "imei": "867689026971962",
+  "latitude": 29.622034,
+  "loginName": "15703034351",
+  "loginPwd": "K1u6dce8E7zxxtvI/W9XdDy3M6N9KzE6yk2fPiM54zu3J7yR3NMg6OdcxU+pUYkdc1C82/WxdSux\nCvlx6JMWh04zqewBD/Ep3OJfFg2lTWJnUTA55i/uWoDFvcvu1OkUjts8t8d0jJ8rrG41LLmoj8Ce\nmvz0t98gPQ99lqzNKKg=\n",
+  "longitude": 106.491499,
+  "mac": "0C:D6:BD:90:A5:52"
+}
+2019-10-16 17:37:41connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-10-16 17:37:42connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/driver/login HTTP/1.1" 200 None
+2019-10-16 17:37:42excel_case_data.pyget_actual_data[line:116]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-10-16 17:37:42LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-10-16 17:53:56LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 17:53:57excel_case_data.pyget_case_data[line:49]INFO:{
+  "appType": 1,
+  "clientId": "fe930a2670b97ea5c6c7285edbdce504",
+  "imei": "867689026971962",
+  "latitude": 29.622034,
+  "loginName": "15703034351",
+  "loginPwd": "K1u6dce8E7zxxtvI/W9XdDy3M6N9KzE6yk2fPiM54zu3J7yR3NMg6OdcxU+pUYkdc1C82/WxdSux\nCvlx6JMWh04zqewBD/Ep3OJfFg2lTWJnUTA55i/uWoDFvcvu1OkUjts8t8d0jJ8rrG41LLmoj8Ce\nmvz0t98gPQ99lqzNKKg=\n",
+  "longitude": 106.491499,
+  "mac": "0C:D6:BD:90:A5:52"
+}
+2019-10-16 17:53:57connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-10-16 17:54:07connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/driver/login HTTP/1.1" 200 None
+2019-10-16 17:54:07excel_case_data.pyget_actual_data[line:118]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-10-16 17:54:07LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-10-16 17:57:56LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 17:57:56excel_case_data.pyget_case_data[line:49]INFO:{
+  "appType": 1,
+  "clientId": "fe930a2670b97ea5c6c7285edbdce504",
+  "imei": "867689026971962",
+  "latitude": 29.622034,
+  "loginName": "15703034351",
+  "loginPwd": "K1u6dce8E7zxxtvI/W9XdDy3M6N9KzE6yk2fPiM54zu3J7yR3NMg6OdcxU+pUYkdc1C82/WxdSux\nCvlx6JMWh04zqewBD/Ep3OJfFg2lTWJnUTA55i/uWoDFvcvu1OkUjts8t8d0jJ8rrG41LLmoj8Ce\nmvz0t98gPQ99lqzNKKg=\n",
+  "longitude": 106.491499,
+  "mac": "0C:D6:BD:90:A5:52"
+}
+2019-10-16 17:57:56connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-10-16 17:57:57connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/driver/login HTTP/1.1" 200 None
+2019-10-16 17:57:57excel_case_data.pyget_actual_data[line:120]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-10-16 17:57:57LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-10-16 18:02:25LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 18:02:25excel_case_data.pyget_case_data[line:49]INFO:{
+  "appType": 1,
+  "clientId": "fe930a2670b97ea5c6c7285edbdce504",
+  "imei": "867689026971962",
+  "latitude": 29.622034,
+  "loginName": "15703034351",
+  "loginPwd": "K1u6dce8E7zxxtvI/W9XdDy3M6N9KzE6yk2fPiM54zu3J7yR3NMg6OdcxU+pUYkdc1C82/WxdSux\nCvlx6JMWh04zqewBD/Ep3OJfFg2lTWJnUTA55i/uWoDFvcvu1OkUjts8t8d0jJ8rrG41LLmoj8Ce\nmvz0t98gPQ99lqzNKKg=\n",
+  "longitude": 106.491499,
+  "mac": "0C:D6:BD:90:A5:52"
+}
+2019-10-16 18:02:25connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-10-16 18:02:25connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/driver/login HTTP/1.1" 200 None
+2019-10-16 18:02:25excel_case_data.pyget_actual_data[line:120]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-10-16 18:02:25LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-10-16 18:03:57LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 18:03:57excel_case_data.pyget_case_data[line:49]INFO:{"token":"s737d38d449801c4c"}
+2019-10-16 18:03:57connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-10-16 18:03:57connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/driver/getRuningOrder?%7B%22token%22:%20null%7D HTTP/1.1" 200 None
+2019-10-16 18:03:57excel_case_data.pyget_actual_data[line:120]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-10-16 18:03:57LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-10-16 18:04:55LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 18:04:55excel_case_data.pyget_case_data[line:49]INFO:{
+  "appType": 1,
+  "clientId": "fe930a2670b97ea5c6c7285edbdce504",
+  "imei": "867689026971962",
+  "latitude": 29.622034,
+  "loginName": "15703034351",
+  "loginPwd": "K1u6dce8E7zxxtvI/W9XdDy3M6N9KzE6yk2fPiM54zu3J7yR3NMg6OdcxU+pUYkdc1C82/WxdSux\nCvlx6JMWh04zqewBD/Ep3OJfFg2lTWJnUTA55i/uWoDFvcvu1OkUjts8t8d0jJ8rrG41LLmoj8Ce\nmvz0t98gPQ99lqzNKKg=\n",
+  "longitude": 106.491499,
+  "mac": "0C:D6:BD:90:A5:52"
+}
+2019-10-16 18:04:55connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-10-16 18:04:55connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/driver/login HTTP/1.1" 200 None
+2019-10-16 18:04:55excel_case_data.pyget_actual_data[line:120]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-10-16 18:04:55LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-10-16 18:04:55LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 18:04:55excel_case_data.pyget_case_data[line:49]INFO:{"token":"s737d38d449801c4c"}
+2019-10-16 18:04:55connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-10-16 18:04:55connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/driver/getRuningOrder?%7B%22token%22:%20%22s2bbf4578168fcfde%22%7D HTTP/1.1" 200 None
+2019-10-16 18:04:55excel_case_data.pyget_actual_data[line:120]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-10-16 18:04:55LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-10-16 18:08:21LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 18:08:21excel_case_data.pyget_case_data[line:49]INFO:{
+  "appType": 1,
+  "clientId": "fe930a2670b97ea5c6c7285edbdce504",
+  "imei": "867689026971962",
+  "latitude": 29.622034,
+  "loginName": "15703034351",
+  "loginPwd": "K1u6dce8E7zxxtvI/W9XdDy3M6N9KzE6yk2fPiM54zu3J7yR3NMg6OdcxU+pUYkdc1C82/WxdSux\nCvlx6JMWh04zqewBD/Ep3OJfFg2lTWJnUTA55i/uWoDFvcvu1OkUjts8t8d0jJ8rrG41LLmoj8Ce\nmvz0t98gPQ99lqzNKKg=\n",
+  "longitude": 106.491499,
+  "mac": "0C:D6:BD:90:A5:52"
+}
+2019-10-16 18:08:21connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-10-16 18:08:21connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/driver/login HTTP/1.1" 200 None
+2019-10-16 18:08:21excel_case_data.pyget_actual_data[line:120]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-10-16 18:08:21LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-10-16 18:08:21LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 18:08:21excel_case_data.pyget_case_data[line:49]INFO:{"token":"s737d38d449801c4c"}
+2019-10-16 18:08:21connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-10-16 18:08:21connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/driver/getRuningOrder?%7B%22token%22:%20%22s117ab9159d0154cb%22%7D HTTP/1.1" 200 None
+2019-10-16 18:08:21excel_case_data.pyget_actual_data[line:120]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-10-16 18:08:21LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-10-16 18:08:58LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 18:08:58excel_case_data.pyget_case_data[line:49]INFO:{
+  "appType": 1,
+  "clientId": "fe930a2670b97ea5c6c7285edbdce504",
+  "imei": "867689026971962",
+  "latitude": 29.622034,
+  "loginName": "15703034351",
+  "loginPwd": "K1u6dce8E7zxxtvI/W9XdDy3M6N9KzE6yk2fPiM54zu3J7yR3NMg6OdcxU+pUYkdc1C82/WxdSux\nCvlx6JMWh04zqewBD/Ep3OJfFg2lTWJnUTA55i/uWoDFvcvu1OkUjts8t8d0jJ8rrG41LLmoj8Ce\nmvz0t98gPQ99lqzNKKg=\n",
+  "longitude": 106.491499,
+  "mac": "0C:D6:BD:90:A5:52"
+}
+2019-10-16 18:09:12LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 18:09:28LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 18:09:28excel_case_data.pyget_case_data[line:49]INFO:{
+  "appType": 1,
+  "clientId": "fe930a2670b97ea5c6c7285edbdce504",
+  "imei": "867689026971962",
+  "latitude": 29.622034,
+  "loginName": "15703034351",
+  "loginPwd": "K1u6dce8E7zxxtvI/W9XdDy3M6N9KzE6yk2fPiM54zu3J7yR3NMg6OdcxU+pUYkdc1C82/WxdSux\nCvlx6JMWh04zqewBD/Ep3OJfFg2lTWJnUTA55i/uWoDFvcvu1OkUjts8t8d0jJ8rrG41LLmoj8Ce\nmvz0t98gPQ99lqzNKKg=\n",
+  "longitude": 106.491499,
+  "mac": "0C:D6:BD:90:A5:52"
+}
+2019-10-16 18:09:41LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 18:09:41excel_case_data.pyget_case_data[line:49]INFO:{
+  "appType": 1,
+  "clientId": "fe930a2670b97ea5c6c7285edbdce504",
+  "imei": "867689026971962",
+  "latitude": 29.622034,
+  "loginName": "15703034351",
+  "loginPwd": "K1u6dce8E7zxxtvI/W9XdDy3M6N9KzE6yk2fPiM54zu3J7yR3NMg6OdcxU+pUYkdc1C82/WxdSux\nCvlx6JMWh04zqewBD/Ep3OJfFg2lTWJnUTA55i/uWoDFvcvu1OkUjts8t8d0jJ8rrG41LLmoj8Ce\nmvz0t98gPQ99lqzNKKg=\n",
+  "longitude": 106.491499,
+  "mac": "0C:D6:BD:90:A5:52"
+}
+2019-10-16 18:09:41connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-10-16 18:09:42connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/driver/login HTTP/1.1" 200 None
+2019-10-16 18:09:42excel_case_data.pyget_actual_data[line:120]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-10-16 18:09:42LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-10-16 18:09:42LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 18:11:12excel_case_data.pyget_case_data[line:49]INFO:{"token":"s737d38d449801c4c"}
+2019-10-16 18:15:34connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-10-16 18:15:34connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/driver/getRuningOrder?%7B%22token%22:%20%22s2dc5ed8af2727b2c%22%7D HTTP/1.1" 200 None
+2019-10-16 18:15:40eucjpprober.pyfeed[line:62]DEBUG:EUC-JP Japanese prober hit error at byte 41
+2019-10-16 18:15:40mbcharsetprober.pyfeed[line:66]DEBUG:EUC-KR Korean prober hit error at byte 41
+2019-10-16 18:15:40mbcharsetprober.pyfeed[line:66]DEBUG:CP949 Korean prober hit error at byte 43
+2019-10-16 18:15:40mbcharsetprober.pyfeed[line:66]DEBUG:Big5 Chinese prober hit error at byte 41
+2019-10-16 18:15:40mbcharsetprober.pyfeed[line:66]DEBUG:EUC-TW Taiwan prober hit error at byte 41
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:100]DEBUG:utf-8  confidence = 0.938125
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:100]DEBUG:SHIFT_JIS Japanese confidence = 0.01
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-JP not active
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:100]DEBUG:GB2312 Chinese confidence = 0.01
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-KR not active
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:97]DEBUG:CP949 not active
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:97]DEBUG:Big5 not active
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-TW not active
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1251 Russian confidence = 0.01
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:100]DEBUG:KOI8-R Russian confidence = 0.01
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:100]DEBUG:ISO-8859-5 Russian confidence = 0.01
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:100]DEBUG:MacCyrillic Russian confidence = 0.09637267119204622
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:100]DEBUG:IBM866 Russian confidence = 0.0
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:100]DEBUG:IBM855 Russian confidence = 0.0
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:100]DEBUG:ISO-8859-7 Greek confidence = 0.01
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1253 Greek confidence = 0.01
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:100]DEBUG:ISO-8859-5 Bulgairan confidence = 0.01
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1251 Bulgarian confidence = 0.01
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:100]DEBUG:TIS-620 Thai confidence = 0.0
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:100]DEBUG:ISO-8859-9 Turkish confidence = 0.551444388388787
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1255 Hebrew confidence = 0.0
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1255 Hebrew confidence = 0.0
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:100]DEBUG:windows-1255 Hebrew confidence = 0.0
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:100]DEBUG:utf-8  confidence = 0.938125
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:100]DEBUG:SHIFT_JIS Japanese confidence = 0.01
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-JP not active
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:100]DEBUG:GB2312 Chinese confidence = 0.01
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-KR not active
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:97]DEBUG:CP949 not active
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:97]DEBUG:Big5 not active
+2019-10-16 18:15:40charsetgroupprober.pyget_confidence[line:97]DEBUG:EUC-TW not active
+2019-10-16 18:24:05LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 18:24:05excel_case_data.pyget_case_data[line:49]INFO:{
+  "appType": 1,
+  "clientId": "fe930a2670b97ea5c6c7285edbdce504",
+  "imei": "867689026971962",
+  "latitude": 29.622034,
+  "loginName": "15703034351",
+  "loginPwd": "K1u6dce8E7zxxtvI/W9XdDy3M6N9KzE6yk2fPiM54zu3J7yR3NMg6OdcxU+pUYkdc1C82/WxdSux\nCvlx6JMWh04zqewBD/Ep3OJfFg2lTWJnUTA55i/uWoDFvcvu1OkUjts8t8d0jJ8rrG41LLmoj8Ce\nmvz0t98gPQ99lqzNKKg=\n",
+  "longitude": 106.491499,
+  "mac": "0C:D6:BD:90:A5:52"
+}
+2019-10-16 18:24:05connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-10-16 18:24:05connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/driver/login HTTP/1.1" 200 None
+2019-10-16 18:24:05excel_case_data.pyget_actual_data[line:121]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-10-16 18:24:05LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-10-16 18:24:05LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 18:24:05excel_case_data.pyget_case_data[line:49]INFO:{"token":"s737d38d449801c4c"}
+2019-10-16 18:24:05connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-10-16 18:24:05connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/driver/getRuningOrder?%7B%22token%22:%20%22%5C%22s47ea8b6488bb9788%5C%22%22%7D HTTP/1.1" 200 None
+2019-10-16 18:24:05excel_case_data.pyget_actual_data[line:121]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-10-16 18:24:05LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-10-16 18:24:44LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 18:24:45excel_case_data.pyget_case_data[line:49]INFO:{
+  "appType": 1,
+  "clientId": "fe930a2670b97ea5c6c7285edbdce504",
+  "imei": "867689026971962",
+  "latitude": 29.622034,
+  "loginName": "15703034351",
+  "loginPwd": "K1u6dce8E7zxxtvI/W9XdDy3M6N9KzE6yk2fPiM54zu3J7yR3NMg6OdcxU+pUYkdc1C82/WxdSux\nCvlx6JMWh04zqewBD/Ep3OJfFg2lTWJnUTA55i/uWoDFvcvu1OkUjts8t8d0jJ8rrG41LLmoj8Ce\nmvz0t98gPQ99lqzNKKg=\n",
+  "longitude": 106.491499,
+  "mac": "0C:D6:BD:90:A5:52"
+}
+2019-10-16 18:24:45LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-10-16 18:24:45LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 18:24:45excel_case_data.pyget_case_data[line:49]INFO:{"token":"s737d38d449801c4c"}
+2019-10-16 18:24:45LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-10-16 18:25:00LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 18:25:00excel_case_data.pyget_case_data[line:49]INFO:{
+  "appType": 1,
+  "clientId": "fe930a2670b97ea5c6c7285edbdce504",
+  "imei": "867689026971962",
+  "latitude": 29.622034,
+  "loginName": "15703034351",
+  "loginPwd": "K1u6dce8E7zxxtvI/W9XdDy3M6N9KzE6yk2fPiM54zu3J7yR3NMg6OdcxU+pUYkdc1C82/WxdSux\nCvlx6JMWh04zqewBD/Ep3OJfFg2lTWJnUTA55i/uWoDFvcvu1OkUjts8t8d0jJ8rrG41LLmoj8Ce\nmvz0t98gPQ99lqzNKKg=\n",
+  "longitude": 106.491499,
+  "mac": "0C:D6:BD:90:A5:52"
+}
+2019-10-16 18:25:00LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-10-16 18:25:00LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 18:25:00excel_case_data.pyget_case_data[line:49]INFO:{"token":"s737d38d449801c4c"}
+2019-10-16 18:25:00LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-10-16 18:29:22LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 18:29:32LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 18:29:32excel_case_data.pyget_case_data[line:49]INFO:{
+  "appType": 1,
+  "clientId": "fe930a2670b97ea5c6c7285edbdce504",
+  "imei": "867689026971962",
+  "latitude": 29.622034,
+  "loginName": "15703034351",
+  "loginPwd": "K1u6dce8E7zxxtvI/W9XdDy3M6N9KzE6yk2fPiM54zu3J7yR3NMg6OdcxU+pUYkdc1C82/WxdSux\nCvlx6JMWh04zqewBD/Ep3OJfFg2lTWJnUTA55i/uWoDFvcvu1OkUjts8t8d0jJ8rrG41LLmoj8Ce\nmvz0t98gPQ99lqzNKKg=\n",
+  "longitude": 106.491499,
+  "mac": "0C:D6:BD:90:A5:52"
+}
+2019-10-16 18:29:32connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-10-16 18:29:43connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/driver/login HTTP/1.1" 200 None
+2019-10-16 18:29:43excel_case_data.pyget_actual_data[line:123]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-10-16 18:29:43LoginTest.pytearDown[line:19]INFO:======This is tearDown function======
+2019-10-16 18:29:43LoginTest.pysetUp[line:15]INFO:======This is setUp function======
+2019-10-16 18:30:08excel_case_data.pyget_case_data[line:49]INFO:{"token":"s737d38d449801c4c"}

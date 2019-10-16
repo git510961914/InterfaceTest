@@ -15,10 +15,9 @@ class ExcelData:
         self.data = {}
         self.case_url = ''
         self.case_input = ''
-        self.content_type = ''
-        self.header = {"c-st":"2"}
+        self.header = {"c-st":"2","content-type":""}
 
-    def get_case_data(self, file_name, sheet_index=0, row_id=0, data=None, **kwargs):
+    def get_case_data(self,file_name,sheet_index=0,row_id=0,**kwargs):
         """
         形参*param表示创建一个名为param的空元组，并将所有收到的值都封装到这个元组中
         形参**param表示创建一个名为param的空字典，并将收到的所有键-值对都封装到这个字典中
@@ -44,8 +43,6 @@ class ExcelData:
         # 获取期望返回数据
         self.expect_res = case_data_list[4]
         print("期望数据：" + self.expect_res)
-        if data is not None:
-            self.data = data
         # 字符串转字典
         if self.data_send != '':
             self.data = json.loads(self.data_send,encoding='utf-8')
@@ -56,23 +53,30 @@ class ExcelData:
                     # 如果传参key和发送内容key相同，则替换Excel表中的对应key的value
                     if i == j:
                         self.data[j] = kwargs[i]
-        if self.get_token() == '':  #strip()方法用于移除字符串头尾指定的字符（默认为空格或换行符）或字符序列
-            actual_res = self.get_actual_data()
+            if "content_type" in kwargs:
+                self.header['content-type'] = kwargs['content_type']
+        if self.data == {}:
+            res = self.get_actual_data()
+            actual_res = res.content
+            jsondata = json.loads(actual_res)
             print(type(actual_res))
-            if type(actual_res) == "str":
-                actual_res = json.dumps(actual_res)
-            token = actual_res['data']['token']
+        elif self.get_token() == '':  #strip()方法用于移除字符串头尾指定的字符（默认为空格或换行符）或字符序列
+            rest = self.get_actual_data()
+            actual_res = rest.content
+            print(type(actual_res))
+            jsondata = json.loads(actual_res)
+            token = jsondata['data']['token']
             print("最新token：" + token)
             self.set_token(token)
-        elif self.data == '':
-            actual_res = self.get_actual_data()
-            print(type(actual_res))
-            print("\n当前token为：" + self.get_token())
         else:
-            actual_res = self.get_actual_data(self.get_token())
+            token = self.get_token()
+            print(token)
+            rest = self.get_actual_data(token)
+            actual_res = rest.content
+            jsondata = json.loads(actual_res)
             print(type(actual_res))
             print("\n当前token为：" + self.get_token())
-        return actual_res
+        return jsondata
 
     def get_case_input(self, file_name, sheet_index=0, row_id=0):
         """
@@ -105,17 +109,16 @@ class ExcelData:
         return self.expect_res.encode('utf-8')
 
     #发送请求并分析返回数据
-    def get_actual_data(self,token=''):
+    def get_actual_data(self,token=None):
         if token != '':
+            token = json.dumps(token)
             self.data['token'] = token
         actual_res_handle = requests_module.GetResponse(self.url,self.method)
-        actual_url = actual_res_handle.get_response(self.data,self.header)
-        res_analysis = requests_module.AnalysisResponse(actual_url)
-        if '<!DOCTYPE html>' in res_analysis.ucontent:
-            actual_res = res_analysis.ucontent
+        if self.data != {}:
+            self.data = json.dumps(self.data)
+            actual_res = actual_res_handle.get_response(self.data,self.header)
         else:
-            actual_res = res_analysis.dic_content
-        #cookies = requests.utils.dict_from_cookiejar(res_analysis.cookies)
+            actual_res = actual_res_handle.get_response()
         # logging.debug(u"===============data==============") + json.dumps(self.data)
         logging.debug((u"===========实际返回的数据为：%s============") % actual_res)
         return actual_res
