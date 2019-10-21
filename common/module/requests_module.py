@@ -16,6 +16,7 @@ class GetResponse:
             try:
                 print("开始get请求")
                 self.__resp = requests.get(self.__url,data,headers=header)
+                print(type(self.__resp))
                 print("状态码为：" + str(self.__resp.status_code))
                 if self.__resp.status_code == 200:
                     print("请求成功")
@@ -32,6 +33,7 @@ class GetResponse:
             try:
                 print("开始post请求")
                 self.__resp = requests.post(self.__url,data,None,headers=header)
+                print(type(self.__resp))
                 print("状态码为：" + str(self.__resp.status_code))
                 if self.__resp.status_code == 200:
                     print("请求成功")
