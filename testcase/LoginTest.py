@@ -1,6 +1,5 @@
 #!user/bin/python3
 #coding=utf-8
-import json
 import logging
 import unittest
 from common.service import excel_case_data
