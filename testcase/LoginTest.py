@@ -28,6 +28,83 @@ class LoginTest(unittest.TestCase):
         response_data = self.excel_data.get_case_data(self.file_name,1,1,content_type="application/json;charset=UTF-8")
         print("\n返回数据：",response_data)
 
+    def test_case_03(self):
+        response_data = self.excel_data.get_case_data(self.file_name,2,1,content_type="application/json;charset=UTF-8")
+        print("\n返回数据：",response_data)
+
+    def test_case_04(self):
+        response_data = self.excel_data.get_case_data(self.file_name,3,1,content_type="application/json;charset=UTF-8")
+        print("\n返回数据：",response_data)
+
+    def test_case_05(self):
+        response_data = self.excel_data.get_case_data(self.file_name,4,1,content_type="application/json;charset=UTF-8")
+        print("\n返回数据：",response_data)
+
+    def test_case_06(self):
+        response_data = self.excel_data.get_case_data(self.file_name,5,1,content_type="application/json;charset=UTF-8")
+        print("\n返回数据：",response_data)
+
+    def test_case_07(self):
+        response_data = self.excel_data.get_case_data(self.file_name,6,1,content_type="application/json;charset=UTF-8")
+        print("\n返回数据：",response_data)
+
+    def test_case_08(self):
+        response_data = self.excel_data.get_case_data(self.file_name,7,1,content_type="application/json;charset=UTF-8")
+        print("\n返回数据：",response_data)
+
+    def test_case_09(self):
+        response_data = self.excel_data.get_case_data(self.file_name,8,1,content_type="application/json;charset=UTF-8")
+        print("\n返回数据：",response_data)
+
+    def test_case_10(self):
+        response_data = self.excel_data.get_case_data(self.file_name,9,1,content_type="application/json;charset=UTF-8")
+        print("\n返回数据：",response_data)
+
+    def test_case_11(self):
+        response_data = self.excel_data.get_case_data(self.file_name,10,1,content_type="application/json;charset=UTF-8")
+        print("\n返回数据：",response_data)
+
+    def test_case_12(self):
+        response_data = self.excel_data.get_case_data(self.file_name,11,1,content_type="application/json;charset=UTF-8")
+        print("\n返回数据：",response_data)
+
+    def test_case_13(self):
+        response_data = self.excel_data.get_case_data(self.file_name,12,1,content_type="application/json;charset=UTF-8")
+        print("\n返回数据：",response_data)
+
+    def test_case_14(self):
+        response_data = self.excel_data.get_case_data(self.file_name,12,2,content_type="application/json;charset=UTF-8")
+        print("\n返回数据：",response_data)
+
+    def test_case_15(self):
+        response_data = self.excel_data.get_case_data(self.file_name,13,1,content_type="application/json;charset=UTF-8")
+        print("\n返回数据：",response_data)
+
+    def test_case_16(self):
+        response_data = self.excel_data.get_case_data(self.file_name,14,1,content_type="application/json;charset=UTF-8")
+        print("\n返回数据：",response_data)
+
+    def test_case_17(self):
+        response_data = self.excel_data.get_case_data(self.file_name,15,1,content_type="application/json;charset=UTF-8")
+        print("\n返回数据：",response_data)
+
+    def test_case_18(self):
+        response_data = self.excel_data.get_case_data(self.file_name,16,1,content_type="application/json;charset=UTF-8")
+        print("\n返回数据：",response_data)
+
+    def test_case_19(self):
+        response_data = self.excel_data.get_case_data(self.file_name,17,1,content_type="multipart/form-data; boundary=Boundary+76727AD6F3A1D284")
+        print("\n返回数据：",response_data)
+
+    def test_case_20(self):
+        response_data = self.excel_data.get_case_data(self.file_name,18,1,content_type="application/json;charset=UTF-8")
+        print("\n返回数据：",response_data)
+
+    def test_case_21(self):
+        response_data = self.excel_data.get_case_data(self.file_name,19,1,content_type="application/json;charset=UTF-8")
+        print("\n返回数据：",response_data)
+
+
 
 
 if __name__ == '__main__':

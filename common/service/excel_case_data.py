@@ -58,15 +58,14 @@ class ExcelData:
         if self.data == {}:
             res1 = self.get_actual_data()
             actual_res = res1.content
-            actual_res = json.loads(actual_res,encoding='utf-8')
-            if actual_res['success']:
-                print("返回数据正确")
         elif self.get_token() == '':  #strip()方法用于移除字符串头尾指定的字符（默认为空格或换行符）或字符序列
             res2 = self.get_actual_data()
             actual_res = res2.content
             dict_data = json.loads(actual_res,encoding='utf-8')
             if dict_data['success']:
                 print("返回数据正确")
+            else:
+                print("返回数据不正确")
             data = dict_data['data']
             token = data['token']
             print("最新token：" + token)
@@ -79,6 +78,8 @@ class ExcelData:
             actual_res = json.loads(actual_res,encoding='utf-8')
             if actual_res['success']:
                 print("返回数据正确")
+            else:
+                print("返回数据不正确")
             print("\n当前token为：" + self.get_token())
         return actual_res
 
