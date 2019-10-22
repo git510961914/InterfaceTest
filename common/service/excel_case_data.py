@@ -15,7 +15,7 @@ class ExcelData:
         self.data = {}
         self.case_url = ''
         self.case_input = ''
-        self.header = {"c-st":"2","Content-Type":""}
+        self.header = {"c-st":"2","Content-Type":"","token":""}
 
     def get_case_data(self,file_name,sheet_index=0,row_id=0,**kwargs):
         """
@@ -59,19 +59,26 @@ class ExcelData:
             res1 = self.get_actual_data()
             actual_res = res1.content
             actual_res = json.loads(actual_res,encoding='utf-8')
+            if actual_res['success']:
+                print("返回数据正确")
         elif self.get_token() == '':  #strip()方法用于移除字符串头尾指定的字符（默认为空格或换行符）或字符序列
             res2 = self.get_actual_data()
             actual_res = res2.content
             dict_data = json.loads(actual_res,encoding='utf-8')
+            if dict_data['success']:
+                print("返回数据正确")
             data = dict_data['data']
             token = data['token']
             print("最新token：" + token)
             self.set_token(token)
         else:
             token = self.get_token()
+            self.header['token'] = token
             res3 = self.get_actual_data(token)
             actual_res = res3.content
             actual_res = json.loads(actual_res,encoding='utf-8')
+            if actual_res['success']:
+                print("返回数据正确")
             print("\n当前token为：" + self.get_token())
         return actual_res
 
@@ -108,7 +115,6 @@ class ExcelData:
     #发送请求并分析返回数据
     def get_actual_data(self,token=None):
         if token:
-            token = json.dumps(token)
             self.data['token'] = token
         actual_res_handle = requests_module.GetResponse(self.url,self.method)
         if self.data != {}:
