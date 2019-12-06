@@ -2,7 +2,6 @@
 #coding=utf-8
 import requests
 import logging
-import json
 from requests.exceptions import *
 
 class GetResponse:
@@ -31,7 +30,7 @@ class GetResponse:
         if self.__method == 'post':
             try:
                 print("开始post请求")
-                self.__resp = requests.post(self.__url,data,None,headers=header)
+                self.__resp = requests.post(self.__url,data,headers=header)
                 print("状态码为：" + str(self.__resp.status_code))
                 if self.__resp.status_code == 200:
                     print("请求成功")

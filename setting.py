@@ -28,7 +28,8 @@ ENVIRONMENT CONFIG
 '''
 ENVIRONMENT_CONFIG = {
     "interfaceUrl": {
-        "login": "http://shuitupaycallbackpre.callme.work"  #https://tcc.taobao.com
+        "Pre": "http://shuitupaycallbackpre.callme.work",
+        "Test": "http://shuitupaycallbacktest.callme.work"
     }
 }
 

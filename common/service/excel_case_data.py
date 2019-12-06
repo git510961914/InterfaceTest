@@ -15,7 +15,10 @@ class ExcelData:
         self.data = {}
         self.case_url = ''
         self.case_input = ''
-        self.header = {"c-st":"2","Content-Type":"","token":""}
+        self.header = {"User-Agent":"callmec/3.6.0 (iPhone; iOS 13.1.2; Scale/2.00)","c-br":"iPhone 7","c-lng":"106.491219",\
+                       "c-sv":"13.1.2","c-cv":"3.6.0","c-lat":"29.621786","c-ct":"2","c-ch":"667.000000","c-sr":"0","Accept-Language":"zh-Hans-CN;q=1",\
+                       "c-iv":"3.6.0","c-cw":"375.000000","Accept":"*/*","Accept-Encoding":"gzip, deflate","c-nw":"4G",\
+                       "c-im":"4A0E5A73-665E-495B-9E93-6BA72FFC7154","c-st":"1","Content-Type":"","token":""}
 
     def get_case_data(self,file_name,sheet_index=0,row_id=0,**kwargs):
         """
@@ -29,12 +32,12 @@ class ExcelData:
         # 获取指定sheet
         sheet = excel_handle.sheet_by_index(sheet_index)
         # 读取指定行
-        case_data_list = excel_handle.row_values(sheet, row_id)
+        case_data_list = excel_handle.row_values(sheet,row_id)
         # 获取第row_id行第2列的数据(路径)
         path = case_data_list[1]
         # 获取完整url
-        self.get_url(path)
-        print("完整URL：" + self.get_url(path))
+        self.url = self.get_url(path)
+        print("完整URL：" + self.url)
         # ID、Path、Request、Input、Expect
         # 获取发送方式（Request）
         self.method = case_data_list[2]
@@ -45,7 +48,7 @@ class ExcelData:
         print("期望数据：" + self.expect_res)
         # 字符串转字典
         if self.data_send != '':
-            self.data = json.loads(self.data_send,encoding='utf-8')
+            self.data = json.loads(self.data_send,encoding="utf-8")
         logging.info(self.data_send)
         if kwargs is not None:
             for i in kwargs:
@@ -56,31 +59,34 @@ class ExcelData:
             if "content_type" in kwargs:
                 self.header['Content-Type'] = kwargs['content_type']
         if self.data == {}:
+            token = self.get_token()
+            self.header['token'] = token
             res1 = self.get_actual_data()
             actual_res = res1.content
+            actual_res = json.loads(actual_res)
+            if actual_res['success']:
+                print("响应正确")
+            else:
+                print("响应不正确")
         elif self.get_token() == '':  #strip()方法用于移除字符串头尾指定的字符（默认为空格或换行符）或字符序列
             res2 = self.get_actual_data()
             actual_res = res2.content
-            dict_data = json.loads(actual_res,encoding='utf-8')
-            if dict_data['success']:
-                print("返回数据正确")
+            actual_res = json.loads(actual_res)
+            if actual_res['success']:
+                print("响应正确")
             else:
-                print("返回数据不正确")
-            data = dict_data['data']
-            token = data['token']
-            print("最新token：" + token)
-            self.set_token(token)
+                print("响应不正确")
         else:
             token = self.get_token()
             self.header['token'] = token
+            print("当前token为：" + self.header['token'])
             res3 = self.get_actual_data(token)
             actual_res = res3.content
-            actual_res = json.loads(actual_res,encoding='utf-8')
+            actual_res = json.loads(actual_res)
             if actual_res['success']:
-                print("返回数据正确")
+                print("响应正确")
             else:
-                print("返回数据不正确")
-            print("\n当前token为：" + self.get_token())
+                print("响应不正确")
         return actual_res
 
     def get_case_input(self, file_name, sheet_index=0, row_id=0):
@@ -98,8 +104,7 @@ class ExcelData:
         return self.data
 
     def get_url(self, path):
-        self.url = environment_module.EnvironmentModule().get_env_url('login') + path
-        return self.url
+        return environment_module.EnvironmentModule().get_env_url('Pre') + path
 
     def get_token(self):
         token = environment_module.EnvironmentModule().get_token()
@@ -107,7 +112,7 @@ class ExcelData:
 
     def set_token(self,token):
         environment_module.EnvironmentModule().set_token(token)
-        print("token设置成功\n")
+        print("token设置成功")
 
     def get_expect_data(self):
         logging.debug("=============Expect============" + self.expect_res)
@@ -119,10 +124,13 @@ class ExcelData:
             self.data['token'] = token
         actual_res_handle = requests_module.GetResponse(self.url,self.method)
         if self.data != {}:
-            self.data = json.dumps(self.data)
-            actual_res = actual_res_handle.get_response(self.data,self.header)
+            #api.py中，get方法的params参数传字典，post方法的data参数传json字符串(以字典提交需要编码data=urllib.urlencode(data))
+            if self.method == "get":
+                actual_res = actual_res_handle.get_response(self.data,self.header)
+            else:
+                self.data = json.dumps(self.data)
+                actual_res = actual_res_handle.get_response(self.data,self.header)
         else:
-            actual_res = actual_res_handle.get_response()
-        # logging.debug(u"===============data==============") + json.dumps(self.data)
+            actual_res = actual_res_handle.get_response(self.data,self.header)
         logging.debug((u"===========实际返回的数据为：%s============") % actual_res)
         return actual_res
