@@ -5,6 +5,7 @@ import unittest
 import datetime
 from common.service import excel_case_data
 from common.module import database
+from common.temp import cashdata
 
 class LoginTest(unittest.TestCase):
     def setUp(self):
@@ -13,6 +14,7 @@ class LoginTest(unittest.TestCase):
         self.excel_data = excel_case_data.ExcelData()
         #excel文件位置
         self.file_name = "D:\\Pycharm\\PycharmProject\\InterfaceTest\\data\\customer.xlsx"
+        self.dbEnv = 'Pre'
         logging.info("======This is setUp function======")
 
     def tearDown(self):
@@ -80,42 +82,118 @@ class LoginTest(unittest.TestCase):
         response_data = self.excel_data.get_case_data(self.file_name,10,1,content_type="application/json")
         print("返回数据：",response_data)
 
-    def test_12_calcEstimatePrice(self):
-        print("开始test_12_calcEstimatePrice接口")
+    def test_12_contractslist(self):
+        print("开始test_12_contractslist接口")
         response_data = self.excel_data.get_case_data(self.file_name,11,1,content_type="application/json")
         print("返回数据：",response_data)
 
-    def test_13_contractslist(self):
-        print("开始test_13_contractslist接口")
+    def test_13_couponfind(self):
+        print("开始test_13_couponfind接口")
         response_data = self.excel_data.get_case_data(self.file_name,12,1,content_type="application/json")
         print("返回数据：",response_data)
 
-    def test_14_couponfind(self):
-        print("开始test_14_couponfind接口")
+    def test_14_calcEstimatePrice(self):
+        print("开始test_14_calcEstimatePrice接口")
         response_data = self.excel_data.get_case_data(self.file_name,13,1,content_type="application/json")
+        data = response_data['data']
+        cashdata.ORDER['coupondetailId'] = data['detailId']
+        cashdata.ORDER['actualPayFee'] = data['actualPayFee']
         print("返回数据：",response_data)
 
-    # def test_15_createH5APPOrder(self):
-    #     print("开始test_15_createH5APPOrder接口")
-    #     hour_stamp = datetime.datetime.now().replace(minute=0, second=0, microsecond=0) #获取当前时间整点时间戳
-    #     date_from = hour_stamp + datetime.timedelta(hours=24)
-    #     date_to = hour_stamp + datetime.timedelta(hours=25)
-    #     sql = 'select * from biz_coupondetail where detailId="711733"'
-    #     db = database.Database('Pre')
-    #     res = db.query(sql)
-    #     response_data = self.excel_data.get_case_data(self.file_name,14,1,content_type="application/json",dateFrom=date_from,dateTo=date_to,detailId=res)
+    def test_15_createH5APPOrder(self):
+        print("开始test_15_createH5APPOrder接口")
+        hour_stamp = datetime.datetime.now().replace(minute=0, second=0, microsecond=0) #获取当前时间整点时间戳
+        date_from = hour_stamp + datetime.timedelta(hours=24)
+        date_from = str(date_from)
+        date_to = hour_stamp + datetime.timedelta(hours=25)
+        date_to = str(date_to)
+        detailId = cashdata.ORDER['coupondetailId']
+        response_data = self.excel_data.get_case_data(self.file_name,14,1,content_type="application/json",dateFrom=date_from,dateTo=date_to,detailId=detailId)
+        data = response_data['data']
+        cashdata.ORDER['orderId'] = data['id']
+        print("当前订单Id为：orderId=",data['id'])
+        cashdata.ORDER['preFee'] = data['preFee']
+        print("返回数据：",response_data)
+
+    def test_16_calculatePCCoupon(self):
+        print("开始test_16_calculatePCCoupon接口")
+        id = cashdata.ORDER['orderId']
+        sql = "SELECT * FROM `biz_coupondetail` WHERE `MemberId` = '21421' AND `CouponId` = '132' AND `isUser` = '0' LIMIT 0, 1000"
+        db = database.Database(self.dbEnv)
+        res = db.query(sql)
+        if res.length <= 1:
+             print("优惠券不足了，请添加优惠券再测试")
+        else:
+            couponDetailId = res[1][0]
+            response_data = self.excel_data.get_case_data(self.file_name,15,1,content_type="application/json",couponDetailId=couponDetailId,id=id)
+            print("返回数据：",response_data)
+
+    def test_17_createPayment(self):
+        print("开始test_17_createPayment接口")
+        orderId = cashdata.ORDER['orderId']
+        response_data = self.excel_data.get_case_data(self.file_name,16,1,content_type="application/json",orderId=orderId)
+        print("返回数据：",response_data)
+
+    def test_18_listDriversByMembershipID(self):
+        print("开始test_18_listDriversByMembershipID接口")
+        response_data = self.excel_data.get_case_data(self.file_name,17,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_19_cancelCollectionDrivers(self):
+        print("开始test_19_cancelCollectionDrivers接口")
+        response_data = self.excel_data.get_case_data(self.file_name,18,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_20_collectionDrivers(self):
+        print("开始test_20_collectionDrivers接口")
+        response_data = self.excel_data.get_case_data(self.file_name,19,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_21_isCollection(self):
+        print("开始test_21_isCollection接口")
+        response_data = self.excel_data.get_case_data(self.file_name,20,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_22_getTripList(self):
+        print("开始test_22_getTripList接口")
+        response_data = self.excel_data.get_case_data(self.file_name,21,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_23_getPasOrderInfo(self):
+        print("开始test_23_getPasOrderInfo接口")
+        response_data = self.excel_data.get_case_data(self.file_name,22,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_24_getDriverInfo(self):
+        print("开始test_24_getDriverInfo接口")
+        response_data = self.excel_data.get_case_data(self.file_name,23,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_25_orderListInvoiceByMemberId(self):
+        print("开始test_25_orderListInvoiceByMemberId接口")
+        response_data = self.excel_data.get_case_data(self.file_name,24,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_26_listInvoiceByMemberId(self):
+        print("开始test_26_listInvoiceByMemberId接口")
+        response_data = self.excel_data.get_case_data(self.file_name,25,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_27_getInvoiceDetailInfo(self):
+        print("开始test_27_getInvoiceDetailInfo接口")
+        response_data = self.excel_data.get_case_data(self.file_name,26,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_28_getInvoiceOrderInfo(self):
+        print("开始test_28_getInvoiceOrderInfo接口")
+        response_data = self.excel_data.get_case_data(self.file_name,27,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    # def test_29_invoice(self):
+    #     print("开始test_29_invoice接口")
+    #     response_data = self.excel_data.get_case_data(self.file_name,28,1,content_type="application/json")
     #     print("返回数据：",response_data)
 
-    #
-    # def test_16_calculatePCCoupon(self):
-    #     print("开始test_16_calculatePCCoupon接口")
-    #     response_data = self.excel_data.get_case_data(self.file_name,15,1,content_type="application/json")
-    #     print("返回数据：",response_data)
-    #
-    # def test_17_createPayment(self):
-    #     print("开始test_17_createPayment接口")
-    #     response_data = self.excel_data.get_case_data(self.file_name,16,1,content_type="application/json")
-    #     print("返回数据：",response_data)
 
 if __name__ == '__main__':
     # runner = unittest.TestLoader().loadTestsFromTestCase(LoginTest)

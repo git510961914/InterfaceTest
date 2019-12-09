@@ -9,8 +9,8 @@ class Database:
         self.env = env
 
     def connect(self):
-        db = environment_module.EnvironmentModule.get_database(self.env)
-        conn = pymysql.connect(db['host'],db['port'],db['username'],db['password'])
+        db = environment_module.EnvironmentModule().get_database(self.env)
+        conn = pymysql.connect(host=db['host'],port=db['port'],user=db['username'],password=db['password'])
         cursor = conn.cursor()  #獲取操作游標
         return  cursor
 
@@ -63,16 +63,7 @@ class Database:
             #rowcount():这是一个只读属性，并返回执行execute()方法后影响的行数
             # 获取所有记录列表
             results = cursor.fetchall()
-            for row in results:
-                fname = row[0]
-                lname = row[1]
-                age = row[2]
-                sex = row[3]
-                income = row[4]
-                # 打印结果
-                print("fname=%s,lname=%s,age=%s,sex=%s,income=%s" % \
-                      (fname, lname, age, sex, income))
-                return fname
+            return results
         except:
             print("Error: unable to fetch data")
         # 关闭数据库连接
