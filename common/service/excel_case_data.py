@@ -2,9 +2,9 @@
 #coding=utf-8
 import json
 import logging
-from InterfaceTest.common.module import excel_module
-from InterfaceTest.common.module import requests_module
-from InterfaceTest.common.module import environment_module
+from common.module import excel_module
+from common.module import requests_module
+from common.module import environment_module
 
 class ExcelData:
     def __init__(self):
@@ -58,7 +58,7 @@ class ExcelData:
                         self.data[j] = kwargs[i]
             if "content_type" in kwargs:
                 self.header['Content-Type'] = kwargs['content_type']
-        if self.data == {}:
+        if self.data == '':
             token = self.get_token()
             self.header['token'] = token
             res1 = self.get_actual_data()

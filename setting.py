@@ -47,10 +47,10 @@ TOKEN = {"token":""}
 #數據庫設置
 database = {
     'Pre':{
-            'host':'127.0.0.0',
-            'port':8080,
-            'username':'sdhjksdhfk',
-            'password':'sdfds56156'
+            'host':'172.29.0.204',
+            'port':3306,
+            'username':'root',
+            'password':'root123'
           },
     'Test':{
             'host': '127.0.0.0',

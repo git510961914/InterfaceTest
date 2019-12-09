@@ -2,7 +2,7 @@
 #coding=utf-8
 
 import pymysql
-from InterfaceTest.common.module import environment_module
+from common.module import environment_module
 
 class Database:
     def __init__(self,env):

@@ -3,8 +3,8 @@
 import logging
 import unittest
 import datetime
-from InterfaceTest.common.service import excel_case_data
-from InterfaceTest.common.module import database
+from common.service import excel_case_data
+from common.module import database
 
 class LoginTest(unittest.TestCase):
     def setUp(self):
@@ -37,7 +37,7 @@ class LoginTest(unittest.TestCase):
 
     def test_03_getMemberInfo(self):
         print("开始test_03_getMemberInfo接口")
-        response_data = self.excel_data.get_case_data(self.file_name,2,1,content_type="application/json;charset=UTF-8")
+        response_data = self.excel_data.get_case_data(self.file_name,2,1,content_type="application/json")
         print("返回数据：",response_data)
 
     def test_04_checkAppVersion(self):
@@ -90,31 +90,32 @@ class LoginTest(unittest.TestCase):
         response_data = self.excel_data.get_case_data(self.file_name,12,1,content_type="application/json")
         print("返回数据：",response_data)
 
-    def test_14_createH5APPOrder(self):
-        print("开始test_14_createH5APPOrder接口")
-        hour_stamp = datetime.datetime.now().replace(minute=0, second=0, microsecond=0) #获取当前时间整点时间戳
-        date_from = hour_stamp + datetime.timedelta(hours=24)
-        date_to = hour_stamp + datetime.timedelta(hours=25)
-        sql = 'select * from biz_coupondetail where detailId="711733"'
-        db = database.Database('Pre')
-        res = db.query(sql)
-        response_data = self.excel_data.get_case_data(self.file_name,13,1,content_type="application/json",dateFrom=date_from,dateTo=date_to,detailId=res)
+    def test_14_couponfind(self):
+        print("开始test_14_couponfind接口")
+        response_data = self.excel_data.get_case_data(self.file_name,13,1,content_type="application/json")
         print("返回数据：",response_data)
 
-    def test_15_couponfind(self):
-        print("开始test_15_couponfind接口")
-        response_data = self.excel_data.get_case_data(self.file_name,14,1,content_type="application/json")
-        print("返回数据：",response_data)
+    # def test_15_createH5APPOrder(self):
+    #     print("开始test_15_createH5APPOrder接口")
+    #     hour_stamp = datetime.datetime.now().replace(minute=0, second=0, microsecond=0) #获取当前时间整点时间戳
+    #     date_from = hour_stamp + datetime.timedelta(hours=24)
+    #     date_to = hour_stamp + datetime.timedelta(hours=25)
+    #     sql = 'select * from biz_coupondetail where detailId="711733"'
+    #     db = database.Database('Pre')
+    #     res = db.query(sql)
+    #     response_data = self.excel_data.get_case_data(self.file_name,14,1,content_type="application/json",dateFrom=date_from,dateTo=date_to,detailId=res)
+    #     print("返回数据：",response_data)
 
-    def test_16_calculatePCCoupon(self):
-        print("开始test_16_calculatePCCoupon接口")
-        response_data = self.excel_data.get_case_data(self.file_name,15,1,content_type="application/json")
-        print("返回数据：",response_data)
-
-    def test_17_createPayment(self):
-        print("开始test_17_createPayment接口")
-        response_data = self.excel_data.get_case_data(self.file_name,16,1,content_type="application/json")
-        print("返回数据：",response_data)
+    #
+    # def test_16_calculatePCCoupon(self):
+    #     print("开始test_16_calculatePCCoupon接口")
+    #     response_data = self.excel_data.get_case_data(self.file_name,15,1,content_type="application/json")
+    #     print("返回数据：",response_data)
+    #
+    # def test_17_createPayment(self):
+    #     print("开始test_17_createPayment接口")
+    #     response_data = self.excel_data.get_case_data(self.file_name,16,1,content_type="application/json")
+    #     print("返回数据：",response_data)
 
 if __name__ == '__main__':
     # runner = unittest.TestLoader().loadTestsFromTestCase(LoginTest)
