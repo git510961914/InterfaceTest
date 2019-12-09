@@ -121,7 +121,7 @@ class LoginTest(unittest.TestCase):
         sql = "SELECT * FROM `biz_coupondetail` WHERE `MemberId` = '21421' AND `CouponId` = '132' AND `isUser` = '0' LIMIT 0, 1000"
         db = database.Database(self.dbEnv)
         res = db.query(sql)
-        if res.length <= 1:
+        if len(res) <= 1:
              print("优惠券不足了，请添加优惠券再测试")
         else:
             couponDetailId = res[1][0]
