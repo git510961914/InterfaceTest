@@ -10,7 +10,7 @@ class Database:
 
     def connect(self):
         db = environment_module.EnvironmentModule().get_database(self.env)
-        conn = pymysql.connect(host=db['host'],port=db['port'],user=db['username'],password=db['password'])
+        conn = pymysql.connect(host=db['host'],port=db['port'],user=db['username'],password=db['password'],database=db['database'])
         cursor = conn.cursor()  #獲取操作游標
         return  cursor
 
@@ -58,9 +58,6 @@ class Database:
         try:
             # 执行查詢sql语句
             cursor.execute(sql)
-            #fetchone():该方法获取下一个查询结果集。结果集是一个对象
-            #fetchall():接收全部的返回结果行
-            #rowcount():这是一个只读属性，并返回执行execute()方法后影响的行数
             # 获取所有记录列表
             results = cursor.fetchall()
             return results
@@ -68,3 +65,7 @@ class Database:
             print("Error: unable to fetch data")
         # 关闭数据库连接
         cursor.close()
+        # fetchone():该方法获取下一个查询结果集。结果集是一个对象
+        # fetchmany():取出一定数量的数据
+        # fetchall():接收全部的返回结果行
+        # rowcount():这是一个只读属性，并返回执行execute()方法后影响的行数

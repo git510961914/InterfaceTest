@@ -50,12 +50,14 @@ database = {
             'host':'172.29.0.204',
             'port':3306,
             'username':'root',
-            'password':'root123'
+            'password':'root123',
+            'database':'callme'
           },
     'Test':{
             'host': '127.0.0.0',
             'port': 8080,
             'username': 'sdhjksdhfk',
-            'password': 'sdfds56156'
+            'password': 'sdfds56156',
+            'database': 'callme'
           }
 }

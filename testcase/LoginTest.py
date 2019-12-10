@@ -118,7 +118,7 @@ class LoginTest(unittest.TestCase):
     def test_16_calculatePCCoupon(self):
         print("开始test_16_calculatePCCoupon接口")
         id = cashdata.ORDER['orderId']
-        sql = "SELECT * FROM `biz_coupondetail` WHERE `MemberId` = '21421' AND `CouponId` = '132' AND `isUser` = '0' LIMIT 0, 1000"
+        sql = "SELECT * FROM biz_coupondetail WHERE MemberId = 21421 AND CouponId = 132 AND isUser = 0 LIMIT 0,1000"
         db = database.Database(self.dbEnv)
         res = db.query(sql)
         if len(res) <= 1:
@@ -189,10 +189,55 @@ class LoginTest(unittest.TestCase):
         response_data = self.excel_data.get_case_data(self.file_name,27,1,content_type="application/json")
         print("返回数据：",response_data)
 
-    # def test_29_invoice(self):
-    #     print("开始test_29_invoice接口")
-    #     response_data = self.excel_data.get_case_data(self.file_name,28,1,content_type="application/json")
-    #     print("返回数据：",response_data)
+    def test_29_invoice(self):
+        print("开始test_29_invoice接口")
+        orderListInvoice = self.excel_data.get_case_data(self.file_name, 24, 1, content_type="application/json")
+        data = orderListInvoice['data']
+        orderId = data[0]['orderId']
+        response_data = self.excel_data.get_case_data(self.file_name,28,1,content_type="application/json",orderIdList=[orderId])
+        print("返回数据：",response_data)
+
+    def test_30_unReadfind(self):
+        print("开始test_30_unReadfind接口")
+        response_data = self.excel_data.get_case_data(self.file_name,29,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_31_systemfind(self):
+        print("开始test_31_systemfind接口")
+        response_data = self.excel_data.get_case_data(self.file_name,30,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_32_activityfind(self):
+        print("开始test_32_activityfind接口")
+        response_data = self.excel_data.get_case_data(self.file_name,31,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_33_messageread(self):
+        print("开始test_33_messageread接口")
+        response_data = self.excel_data.get_case_data(self.file_name,32,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_34_messagedelete(self):
+        print("开始test_34_messagedelete接口")
+        response_data = self.excel_data.get_case_data(self.file_name,33,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_35_ordersubmit(self):
+        print("开始test_35_ordersubmit接口")
+        sql = "select * from biz_order WHERE MemberShipID=21421 and state=7 ORDER BY CreateDate DESC LIMIT 0,10"
+        db = database.Database(self.dbEnv)
+        res = db.query(sql)
+        if len(res) == '':
+            print("没有待评论的订单")
+        else:
+            orderId = res[0][0]
+            response_data = self.excel_data.get_case_data(self.file_name,34,1,content_type="application/json",id=orderId)
+            print("返回数据：",response_data)
+
+    def test_36_commentget(self):
+        print("开始test_36_commentget接口")
+        response_data = self.excel_data.get_case_data(self.file_name,35,1,content_type="application/json")
+        print("返回数据：",response_data)
 
 
 if __name__ == '__main__':
