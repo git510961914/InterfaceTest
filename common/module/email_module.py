@@ -1,7 +1,7 @@
 #!user/bin/python3
 #coding=utf-8
 
-from InterfaceTest import setting
+import setting
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
