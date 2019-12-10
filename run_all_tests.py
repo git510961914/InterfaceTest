@@ -23,5 +23,5 @@ if __name__ == '__main__':
     runner.run(all_case())
     fp.close()
     #调用封装好的sendMail方法，参数为上面的文件
-    #mail = email_module.sendMail(report_path)
+    mail = email_module.sendMail(report_path)
     print("Email sending Success")
