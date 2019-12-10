@@ -16,11 +16,12 @@ if __name__ == '__main__':
     #导入HTMLTestRunner模块
     from common.integretion import HTMLTestRunner
     # now = time.strftime("%Y-%m-%d %H_%M_%S")
-    report_path = r"D:\PyCharm\PycharmProject\InterfaceTest\report.html"
+    #report_path = r"D:\PyCharm\PycharmProject\InterfaceTest\report.html"
+    report_path = './report.html'
     fp = open(report_path, "wb")
     runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=u"测试报告", description=u"用例执行情况")
     runner.run(all_case())
     fp.close()
     #调用封装好的sendMail方法，参数为上面的文件
-    mail = email_module.sendMail(report_path)
+    #mail = email_module.sendMail(report_path)
     print("Email sending Success")

@@ -1,0 +1,1418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+a.popup_link:hover {
+    color: red;
+}
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+<div class='heading'>
+<h1>测试报告</h1>
+<p class='attribute'><strong>执行开始时间:</strong> 2019-12-10 17:47:05</p>
+<p class='attribute'><strong>执行用时:</strong> 0:00:12.043689</p>
+<p class='attribute'><strong>执行状态:</strong> 通过数 36</p>
+
+<p class='description'>用例执行情况</p>
+</div>
+
+
+<p id='show_detail_line'>展示方式
+<a href='javascript:showCase(0)'>概览</a>
+<a href='javascript:showCase(1)'>失败</a>
+<a href='javascript:showCase(2)'>全部</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>测试集群/测试用例</td>
+    <td>数量</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>报错</td>
+    <td>查看</td>
+</tr>
+
+<tr class='passClass'>
+    <td>LoginTest.LoginTest</td>
+    <td>36</td>
+    <td>36</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',36)">详情</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01_isMemberExist</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        通过</a>
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: 初始化数据
+开始test_01_isMemberExist接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/membership/isMemberExist
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575534903220,"dataMap":{},"data":{"memberExist":true}}
+开始post请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971229961, 'dataMap': {}, 'data': {'memberExist': True}}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02_login</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        通过</a>
+    <div id='div_pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2: 初始化数据
+开始test_02_login接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/membership/login
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575535407163,"dataMap":{},"data":{"token":"s7662f644fafcbd6a","id":21421,"gender":1,"state":1,"instID":null,"appointID":null,"pendPayID":null,"icon":"2017/10/2017/10/_f0c465b8ed5946c8b95baca503200a2c.jpg","phoneNo":"15703034351","identifierNo":"5003********9079","serviceNo":"4008187799","name":"王**","nickName":"王承印帅哥","voiceOnOff":true,"loginTime":1575535407529,"systemTime":1575535407529}}
+开始post请求
+状态码为：200
+请求成功
+响应正确
+最新token：s5e0fa5945d1cb081
+token设置成功
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971230029, 'dataMap': {}, 'data': {'token': 's5e0fa5945d1cb081', 'id': 21421, 'gender': 1, 'state': 1, 'instID': None, 'appointID': None, 'pendPayID': None, 'icon': '2017/10/2017/10/_f0c465b8ed5946c8b95baca503200a2c.jpg', 'phoneNo': '15703034351', 'identifierNo': '5003********9079', 'serviceNo': '4008187799', 'name': '王**', 'nickName': '王承印帅哥', 'voiceOnOff': True, 'loginTime': 1575971230455, 'systemTime': 1575971230455}}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03_getMemberInfo</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        通过</a>
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: 初始化数据
+开始test_03_getMemberInfo接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/membership/getMemberInfo
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575536445085,"dataMap":{},"data":{"birthday":715363200000,"gender":1,"city":null,"description":"合川","job":"测试","nickName":"王承印帅哥","icon":"2017/10/2017/10/_f0c465b8ed5946c8b95baca503200a2c.jpg","iconURL":"http://fe-huwo-rs.test.huwo.io/fs/get?path=2017/10/2017/10/_f0c465b8ed5946c8b95baca503200a2c.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE3LzEwLzIwMTcvMTAvX2YwYzQ2NWI4ZWQ1OTQ2YzhiOTViYWNhNTAzMjAwYTJjLmpwZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1NTM4MjQ1MDkyLCJpYXQiOjE1NzU1MzY0NDUwOTJ9.zJeUJXW-Ej36l0wBk62l9EXz-XpfZzOh9hAs3lsVx1U","companyAddress":"猪八戒众创空间","companyLatitude":"29.621418","companyLongitude":"106.491641","homeAddress":"宇豪小区","homeLatitude":"29.579707","homeLongitude":"106.508378","identifierNo":"5003********9079","name":"王**"}}
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971230540, 'dataMap': {}, 'data': {'birthday': 715363200000, 'gender': 1, 'city': None, 'description': '合川', 'job': '测试', 'nickName': '王承印帅哥', 'icon': '2017/10/2017/10/_f0c465b8ed5946c8b95baca503200a2c.jpg', 'iconURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2017/10/2017/10/_f0c465b8ed5946c8b95baca503200a2c.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE3LzEwLzIwMTcvMTAvX2YwYzQ2NWI4ZWQ1OTQ2YzhiOTViYWNhNTAzMjAwYTJjLmpwZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDMwNTYwLCJpYXQiOjE1NzU5NzEyMzA1NjB9.W40OGsc3dGDVNY3JDA1W0VbK-4eCr06QRfpMYEoRsVI', 'companyAddress': '猪八戒众创空间', 'companyLatitude': '29.621418', 'companyLongitude': '106.491641', 'homeAddress': '宇豪小区', 'homeLatitude': '29.579707', 'homeLongitude': '106.508378', 'identifierNo': '5003********9079', 'name': '王**'}}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_checkAppVersion</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        通过</a>
+    <div id='div_pt1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.4: 初始化数据
+开始test_04_checkAppVersion接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/pk/version/checkAppVersion
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575536442099,"dataMap":{},"data":{"hasNewVersion":true,"version":"3.6.1","description":"测试","descriptions":["测试"],"url":"http://cdn.huwochuxing.com/CallMeC2.0_11141703v_3.6.1.apk","type":1,"updateType":0}}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971230646, 'dataMap': {}, 'data': {'hasNewVersion': False, 'version': None, 'description': None, 'descriptions': None, 'url': None, 'type': None, 'updateType': None}}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_05_getNotFinishedOrder</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        通过</a>
+    <div id='div_pt1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.5: 初始化数据
+开始test_05_getNotFinishedOrder接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/membership/getNotFinishedOrder
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575536443082,"dataMap":{},"data":null}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971230765, 'dataMap': {}, 'data': None}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_06_requirement</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6')" >
+        通过</a>
+    <div id='div_pt1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.6: 初始化数据
+开始test_06_requirement接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/membership/depart/requirement
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575596160906,"dataMap":{},"data":{"carTypes":[4,5,3,11],"openBizTypes":[{"type":1,"name":"专车","open":true,"sort":1},{"type":2,"name":" 快车","open":true,"sort":2},{"type":5,"name":" 出租车","open":true,"sort":4}]}}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971230829, 'dataMap': {}, 'data': {'carTypes': [4, 5, 3, 11], 'openBizTypes': [{'type': 1, 'name': '专车', 'open': True, 'sort': 1}, {'type': 2, 'name': ' 快车', 'open': True, 'sort': 2}, {'type': 5, 'name': ' 出租车', 'open': True, 'sort': 4}]}}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_07_adfind</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.7')" >
+        通过</a>
+    <div id='div_pt1.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.7: 初始化数据
+开始test_07_adfind接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/pk/ad/find
+期望数据：{"code": 0,"data": [{"adContentUrl": "","adFile": "","adFileURL": "","adShow": 0,"adTitle": ""}],"dataMap": {},"message": "","sid": "","success": true,"ts": 0}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971230865, 'dataMap': {}, 'data': [{'adFile': '2017/12/570d73317d934029b54a9192d3d3f15e.jpg', 'adFileURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2017/12/570d73317d934029b54a9192d3d3f15e.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE3LzEyLzU3MGQ3MzMxN2Q5MzQwMjliNTRhOTE5MmQzZDNmMTVlLmpwZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDMxMjExLCJpYXQiOjE1NzU5NzEyMzEyMTF9.T34G_Bpld4HzLe-4MJ1OQsfgPInIyhAr5px_lTr63lY', 'adTitle': '乘客专车', 'adContentUrl': 'https://common.ofo.so/campaign/rbqpacket/?channel=33847_1513239954744&amp;banner=https%3A%2F%2Fimg.ofo.so%2Fcms%2Fdc9bc6ae40f01aa48c7084aa433fe22f.jpg', 'adShow': 1}, {'adFile': '2017/12/2ec1466953cc4c08ab3e18e418313f0b.gif', 'adFileURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2017/12/2ec1466953cc4c08ab3e18e418313f0b.gif&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE3LzEyLzJlYzE0NjY5NTNjYzRjMDhhYjNlMThlNDE4MzEzZjBiLmdpZlwifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDMxMjExLCJpYXQiOjE1NzU5NzEyMzEyMTF9.Q1v6RWDHo2K3XJHrRcGddw7xg4F045hdfpXFGJC3_Mo', 'adTitle': '乘客专车广告', 'adContentUrl': '&lt;html&gt;\n&lt;head&gt;\n\t&lt;title&gt;&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;&amp;nbsp;&lt;/body&gt;\n&lt;/html&gt;', 'adShow': 1}, {'adFile': '2018/08/a1c5b59d95924d6da3c65b6e2228568e.png', 'adFileURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2018/08/a1c5b59d95924d6da3c65b6e2228568e.png&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE4LzA4L2ExYzViNTlkOTU5MjRkNmRhM2M2NWI2ZTIyMjg1NjhlLnBuZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDMxMjEyLCJpYXQiOjE1NzU5NzEyMzEyMTJ9.daoTK1lHe0y8U0h3CgbWyX536y82ZWzD3lI91TSEsPo', 'adTitle': '测试专车广告', 'adContentUrl': '&lt;html&gt;\r\n&lt;head&gt;\r\n\t&lt;title&gt;&lt;/title&gt;\r\n&lt;/head&gt;\r\n&lt;body&gt;测试专车广告&lt;/body&gt;\r\n&lt;/html&gt;', 'adShow': 1}, {'adFile': '2019/11/7d02d69bd01a4651928d02ce8db605c3.png', 'adFileURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2019/11/7d02d69bd01a4651928d02ce8db605c3.png&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE5LzExLzdkMDJkNjliZDAxYTQ2NTE5MjhkMDJjZThkYjYwNWMzLnBuZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDMxMjEyLCJpYXQiOjE1NzU5NzEyMzEyMTJ9.8nrdvEZKOMUDWMKI7l2YWZlamr9J7s3J2FKxaVC8JBE', 'adTitle': '专车页', 'adContentUrl': '&lt;html&gt;\r\n&lt;head&gt;\r\n\t&lt;title&gt;&lt;/title&gt;\r\n&lt;/head&gt;\r\n&lt;body&gt;&amp;nbsp;&lt;/body&gt;\r\n&lt;/html&gt;', 'adShow': 1}]}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_08_bizCityfind</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.8')" >
+        通过</a>
+    <div id='div_pt1.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.8: 初始化数据
+开始test_08_bizCityfind接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/trip/bizCity/find
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575615056569,"dataMap":{},"data":[]}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971231286, 'dataMap': {}, 'data': [{'firstLetter': 'A', 'cityList': ['阿里地区', '阿坝藏族羌族自治州', '安庆市', '阿勒泰地区', '鞍山市', '阿拉善盟', '安阳市', '安康市', '阿克苏地区', '安顺市', '阿拉尔市']}, {'firstLetter': 'B', 'cityList': ['包头市', '博尔塔拉蒙古自治州', '保亭黎族苗族自治县', '亳州市', '百色市', '宝鸡市', '本溪市', '滨州市', '保山市', '北海市', '北屯市', '白银市', '巴音郭楞蒙古自治州', '白城市', '巴中市', '北区', '白山市', '北京市', '巴彦淖尔市', '保定市', '白沙黎族自治县', '蚌埠市', '毕节市']}, {'firstLetter': 'C', 'cityList': ['长春市', '常德市', '长治市', '长沙市', '昌江黎族自治县', '重庆市', '崇左市', '赤峰市', '常州市', '池州市', '郴州市', '昌都市', '潮州市', '楚雄彝族自治州', '承德市', '澄迈县', '昌吉回族自治州', '成都市', '沧州市', '朝阳市', '滁州市']}, {'firstLetter': 'D', 'cityList': ['大埔区', '定西市', '迪庆藏族自治州', '大连市', '东莞市', '德宏傣族景颇族自治州', '东区', '德州市', '东营市', '东沙群岛', '大兴安岭地区', '德阳市', '达州市', '丹东市', '大庆市', '定安县', '儋州市', '大理白族自治州', '大同市', '大堂区', '东方市']}, {'firstLetter': 'E', 'cityList': ['鄂州市', '恩施土家族苗族自治州', '鄂尔多斯市']}, {'firstLetter': 'F', 'cityList': ['福州市', '抚顺市', '佛山市', '风顺堂区', '抚州市', '阜阳市', '防城港市', '阜新市']}, {'firstLetter': 'G', 'cityList': ['贵阳市', '桂林市', '观塘区', '甘孜藏族自治州', '果洛藏族自治州', '赣州市', '广元市', '甘南藏族自治州', '广安市', '贵港市', '广州市', '固原市']}, {'firstLetter': 'H', 'cityList': ['海北藏族自治州', '黄大仙区', '黑河市', '河池市', '衡阳市', '黄石市', '贺州市', '哈密市', '鹤壁市', '河源市', '怀化市', '湖州市', '菏泽市', '合肥市', '黄冈市', '红河哈尼族彝族自治州', '淮北市', '杭州市', '惠州市', '黄南藏族自治州', '花地玛堂区', '淮南市', '衡水市', '哈尔滨市', '海西蒙古族藏族自治州', '海东市', '邯郸市', '花王堂区', '汉中市', '呼和浩特市', '和田地区', '黄山市', '呼伦贝尔市', '海南藏族自治州', '葫芦岛市', '海口市', '淮安市', '鹤岗市']}, {'firstLetter': 'J', 'cityList': ['江门市', '吉安市', '鸡西市', '金华市', '荆州市', '焦作市', '晋中市', '酒泉市', '九龙城区', '金昌市', '九江市', '锦州市', '济宁市', '嘉模堂区', '嘉峪关市', '吉林市', '佳木斯市', '景德镇市', '济源市', '晋城市', '济南市', '荆门市', '揭阳市', '嘉兴市']}, {'firstLetter': 'K', 'cityList': ['克孜勒苏柯尔克孜自治州', '开封市', '昆玉市', '可克达拉市', '喀什地区', '葵青区', '克拉玛依市', '昆明市']}, {'firstLetter': 'L', 'cityList': ['临高县', '陇南市', '聊城市', '兰州市', '辽阳市', '六安市', '洛阳市', '廊坊市', '离岛区', '临夏回族自治州', '吕梁市', '林芝市', '凉山彝族自治州', '来宾市', '龙岩市', '丽江市', '连云港市', '陵水黎族自治县', '娄底市', '六盘水市', '临沧市', '丽水市', '柳州市', '漯河市', '拉萨市', '乐东黎族自治县', '乐山市', '临汾市', '泸州市', '辽源市', '临沂市', '路凼填海区']}, {'firstLetter': 'M', 'cityList': ['眉山市', '绵阳市', '牡丹江市', '马鞍山市', '梅州市', '茂名市']}, {'firstLetter': 'N', 'cityList': ['内江市', '宁德市', '南宁市', '怒江傈僳族自治州', '宁波市', '南昌市', '南阳市', '南平市', '南区', '那曲市', '南京市', '南充市', '南通市']}, {'firstLetter': 'P', 'cityList': ['普洱市', '莆田市', '萍乡市', '平凉市', '平顶山市', '濮阳市', '盘锦市', '攀枝花市']}, {'firstLetter': 'Q', 'cityList': ['潜江市', '秦皇岛市', '钦州市', '琼海市', '衢州市', '青岛市', '七台河市', '庆阳市', '曲靖市', '荃湾区', '黔南布依族苗族自治州', '琼中黎族苗族自治县', '黔东南苗族侗族自治州', '齐齐哈尔市', '黔西南布依族苗族自治州', '清远市', '泉州市']}, {'firstLetter': 'R', 'cityList': ['日喀则市', '日照市']}, {'firstLetter': 'S', 'cityList': ['遂宁市', '三明市', '朔州市', '山南市', '随州市', '沈阳市', '双河市', '汕尾市', '商洛市', '三沙市', '深水埗区', '宿州市', '石家庄市', '绥化市', '苏州市', '神农架林区', '宿迁市', '韶关市', '双鸭山市', '三门峡市', '深圳市', '四平市', '三亚市', '绍兴市', '十堰市', '邵阳市', '圣方济各堂区', '汕头市', '沙田区', '石嘴山市', '上海市', '松原市', '上饶市', '石河子市', '商丘市']}, {'firstLetter': 'T', 'cityList': ['吐鲁番市', '塔城地区', '泰安市', '天津市', '铁岭市', '通辽市', '通化市', '天门市', '泰州市', '唐山市', '太原市', '图木舒克市', '铜陵市', '天水市', '屯门区', '屯昌县', '台州市', '铜仁市', '铜川市', '铁门关市']}, {'firstLetter': 'W', 'cityList': ['吴忠市', '望德堂区', '湾仔区', '威海市', '乌兰察布市', '文昌市', '五指山市', '武汉市', '文山壮族苗族自治州', '潍坊市', '渭南市', '乌鲁木齐市', '五家渠市', '温州市', '梧州市', '无锡市', '乌海市', '武威市', '万宁市', '芜湖市']}, {'firstLetter': 'X', 'cityList': ['咸宁市', '湘西土家族苗族自治州', '襄阳市', '忻州市', '信阳市', '新乡市', '湘潭市', '许昌市', '孝感市', '咸阳市', '兴安盟', '西贡区', '徐州市', '厦门市', '邢台市', '西宁市', '新余市', '西安市', '锡林郭勒盟', '仙桃市', '西双版纳傣族自治州', '宣城市']}, {'firstLetter': 'Y', 'cityList': ['伊春市', '玉溪市', '延安市', '宜春市', '烟台市', '营口市', '阳江市', '延边朝鲜族自治州', '鹰潭市', '榆林市', '银川市', '伊犁哈萨克自治州', '油尖旺区', '阳泉市', '云浮市', '运城市', '扬州市', '元朗区', '盐城市', '玉林市', '岳阳市', '雅安市', '宜昌市', '益阳市', '永州市', '宜宾市', '玉树藏族自治州']}, {'firstLetter': 'Z', 'cityList': ['资阳市', '湛江市', '株洲市', '张家口市', '张掖市', '昭通市', '自贡市', '周口市', '中西区', '驻马店市', '张家界市', '遵义市', '郑州市', '珠海市', '肇庆市', '淄博市', '镇江市', '枣庄市', '中山市', '中卫市', '舟山市', '漳州市']}]}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_09_isEnableService</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.9')" >
+        通过</a>
+    <div id='div_pt1.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.9: 初始化数据
+开始test_09_isEnableService接口
+完整URL：http://shuitupaycallbackpre.callme.work/isEnableService
+期望数据：{"data":{"service":True},"error":0,"message":"在服务区域内！","node":1,"success":True,"total":0}
+当前token为：s5e0fa5945d1cb081
+开始post请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'error': 0, 'success': True, 'data': {'service': False}, 'message': '请选择上车点', 'node': '1', 'total': 0}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_10_findRecommendLine</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.10')" >
+        通过</a>
+    <div id='div_pt1.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.10: 初始化数据
+开始test_10_findRecommendLine接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/trip/findRecommendLine
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575615056569,"dataMap":{},"data":[]}
+{"sid":null,"code":0,"message":null,"success":true,"ts":1575616919607,"dataMap":{},"data":{}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971231606, 'dataMap': {}, 'data': {'carTypes': '4, 3', 'lineId': 1100, 'state': 1, 'pickType': 2, 'startPoint': {'id': 7572, 'name': '渝北区康美街道大路村', 'longitude': 106.49044, 'latitude': 29.630219}, 'startPoints': [{'latitude': 29.630219, 'longitude': 106.49044}, {'latitude': 29.62246, 'longitude': 106.47181}, {'latitude': 29.607162, 'longitude': 106.48572}, {'latitude': 29.606937, 'longitude': 106.49859}, {'latitude': 29.619177, 'longitude': 106.5052}, {'latitude': 29.629099, 'longitude': 106.50091}], 'endPoint': {'id': 7573, 'name': '渝中区大溪沟街道巴蜀路巴蜀花园', 'longitude': 106.560005, 'latitude': 29.561508}, 'endPoints': [{'latitude': 29.561508, 'longitude': 106.560005}, {'latitude': 29.559753, 'longitude': 106.58704}, {'latitude': 29.55128, 'longitude': 106.572624}], 'bothCircle': True}}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_11_listLineSameTime</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.11')" >
+        通过</a>
+    <div id='div_pt1.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.11: 初始化数据
+开始test_11_listLineSameTime接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/trip/listLineSameTime
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575616919702,"dataMap":{},"data":{"timesDto":[],"isSameTime":false}}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971231779, 'dataMap': {}, 'data': {'timesDto': [], 'isSameTime': False}}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_12_contractslist</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.12')" >
+        通过</a>
+    <div id='div_pt1.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.12: 初始化数据
+开始test_12_contractslist接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/membership/contracts/list
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575621496894,"dataMap":{},"data":[]}
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971231909, 'dataMap': {}, 'data': [{'id': None, 'membershipId': None, 'commonPhone': '15703034351', 'membershipName': '本人', 'isDelete': None}, {'id': 286, 'membershipId': None, 'commonPhone': '17783586717', 'membershipName': '', 'isDelete': None}, {'id': 281, 'membershipId': None, 'commonPhone': '17783586885', 'membershipName': '本机号码', 'isDelete': None}, {'id': 280, 'membershipId': None, 'commonPhone': '18886529383', 'membershipName': '解放碑', 'isDelete': None}, {'id': 257, 'membershipId': None, 'commonPhone': '19996921173', 'membershipName': '测试罗', 'isDelete': None}, {'id': 256, 'membershipId': None, 'commonPhone': '19996918875', 'membershipName': '新加', 'isDelete': None}, {'id': 255, 'membershipId': None, 'commonPhone': '18788658848', 'membershipName': '测试军', 'isDelete': None}, {'id': 219, 'membershipId': None, 'commonPhone': '18996919981', 'membershipName': '莫邪', 'isDelete': None}, {'id': 99, 'membershipId': None, 'commonPhone': '15866664437', 'membershipName': '莫男', 'isDelete': None}]}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.13' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_13_couponfind</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.13')" >
+        通过</a>
+    <div id='div_pt1.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.13: 初始化数据
+开始test_13_couponfind接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/pk/coupon/find
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575622918907,"dataMap":{},"data":[]}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971232057, 'dataMap': {}, 'data': [{'endTime': '2019-12-31', 'name': '通折max', 'value': '6.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2019-12-31', 'startTime': '2018-11-14 14:28', 'orderTypeName': '通用券', 'memo': '测试', 'couponDetailId': 709770, 'limitItem': None, 'limitMileage': None, 'limitAmount': '10.00', 'limitNumber': None}, {'endTime': '2019-12-31', 'name': '通折max', 'value': '6.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2019-12-31', 'startTime': '2018-11-14 14:28', 'orderTypeName': '通用券', 'memo': '测试', 'couponDetailId': 709774, 'limitItem': None, 'limitMileage': None, 'limitAmount': '10.00', 'limitNumber': None}, {'endTime': '2019-12-31', 'name': '百分之一', 'value': '0.01', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2019-12-31', 'startTime': '2019-1-2 17:12', 'orderTypeName': '通用券', 'memo': '测试支付专用', 'couponDetailId': 711769, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2019-12-31', 'name': '通折max', 'value': '6.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2019-12-31', 'startTime': '2018-11-14 14:28', 'orderTypeName': '通用券', 'memo': '测试', 'couponDetailId': 709771, 'limitItem': None, 'limitMileage': None, 'limitAmount': '10.00', 'limitNumber': None}, {'endTime': '2019-12-31', 'name': '通折max', 'value': '6.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2019-12-31', 'startTime': '2018-11-14 14:28', 'orderTypeName': '通用券', 'memo': '测试', 'couponDetailId': 709776, 'limitItem': None, 'limitMileage': None, 'limitAmount': '10.00', 'limitNumber': None}, {'endTime': '2019-12-31', 'name': '通折max', 'value': '6.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2019-12-31', 'startTime': '2018-11-14 14:28', 'orderTypeName': '通用券', 'memo': '测试', 'couponDetailId': 709772, 'limitItem': None, 'limitMileage': None, 'limitAmount': '10.00', 'limitNumber': None}, {'endTime': '2019-12-31', 'name': '百分之一', 'value': '0.01', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2019-12-31', 'startTime': '2019-1-2 17:12', 'orderTypeName': '通用券', 'memo': '测试支付专用', 'couponDetailId': 711733, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2019-12-31', 'name': '通折max', 'value': '6.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2019-12-31', 'startTime': '2018-11-14 14:28', 'orderTypeName': '通用券', 'memo': '测试', 'couponDetailId': 709769, 'limitItem': None, 'limitMileage': None, 'limitAmount': '10.00', 'limitNumber': None}, {'endTime': '2019-12-31', 'name': '通折max', 'value': '6.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2019-12-31', 'startTime': '2018-11-14 14:28', 'orderTypeName': '通用券', 'memo': '测试', 'couponDetailId': 709773, 'limitItem': None, 'limitMileage': None, 'limitAmount': '10.00', 'limitNumber': None}, {'endTime': '2019-12-31', 'name': '百分之一', 'value': '0.01', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2019-12-31', 'startTime': '2019-1-2 17:12', 'orderTypeName': '通用券', 'memo': '测试支付专用', 'couponDetailId': 711754, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2020-1-16', 'name': '快车折扣（预约单）', 'value': '2.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '2', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2020-1-16', 'startTime': '2019-1-16 10:21', 'orderTypeName': ' 快车券', 'memo': '', 'couponDetailId': 713342, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2020-1-16', 'name': '快车折扣（预约单）', 'value': '2.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '2', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2020-1-16', 'startTime': '2019-1-16 10:21', 'orderTypeName': ' 快车券', 'memo': '', 'couponDetailId': 713343, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713821, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713825, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713830, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713835, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713841, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713817, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713822, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713826, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713832, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713836, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713842, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713818, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713819, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713823, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713827, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713833, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713838, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713820, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713824, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713828, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713834, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713840, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-10-1', 'name': '0.1折', 'value': '0.1', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-10-1', 'startTime': '2019-9-1 10:51', 'orderTypeName': '通用券', 'memo': '', 'couponDetailId': 713813, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714244, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714248, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714252, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714228, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714232, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714236, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714240, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714241, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714245, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714249, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714253, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714229, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714233, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714237, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714242, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714246, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714250, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714254, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714226, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714230, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714234, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714238, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714243, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714247, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714251, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714255, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714227, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714231, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714235, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}, {'endTime': '2021-12-1', 'name': '0折测试体验专用券', 'value': '0.0', 'line': '仅限主城区使用', 'area': '主城区', 'couponType': '2', 'isUse': False, 'orderType': '3', 'isOutDate': False, 'description': '仅限主城区使用', 'endUserTime': '2021-12-1', 'startTime': '2018-11-9 16:05', 'orderTypeName': '通用券', 'memo': '接口测试脚本专用！！！', 'couponDetailId': 714239, 'limitItem': None, 'limitMileage': None, 'limitAmount': None, 'limitNumber': None}]}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.14' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_14_calcEstimatePrice</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.14')" >
+        通过</a>
+    <div id='div_pt1.14' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.14').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.14: 初始化数据
+开始test_14_calcEstimatePrice接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/trip/calcEstimatePrice
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575616919714,"dataMap":{},"data":{}
+当前token为：s5e0fa5945d1cb081
+开始post请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971232387, 'dataMap': {}, 'data': {'actFeeMin': 0.0, 'actualFeeP': 0.0, 'coupon': None, 'isDynamicDiscount': None, 'dynamicDiscountName': None, 'noContainDiscountName': None, 'actualDiscountFee': 1.0, 'couponId': 0, 'description': '', 'detailId': 713720, 'distance': 16350, 'priceLabel': '整车价', 'supFee': 84.48, 'tollFee': 0.0, 'unitFee': 1.0, 'originalPrice': 12.0, 'actualFeeMini': 0.01, 'actualPayFee': 0.01, 'details': [{'id': None, 'fee': 30.48, 'feeP': None, 'feeType': None, 'feeTypeP': None, 'description': '10-30公里费用(6.35)公里', 'descriptionP': None, 'optName': None}, {'id': None, 'fee': 30.0, 'feeP': None, 'feeType': None, 'feeTypeP': None, 'description': '5-10公里费用(5.0)公里', 'descriptionP': None, 'optName': None}, {'id': None, 'fee': 30.0, 'feeP': None, 'feeType': None, 'feeTypeP': None, 'description': '起步费(5公里内)', 'descriptionP': None, 'optName': None}], 'actualFee': 6.0, 'couponFee': 1.0, 'couponFeeTotal': 1.0, 'totalFee': 90.48}}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.15' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_15_createH5APPOrder</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.15')" >
+        通过</a>
+    <div id='div_pt1.15' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.15').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.15: 初始化数据
+开始test_15_createH5APPOrder接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/trip/createH5APPOrder
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575621862056,"dataMap":{},"data":{"id":6542531,"fee":1,"preFee":1,"discount":0,"coupon":null}}
+当前token为：s5e0fa5945d1cb081
+开始post请求
+状态码为：200
+请求成功
+响应正确
+当前订单Id为：orderId= 6542647
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971232656, 'dataMap': {}, 'data': {'id': 6542647, 'fee': 100, 'preFee': 1, 'discount': 100, 'coupon': {'couponDetailId': 713720, 'couponType': '2', 'discount': 10, 'value': 0.0}}}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.16' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_16_calculatePCCoupon</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.16')" >
+        通过</a>
+    <div id='div_pt1.16' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.16').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.16: 初始化数据
+开始test_16_calculatePCCoupon接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/trip/calculatePCCoupon
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575623502198,"dataMap":{},"data":{"fee":100,"preFee":60,"discount":40,"coupon":{"value":6.0,"couponType":"2","couponDetailId":709772}}}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971236175, 'dataMap': {}, 'data': {'fee': 100, 'preFee': 1, 'discount': 100, 'coupon': {'value': 0.0, 'couponType': '2', 'couponDetailId': 713721}}}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.17' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_17_createPayment</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.17')" >
+        通过</a>
+    <div id='div_pt1.17' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.17').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.17: 初始化数据
+开始test_17_createPayment接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/trade/createPayment
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575623973877,"dataMap":{},"data":{}}
+当前token为：s5e0fa5945d1cb081
+开始post请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971237487, 'dataMap': {}, 'data': {'message': '处理中', 'prepayInfo': 'alipay_sdk=alipay-sdk-java-dynamicVersionNo&amp;app_id=2017101009224720&amp;biz_content=%7B%22body%22%3A%22%E5%91%BC%E6%88%91%E8%AE%A2%E5%8D%95%22%2C%22out_trade_no%22%3A%22o19121017473565410505%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22subject%22%3A%22%E5%91%BC%E6%88%91%E8%AE%A2%E5%8D%95%22%2C%22timeout_express%22%3A%225m%22%2C%22total_amount%22%3A%220.01%22%7D&amp;charset=UTF-8&amp;format=json&amp;method=alipay.trade.app.pay&amp;notify_url=http%3A%2F%2Fpaytest.callme.work%3A8021%2Fgateway%2Fnotify%2Fapp%2Fali&amp;sign=LiwKWTXkrR1Nqzh0WYRBlUNEVR5%2B2kTIIJaKgVqNO8Cm8JuVPxZxxHPY8cN98dyJIPppreab5maZe0jEnmnzzQ45tyjc4sdc22yqcoB6m44W%2F17whVNoEzLmPRFrXtM9%2F6HvFOwBZJluSr%2F0bqlfBhEKvqYAwPv%2FoEPAG9KtoYHmD6zqNTwDbsTLO4TtiFEC3QfqseK6yAoh%2BJha%2FHGeltgdWzAXqMX1xylSTON%2BwfICr8ftGrVwIjcl1C2%2FUdkN%2FZ1mULMnRRSPFA6DtwCzTYT6mne4%2B8XVFDfXHju7ZWM8Nav7MgVOSGAd%2FG%2BJDSOXbZBJgdQrUH6hQuvF7SBpFA%3D%3D&amp;sign_type=RSA2&amp;timestamp=2019-12-10+17%3A47%3A36&amp;version=1.0', 'tradeNo': '19121017471612300000', 'merchOrderNo': '000000000000000000000000031272', 'reqWSCommon': None}}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.18' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_18_listDriversByMembershipID</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.18')" >
+        通过</a>
+    <div id='div_pt1.18' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.18').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.18: 初始化数据
+开始test_18_listDriversByMembershipID接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/membership/listDriversByMembershipID
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575623973877,"dataMap":{},"data":{}}
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971237948, 'dataMap': {}, 'data': [{'driverId': 104753, 'carNo': '渝A9976', 'color': '白色', 'carDescription': '帕萨特', 'safeDate': 148, 'level': 5.0, 'carType': 4, 'realName': '项霞', 'icon': '2017/10/1508378066104upload_ad5ab91c_bf78_43f3_bea0_7c9b4ea90c4c_00000441.tmp', 'iconURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2017/10/1508378066104upload_ad5ab91c_bf78_43f3_bea0_7c9b4ea90c4c_00000441.tmp&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE3LzEwLzE1MDgzNzgwNjYxMDR1cGxvYWRfYWQ1YWI5MWNfYmY3OF80M2YzX2JlYTBfN2M5YjRlYTkwYzRjXzAwMDAwNDQxLnRtcFwifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDM3NzI1LCJpYXQiOjE1NzU5NzEyMzc3MjV9.fWDK9rhR-skXnTbjERmslHGD49D_SSO8s7MFNyTK0pY'}, {'driverId': 253795, 'carNo': '渝B38976', 'color': '白色', 'carDescription': '小车', 'safeDate': 174, 'level': 4.0, 'carType': 10, 'realName': '王小源', 'icon': '2018/07/1530771758033upload_56a01253_328d_4aec_bbf3_36aba883f304_00000052.tmp', 'iconURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2018/07/1530771758033upload_56a01253_328d_4aec_bbf3_36aba883f304_00000052.tmp&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE4LzA3LzE1MzA3NzE3NTgwMzN1cGxvYWRfNTZhMDEyNTNfMzI4ZF80YWVjX2JiZjNfMzZhYmE4ODNmMzA0XzAwMDAwMDUyLnRtcFwifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDM3NzY3LCJpYXQiOjE1NzU5NzEyMzc3Njd9.XiRbGG0-1QNHnw2s6MbGIoXTz_mALrKyj7oDYUn941A'}, {'driverId': 253798, 'carNo': '渝B123456', 'color': '白色', 'carDescription': '恩佐', 'safeDate': 232, 'level': 4.0, 'carType': 4, 'realName': '邸楠', 'icon': '2018/11/1542267338736upload_874219a3_5e90_4cf2_a175_580f083d71fc_00000005.tmp', 'iconURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2018/11/1542267338736upload_874219a3_5e90_4cf2_a175_580f083d71fc_00000005.tmp&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE4LzExLzE1NDIyNjczMzg3MzZ1cGxvYWRfODc0MjE5YTNfNWU5MF80Y2YyX2ExNzVfNTgwZjA4M2Q3MWZjXzAwMDAwMDA1LnRtcFwifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDM3NzkyLCJpYXQiOjE1NzU5NzEyMzc3OTJ9.uAm002uK7Bd0NC_uCxzHMdhJTT_X3R3ITYUO8wFfC5c'}, {'driverId': 253802, 'carNo': '渝A522013', 'color': '白色', 'carDescription': 'C1', 'safeDate': 357, 'level': 4.0, 'carType': 3, 'realName': '南宫诗人', 'icon': None, 'iconURL': ''}, {'driverId': 253776, 'carNo': '渝A99999', 'color': '白色', 'carDescription': '途昂', 'safeDate': 15, 'level': 5.0, 'carType': 4, 'realName': '张师傅', 'icon': 'pridev/2019/11/1008_157369493719521849.jpg', 'iconURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=pridev/2019/11/1008_157369493719521849.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCJwcmlkZXYvMjAxOS8xMS8xMDA4XzE1NzM2OTQ5MzcxOTUyMTg0OS5qcGdcIn0iLCJpc3MiOiJqZXNpciIsImV4cCI6MTU3NTk3MzAzNzgzNSwiaWF0IjoxNTc1OTcxMjM3ODM1fQ.bO6WtsWeUt94sNtZvMSssImlehMcuQrBCIIyauNYZ8s'}, {'driverId': 253796, 'carNo': '豫JNU580', 'color': '白色', 'carDescription': 'suv', 'safeDate': 18, 'level': 4.0, 'carType': 4, 'realName': '蔡宗现', 'icon': 'pridev/2019/09/1008_156940332755371334.jpg', 'iconURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=pridev/2019/09/1008_156940332755371334.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCJwcmlkZXYvMjAxOS8wOS8xMDA4XzE1Njk0MDMzMjc1NTM3MTMzNC5qcGdcIn0iLCJpc3MiOiJqZXNpciIsImV4cCI6MTU3NTk3MzAzNzg1OCwiaWF0IjoxNTc1OTcxMjM3ODU4fQ.znJeRVamj51ppIFpzIVwdRRInGzAkYXvXqqtAbxAS7Y'}, {'driverId': 2342279, 'carNo': '赣W14568', 'color': '红色', 'carDescription': '七坐', 'safeDate': 12, 'level': 5.0, 'carType': 3, 'realName': '袁朝芳', 'icon': 'pridev/2019/12/1008_157545023656455688.jpg', 'iconURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=pridev/2019/12/1008_157545023656455688.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCJwcmlkZXYvMjAxOS8xMi8xMDA4XzE1NzU0NTAyMzY1NjQ1NTY4OC5qcGdcIn0iLCJpc3MiOiJqZXNpciIsImV4cCI6MTU3NTk3MzAzNzg4NywiaWF0IjoxNTc1OTcxMjM3ODg3fQ.s1aygFCjlA2Zj9SyMrOEOBVDZOsFcwKjApd2tX1ftuo'}, {'driverId': 2342364, 'carNo': '津A12345', 'color': '黑色', 'carDescription': '车系', 'safeDate': 54, 'level': 5.0, 'carType': 4, 'realName': '司机2008', 'icon': None, 'iconURL': ''}, {'driverId': 253774, 'carNo': '渝A58159', 'color': '白色', 'carDescription': '帝豪', 'safeDate': 11, 'level': 5.0, 'carType': 4, 'realName': '王承印', 'icon': 'pridev/2019/09/1008_156939228387187540.jpg', 'iconURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=pridev/2019/09/1008_156939228387187540.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCJwcmlkZXYvMjAxOS8wOS8xMDA4XzE1NjkzOTIyODM4NzE4NzU0MC5qcGdcIn0iLCJpc3MiOiJqZXNpciIsImV4cCI6MTU3NTk3MzAzNzkyNywiaWF0IjoxNTc1OTcxMjM3OTI3fQ.QXXLl8KkUYQu4_D27wBIX6mwIrsjV-BrnSyA5KphQT0'}]}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.19' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_19_cancelCollectionDrivers</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.19')" >
+        通过</a>
+    <div id='div_pt1.19' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.19').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.19: 初始化数据
+开始test_19_cancelCollectionDrivers接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/membership/cancelCollectionDrivers
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575623973877,"dataMap":{},"data":{}}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应不正确
+返回数据： {'sid': None, 'code': 9, 'message': 'driverId:司机ID不能为空', 'success': False, 'ts': 1575971238020, 'dataMap': {}, 'data': None}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.20' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_20_collectionDrivers</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.20')" >
+        通过</a>
+    <div id='div_pt1.20' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.20').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.20: 初始化数据
+开始test_20_collectionDrivers接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/membership/collectionDrivers
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575857549476,"dataMap":{},"data":null}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应不正确
+返回数据： {'sid': None, 'code': 1, 'message': '已经收藏该司机', 'success': False, 'ts': 1575971238134, 'dataMap': {}, 'data': None}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.21' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_21_isCollection</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.21')" >
+        通过</a>
+    <div id='div_pt1.21' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.21').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.21: 初始化数据
+开始test_21_isCollection接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/membership/isCollection
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575858574003,"dataMap":{},"data":{"isCollection":true}}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971238252, 'dataMap': {}, 'data': {'isCollection': True}}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.22' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_22_getTripList</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.22')" >
+        通过</a>
+    <div id='div_pt1.22' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.22').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.22: 初始化数据
+开始test_22_getTripList接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/membership/getTripList
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575857549476,"dataMap":{},"data":null}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971238424, 'dataMap': {}, 'currentPage': 1, 'pages': 118, 'total': 2341, 'data': [{'orderId': 6542593, 'orderNo': 'PC1204239325547778048', 'type': 2, 'pcType': 0, 'carType': 3, 'pewNum': 7, 'orderStatus': 2, 'memberShipId': 21421, 'driverId': 0, 'status': 100, 'mark': None, 'startDate': '2019-12-10 11:20:03', 'appointDate': '2019-12-10 11:20:03', 'dateFrom': '2019-12-11 11:00:00', 'dateTo': '2019-12-11 12:00:00', 'beginLocation': '猪八戒众创空间', 'endLocation': '人民解放纪念碑', 'peopleNum': 1, 'orderSource': 0, 'fee': 100, 'orgFee': 0, 'sysCouponFee': 0, 'couponFee': 0, 'sysDiscount': 0, 'adultNumFee': 0, 'childNumberFee': 0, 'mileageFee': 0, 'mileage': 0.0, 'actFee': 80, 'actFeeP': 100, 'feeP': 1, 'createDate': '2019-12-10T03:20:04.000+0000', 'credit': 0, 'couponInfoList': []}, {'orderId': 6542592, 'orderNo': 'PC1204235265155321856', 'type': 2, 'pcType': 0, 'carType': 3, 'pewNum': 7, 'orderStatus': 2, 'memberShipId': 21421, 'driverId': 0, 'status': 100, 'mark': None, 'startDate': '2019-12-10 11:03:55', 'appointDate': '2019-12-10 11:03:55', 'dateFrom': '2019-12-11 11:00:00', 'dateTo': '2019-12-11 12:00:00', 'beginLocation': '猪八戒众创空间', 'endLocation': '人民解放纪念碑', 'peopleNum': 1, 'orderSource': 0, 'fee': 100, 'orgFee': 0, 'sysCouponFee': 0, 'couponFee': 0, 'sysDiscount': 0, 'adultNumFee': 0, 'childNumberFee': 0, 'mileageFee': 0, 'mileage': 0.0, 'actFee': 80, 'actFeeP': 100, 'feeP': 1, 'createDate': '2019-12-10T03:03:56.000+0000', 'credit': 0, 'couponInfoList': []}, {'orderId': 6542591, 'orderNo': 'PC1204231253236436992', 'type': 2, 'pcType': 0, 'carType': 3, 'pewNum': 7, 'orderStatus': 2, 'memberShipId': 21421, 'driverId': 0, 'status': 100, 'mark': None, 'startDate': '2019-12-10 10:47:59', 'appointDate': '2019-12-10 10:47:59', 'dateFrom': '2019-12-11 10:00:00', 'dateTo': '2019-12-11 11:00:00', 'beginLocation': '猪八戒众创空间', 'endLocation': '人民解放纪念碑', 'peopleNum': 1, 'orderSource': 0, 'fee': 100, 'orgFee': 0, 'sysCouponFee': 0, 'couponFee': 0, 'sysDiscount': 0, 'adultNumFee': 0, 'childNumberFee': 0, 'mileageFee': 0, 'mileage': 0.0, 'actFee': 80, 'actFeeP': 100, 'feeP': 1, 'createDate': '2019-12-10T02:47:59.000+0000', 'credit': 0, 'couponInfoList': []}, {'orderId': 6542590, 'orderNo': 'PC1204229563586236416', 'type': 2, 'pcType': 0, 'carType': 3, 'pewNum': 7, 'orderStatus': 2, 'memberShipId': 21421, 'driverId': 0, 'status': 100, 'mark': None, 'startDate': '2019-12-10 10:41:16', 'appointDate': '2019-12-10 10:41:16', 'dateFrom': '2019-12-11 10:00:00', 'dateTo': '2019-12-11 11:00:00', 'beginLocation': '猪八戒众创空间', 'endLocation': '人民解放纪念碑', 'peopleNum': 1, 'orderSource': 0, 'fee': 100, 'orgFee': 0, 'sysCouponFee': 0, 'couponFee': 0, 'sysDiscount': 0, 'adultNumFee': 0, 'childNumberFee': 0, 'mileageFee': 0, 'mileage': 0.0, 'actFee': 80, 'actFeeP': 100, 'feeP': 1, 'createDate': '2019-12-10T02:41:16.000+0000', 'credit': 0, 'couponInfoList': []}, {'orderId': 6542589, 'orderNo': 'PC1204226147438874624', 'type': 2, 'pcType': 0, 'carType': 3, 'pewNum': 7, 'orderStatus': 2, 'memberShipId': 21421, 'driverId': 0, 'status': 100, 'mark': None, 'startDate': '2019-12-10 10:27:41', 'appointDate': '2019-12-10 10:27:41', 'dateFrom': '2019-12-11 10:00:00', 'dateTo': '2019-12-11 11:00:00', 'beginLocation': '猪八戒众创空间', 'endLocation': '人民解放纪念碑', 'peopleNum': 1, 'orderSource': 0, 'fee': 100, 'orgFee': 0, 'sysCouponFee': 0, 'couponFee': 0, 'sysDiscount': 0, 'adultNumFee': 0, 'childNumberFee': 0, 'mileageFee': 0, 'mileage': 0.0, 'actFee': 80, 'actFeeP': 100, 'feeP': 1, 'createDate': '2019-12-10T02:27:42.000+0000', 'credit': 0, 'couponInfoList': []}, {'orderId': 6542588, 'orderNo': 'PC1204224020566036480', 'type': 2, 'pcType': 0, 'carType': 3, 'pewNum': 7, 'orderStatus': 2, 'memberShipId': 21421, 'driverId': 0, 'status': 100, 'mark': None, 'startDate': '2019-12-10 10:19:14', 'appointDate': '2019-12-10 10:19:14', 'dateFrom': '2019-12-11 10:00:00', 'dateTo': '2019-12-11 11:00:00', 'beginLocation': '猪八戒众创空间', 'endLocation': '人民解放纪念碑', 'peopleNum': 1, 'orderSource': 0, 'fee': 100, 'orgFee': 0, 'sysCouponFee': 0, 'couponFee': 0, 'sysDiscount': 0, 'adultNumFee': 0, 'childNumberFee': 0, 'mileageFee': 0, 'mileage': 0.0, 'actFee': 80, 'actFeeP': 100, 'feeP': 1, 'createDate': '2019-12-10T02:19:15.000+0000', 'credit': 0, 'couponInfoList': []}, {'orderId': 6542587, 'orderNo': 'PC1204223560136314880', 'type': 2, 'pcType': 0, 'carType': 3, 'pewNum': 7, 'orderStatus': 2, 'memberShipId': 21421, 'driverId': 0, 'status': 100, 'mark': None, 'startDate': '2019-12-10 10:17:25', 'appointDate': '2019-12-10 10:17:25', 'dateFrom': '2019-12-11 10:00:00', 'dateTo': '2019-12-11 11:00:00', 'beginLocation': '猪八戒众创空间', 'endLocation': '人民解放纪念碑', 'peopleNum': 1, 'orderSource': 0, 'fee': 100, 'orgFee': 0, 'sysCouponFee': 0, 'couponFee': 0, 'sysDiscount': 0, 'adultNumFee': 0, 'childNumberFee': 0, 'mileageFee': 0, 'mileage': 0.0, 'actFee': 80, 'actFeeP': 100, 'feeP': 1, 'createDate': '2019-12-10T02:17:25.000+0000', 'credit': 0, 'couponInfoList': []}, {'orderId': 6542586, 'orderNo': 'PC1204219887268188160', 'type': 2, 'pcType': 0, 'carType': 3, 'pewNum': 7, 'orderStatus': 2, 'memberShipId': 21421, 'driverId': 0, 'status': 100, 'mark': None, 'startDate': '2019-12-10 10:02:49', 'appointDate': '2019-12-10 10:02:49', 'dateFrom': '2019-12-11 10:00:00', 'dateTo': '2019-12-11 11:00:00', 'beginLocation': '猪八戒众创空间', 'endLocation': '人民解放纪念碑', 'peopleNum': 1, 'orderSource': 0, 'fee': 100, 'orgFee': 0, 'sysCouponFee': 0, 'couponFee': 0, 'sysDiscount': 0, 'adultNumFee': 0, 'childNumberFee': 0, 'mileageFee': 0, 'mileage': 0.0, 'actFee': 80, 'actFeeP': 100, 'feeP': 1, 'createDate': '2019-12-10T02:02:49.000+0000', 'credit': 0, 'couponInfoList': []}, {'orderId': 6542585, 'orderNo': 'PC1204219571562926080', 'type': 2, 'pcType': 0, 'carType': 3, 'pewNum': 7, 'orderStatus': 2, 'memberShipId': 21421, 'driverId': 0, 'status': 100, 'mark': None, 'startDate': '2019-12-10 10:01:34', 'appointDate': '2019-12-10 10:01:34', 'dateFrom': '2019-12-11 10:00:00', 'dateTo': '2019-12-11 11:00:00', 'beginLocation': '猪八戒众创空间', 'endLocation': '人民解放纪念碑', 'peopleNum': 1, 'orderSource': 0, 'fee': 100, 'orgFee': 0, 'sysCouponFee': 0, 'couponFee': 0, 'sysDiscount': 0, 'adultNumFee': 0, 'childNumberFee': 0, 'mileageFee': 0, 'mileage': 0.0, 'actFee': 80, 'actFeeP': 100, 'feeP': 1, 'createDate': '2019-12-10T02:01:34.000+0000', 'credit': 0, 'couponInfoList': []}, {'orderId': 6542584, 'orderNo': 'PC1204218848150343680', 'type': 2, 'pcType': 0, 'carType': 3, 'pewNum': 7, 'orderStatus': 2, 'memberShipId': 21421, 'driverId': 0, 'status': 100, 'mark': None, 'startDate': '2019-12-10 09:58:41', 'appointDate': '2019-12-10 09:58:41', 'dateFrom': '2019-12-11 09:00:00', 'dateTo': '2019-12-11 10:00:00', 'beginLocation': '猪八戒众创空间', 'endLocation': '人民解放纪念碑', 'peopleNum': 1, 'orderSource': 0, 'fee': 100, 'orgFee': 0, 'sysCouponFee': 0, 'couponFee': 0, 'sysDiscount': 0, 'adultNumFee': 0, 'childNumberFee': 0, 'mileageFee': 0, 'mileage': 0.0, 'actFee': 80, 'actFeeP': 100, 'feeP': 1, 'createDate': '2019-12-10T01:58:42.000+0000', 'credit': 0, 'couponInfoList': []}, {'orderId': 6542578, 'orderNo': 'PC1204213695028449280', 'type': 2, 'pcType': 0, 'carType': 3, 'pewNum': 7, 'orderStatus': 2, 'memberShipId': 21421, 'driverId': 0, 'status': 100, 'mark': None, 'startDate': '2019-12-10 09:38:13', 'appointDate': '2019-12-10 09:38:13', 'dateFrom': '2019-12-11 09:00:00', 'dateTo': '2019-12-11 10:00:00', 'beginLocation': '猪八戒众创空间', 'endLocation': '人民解放纪念碑', 'peopleNum': 1, 'orderSource': 0, 'fee': 100, 'orgFee': 0, 'sysCouponFee': 0, 'couponFee': 0, 'sysDiscount': 0, 'adultNumFee': 0, 'childNumberFee': 0, 'mileageFee': 0, 'mileage': 0.0, 'actFee': 80, 'actFeeP': 100, 'feeP': 1, 'createDate': '2019-12-10T01:38:13.000+0000', 'credit': 0, 'couponInfoList': []}, {'orderId': 6542577, 'orderNo': 'PC1204213585167044608', 'type': 2, 'pcType': 0, 'carType': 3, 'pewNum': 7, 'orderStatus': 2, 'memberShipId': 21421, 'driverId': 0, 'status': 100, 'mark': None, 'startDate': '2019-12-10 09:37:46', 'appointDate': '2019-12-10 09:37:46', 'dateFrom': '2019-12-11 09:00:00', 'dateTo': '2019-12-11 10:00:00', 'beginLocation': '猪八戒众创空间', 'endLocation': '人民解放纪念碑', 'peopleNum': 1, 'orderSource': 0, 'fee': 100, 'orgFee': 0, 'sysCouponFee': 0, 'couponFee': 0, 'sysDiscount': 0, 'adultNumFee': 0, 'childNumberFee': 0, 'mileageFee': 0, 'mileage': 0.0, 'actFee': 80, 'actFeeP': 100, 'feeP': 1, 'createDate': '2019-12-10T01:37:47.000+0000', 'credit': 0, 'couponInfoList': []}, {'orderId': 6542575, 'orderNo': 'PC1203978702338859008', 'type': 2, 'pcType': 0, 'carType': 3, 'pewNum': 7, 'orderStatus': 2, 'memberShipId': 21421, 'driverId': 0, 'status': 100, 'mark': None, 'startDate': '2019-12-09 18:04:26', 'appointDate': '2019-12-09 18:04:26', 'dateFrom': '2019-12-10 18:00:00', 'dateTo': '2019-12-10 19:00:00', 'beginLocation': '猪八戒众创空间', 'endLocation': '人民解放纪念碑', 'peopleNum': 1, 'orderSource': 0, 'fee': 100, 'orgFee': 0, 'sysCouponFee': 0, 'couponFee': 0, 'sysDiscount': 0, 'adultNumFee': 0, 'childNumberFee': 0, 'mileageFee': 0, 'mileage': 0.0, 'actFee': 80, 'actFeeP': 100, 'feeP': 1, 'createDate': '2019-12-09T10:04:26.000+0000', 'credit': 0, 'couponInfoList': []}, {'orderId': 6542574, 'orderNo': 'PC1203977989680472064', 'type': 2, 'pcType': 0, 'carType': 3, 'pewNum': 7, 'orderStatus': 2, 'memberShipId': 21421, 'driverId': 0, 'status': 100, 'mark': None, 'startDate': '2019-12-09 18:01:36', 'appointDate': '2019-12-09 18:01:36', 'dateFrom': '2019-12-10 18:00:00', 'dateTo': '2019-12-10 19:00:00', 'beginLocation': '猪八戒众创空间', 'endLocation': '人民解放纪念碑', 'peopleNum': 1, 'orderSource': 0, 'fee': 100, 'orgFee': 0, 'sysCouponFee': 0, 'couponFee': 0, 'sysDiscount': 0, 'adultNumFee': 0, 'childNumberFee': 0, 'mileageFee': 0, 'mileage': 0.0, 'actFee': 80, 'actFeeP': 100, 'feeP': 1, 'createDate': '2019-12-09T10:01:37.000+0000', 'credit': 0, 'couponInfoList': []}, {'orderId': 6542573, 'orderNo': 'PC1203977734310273024', 'type': 2, 'pcType': 0, 'carType': 3, 'pewNum': 7, 'orderStatus': 2, 'memberShipId': 21421, 'driverId': 0, 'status': 100, 'mark': None, 'startDate': '2019-12-09 18:00:35', 'appointDate': '2019-12-09 18:00:35', 'dateFrom': '2019-12-10 18:00:00', 'dateTo': '2019-12-10 19:00:00', 'beginLocation': '猪八戒众创空间', 'endLocation': '人民解放纪念碑', 'peopleNum': 1, 'orderSource': 0, 'fee': 100, 'orgFee': 0, 'sysCouponFee': 0, 'couponFee': 0, 'sysDiscount': 0, 'adultNumFee': 0, 'childNumberFee': 0, 'mileageFee': 0, 'mileage': 0.0, 'actFee': 80, 'actFeeP': 100, 'feeP': 1, 'createDate': '2019-12-09T10:00:36.000+0000', 'credit': 0, 'couponInfoList': []}, {'orderId': 6542570, 'orderNo': 'PC1203977443108134912', 'type': 2, 'pcType': 0, 'carType': 3, 'pewNum': 7, 'orderStatus': 2, 'memberShipId': 21421, 'driverId': 0, 'status': 100, 'mark': None, 'startDate': '2019-12-09 17:59:26', 'appointDate': '2019-12-09 17:59:26', 'dateFrom': '2019-12-10 17:00:00', 'dateTo': '2019-12-10 18:00:00', 'beginLocation': '猪八戒众创空间', 'endLocation': '人民解放纪念碑', 'peopleNum': 1, 'orderSource': 0, 'fee': 100, 'orgFee': 0, 'sysCouponFee': 0, 'couponFee': 0, 'sysDiscount': 0, 'adultNumFee': 0, 'childNumberFee': 0, 'mileageFee': 0, 'mileage': 0.0, 'actFee': 80, 'actFeeP': 100, 'feeP': 1, 'createDate': '2019-12-09T09:59:26.000+0000', 'credit': 0, 'couponInfoList': []}, {'orderId': 6542566, 'orderNo': 'PC1203976474413318144', 'type': 2, 'pcType': 0, 'carType': 3, 'pewNum': 7, 'orderStatus': 2, 'memberShipId': 21421, 'driverId': 0, 'status': 100, 'mark': None, 'startDate': '2019-12-09 17:55:35', 'appointDate': '2019-12-09 17:55:35', 'dateFrom': '2019-12-10 17:00:00', 'dateTo': '2019-12-10 18:00:00', 'beginLocation': '猪八戒众创空间', 'endLocation': '人民解放纪念碑', 'peopleNum': 1, 'orderSource': 0, 'fee': 100, 'orgFee': 0, 'sysCouponFee': 0, 'couponFee': 0, 'sysDiscount': 0, 'adultNumFee': 0, 'childNumberFee': 0, 'mileageFee': 0, 'mileage': 0.0, 'actFee': 80, 'actFeeP': 100, 'feeP': 1, 'createDate': '2019-12-09T09:55:35.000+0000', 'credit': 0, 'couponInfoList': []}, {'orderId': 6542565, 'orderNo': 'PC1203975880671838208', 'type': 2, 'pcType': 0, 'carType': 3, 'pewNum': 7, 'orderStatus': 2, 'memberShipId': 21421, 'driverId': 0, 'status': 100, 'mark': None, 'startDate': '2019-12-09 17:53:13', 'appointDate': '2019-12-09 17:53:13', 'dateFrom': '2019-12-10 17:00:00', 'dateTo': '2019-12-10 18:00:00', 'beginLocation': '猪八戒众创空间', 'endLocation': '人民解放纪念碑', 'peopleNum': 1, 'orderSource': 0, 'fee': 100, 'orgFee': 0, 'sysCouponFee': 0, 'couponFee': 0, 'sysDiscount': 0, 'adultNumFee': 0, 'childNumberFee': 0, 'mileageFee': 0, 'mileage': 0.0, 'actFee': 80, 'actFeeP': 100, 'feeP': 1, 'createDate': '2019-12-09T09:53:14.000+0000', 'credit': 0, 'couponInfoList': []}, {'orderId': 6542564, 'orderNo': 'PC1203975088141320192', 'type': 2, 'pcType': 0, 'carType': 3, 'pewNum': 7, 'orderStatus': 2, 'memberShipId': 21421, 'driverId': 0, 'status': 100, 'mark': None, 'startDate': '2019-12-09 17:50:04', 'appointDate': '2019-12-09 17:50:04', 'dateFrom': '2019-12-10 17:00:00', 'dateTo': '2019-12-10 18:00:00', 'beginLocation': '猪八戒众创空间', 'endLocation': '人民解放纪念碑', 'peopleNum': 1, 'orderSource': 0, 'fee': 100, 'orgFee': 0, 'sysCouponFee': 0, 'couponFee': 0, 'sysDiscount': 0, 'adultNumFee': 0, 'childNumberFee': 0, 'mileageFee': 0, 'mileage': 0.0, 'actFee': 80, 'actFeeP': 100, 'feeP': 1, 'createDate': '2019-12-09T09:50:07.000+0000', 'credit': 0, 'couponInfoList': []}, {'orderId': 6542563, 'orderNo': 'PC1203974690562445312', 'type': 2, 'pcType': 0, 'carType': 3, 'pewNum': 7, 'orderStatus': 2, 'memberShipId': 21421, 'driverId': 0, 'status': 100, 'mark': None, 'startDate': '2019-12-09 17:48:29', 'appointDate': '2019-12-09 17:48:29', 'dateFrom': '2019-12-10 17:00:00', 'dateTo': '2019-12-10 18:00:00', 'beginLocation': '猪八戒众创空间', 'endLocation': '人民解放纪念碑', 'peopleNum': 1, 'orderSource': 0, 'fee': 100, 'orgFee': 0, 'sysCouponFee': 0, 'couponFee': 0, 'sysDiscount': 0, 'adultNumFee': 0, 'childNumberFee': 0, 'mileageFee': 0, 'mileage': 0.0, 'actFee': 80, 'actFeeP': 100, 'feeP': 1, 'createDate': '2019-12-09T09:48:30.000+0000', 'credit': 0, 'couponInfoList': []}]}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.23' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_23_getPasOrderInfo</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.23')" >
+        通过</a>
+    <div id='div_pt1.23' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.23').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.23: 初始化数据
+开始test_23_getPasOrderInfo接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/trip/getPasOrderInfo
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575857549476,"dataMap":{},"data":null}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971238711, 'dataMap': {}, 'data': {'orderInfo': {'orderId': 6542509, 'orderNo': 'PC1202491880148250624', 'state': 8, 'orderArea': '重庆市-重庆市-渝北区', 'endOrderArea': '重庆市-重庆市-渝中区', 'type': 2, 'orderSource': 0, 'pcType': 0, 'appoint': True, 'distance': 15550, 'arrivalDate': None, 'fee': 1, 'actFee': 1, 'actFeeP': 1, 'actFeeMin': None, 'couponDetailId': 713344, 'couponId': 0, 'couponFeeTotal': 1, 'startDate': '2019-12-05 15:40', 'endDate': '2019-12-05 15:40', 'carType': 3, 'membershipId': 21421, 'driverId': 2342279, 'startLocation': '猪八戒网总部大厦', 'endLocation': '人民解放纪念碑', 'startLongitude': 106.491325, 'startLatitude': 29.621861, 'endLongitude': 106.577034, 'endLatitude': 29.557204, 'departmentId': 129, 'departmentName': None, 'lineId': 1100, 'lineName': '互联网产业园-解放碑', 'appointDate': '2019-12-05 15:36', 'dateFrom': '2019-12-05 15:00', 'dateTo': '2019-12-05 16:00', 'startLimitDate': '15:10', 'endLimitDate': '15:50', 'carId': 368802, 'carPoolNum': 1, 'childNumber': 0, 'invoiceId': 1021, 'other': False, 'otherName': '本人', 'otherPhone': '15703034351', 'cancelReason': None, 'cancelDate': None, 'spendTime': 0, 'intTip': 0, 'strIsCash': 0, 'callBean': 0, 'flightNum': '', 'flightNumIndex': 0, 'fromAirport': False, 'toExportTime': None, 'toAirport': False, 'confirmTime': '2019-12-05 15:38', 'payDate': '2019-12-05 15:36', 'cancelUserType': None, 'cancelOrderState': None, 'startPoint': None, 'endPoint': None, 'orderCity': '023', 'externalOrderId': '', 'pickType': 2, 'masterId': 6542511, 'subId': 6542510, 'sameTime': False, 'credit': None, 'unitPrice': 100, 'seat1Price': None, 'seat2Price': None, 'seat3Price': None, 'seat4Price': None, 'seat5Price': None, 'seat6Price': None, 'scheduleStartDate': None, 'scheduleEndDate': None, 'membershipPhone': '15703034351', 'ruleDesc': '账单金额=（乘客应付-代收过路费）* 0.8 +代收过路费', 'createDate': '2019-12-05 15:36', 'messages': '[{"m":"需要发票","t":1}]', 'createDateMills': '2019-12-05T07:36:20.000+0000', 'upperCarPoint': None, 'lowerCarPoint': None, 'orderDetails': [{'id': 7295682, 'orderID': 6542509, 'feeType': 0, 'feeTypeP': 0, 'fee': 0, 'feeP': 1, 'description': '车费', 'descriptionP': '车费', 'attribute1': None, 'attribute2': None, 'attribute3': None, 'optName': None}, {'id': 7295683, 'orderID': 6542509, 'feeType': 5, 'feeTypeP': 5, 'fee': 0, 'feeP': 0, 'description': '代收过路,过车', 'descriptionP': '代收过路,过车', 'attribute1': None, 'attribute2': None, 'attribute3': None, 'optName': None}], 'eDistance': None, 'sDistance': 15550, 'rLocation': '壹小碗', 'rLongitude': 106.491465, 'rLatitude': 29.621997, 'pLocation': None, 'pLongitude': None, 'pLatitude': None}, 'refund': None, 'comment': {'desc': None, 'level': '5', 'date': '2019-12-05 15:47:43'}}}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.24' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_24_getDriverInfo</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.24')" >
+        通过</a>
+    <div id='div_pt1.24' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.24').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.24: 初始化数据
+开始test_24_getDriverInfo接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/driver/getDriverInfo
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575857549476,"dataMap":{},"data":null}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971238813, 'dataMap': {}, 'data': {'driverId': 253774, 'driverPhone': '15703034351', 'driverName': '王师傅', 'driverPhoneNo': '15703034351', 'carNo': '渝A58159', 'driverServeSubScore': '100.0', 'drivingAge': 5, 'safeDrivingDayNum': 11, 'driverHeadImg': 'pridev/2019/09/1008_156939228387187540.jpg', 'driverHeadURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=pridev/2019/09/1008_156939228387187540.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCJwcmlkZXYvMjAxOS8wOS8xMDA4XzE1NjkzOTIyODM4NzE4NzU0MC5qcGdcIn0iLCJpc3MiOiJqZXNpciIsImV4cCI6MTU3NTk3MzAzODgzMywiaWF0IjoxNTc1OTcxMjM4ODMzfQ.AqP0HAVc6glCKRSijkMvxMwACx61UuM-DagqlpUeORI', 'carDesc': '帝豪', 'carType': 4, 'star': '5', 'carColor': '白色'}}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.25' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_25_orderListInvoiceByMemberId</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.25')" >
+        通过</a>
+    <div id='div_pt1.25' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.25').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.25: 初始化数据
+开始test_25_orderListInvoiceByMemberId接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/pk/orderListInvoiceByMemberId
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575857549476,"dataMap":{},"data":null}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971239036, 'dataMap': {}, 'currentPage': 1, 'pages': 52, 'total': 768, 'data': [{'businessTypeName': '专车', 'orderType': None, 'orderTypeName': None, 'createDate': '2019-11-14 15:21:55', 'actFee': 0.01, 'actFeeF': 1, 'orderId': 6542094, 'memberShipID': None, 'orderBusinessType': None, 'orderBusinessTypeName': None, 'sLocation': '重庆江北国际机场', 'eLocation': '龙头寺(地铁站)'}, {'businessTypeName': '专车', 'orderType': None, 'orderTypeName': None, 'createDate': '2019-11-14 15:17:13', 'actFee': 0.01, 'actFeeF': 1, 'orderId': 6542092, 'memberShipID': None, 'orderBusinessType': None, 'orderBusinessTypeName': None, 'sLocation': '竹林公园', 'eLocation': '重庆江北国际机场'}, {'businessTypeName': '专车', 'orderType': None, 'orderTypeName': None, 'createDate': '2019-11-14 15:09:45', 'actFee': 0.01, 'actFeeF': 1, 'orderId': 6542091, 'memberShipID': None, 'orderBusinessType': None, 'orderBusinessTypeName': None, 'sLocation': '竹林公园', 'eLocation': '康庄(地铁站)'}, {'businessTypeName': '专车', 'orderType': None, 'orderTypeName': None, 'createDate': '2019-11-14 15:04:56', 'actFee': 0.01, 'actFeeF': 1, 'orderId': 6542090, 'memberShipID': None, 'orderBusinessType': None, 'orderBusinessTypeName': None, 'sLocation': '中国联合网络通信有限公司重庆分公司办公大楼', 'eLocation': '康庄(地铁站)'}, {'businessTypeName': '专车', 'orderType': None, 'orderTypeName': None, 'createDate': '2019-11-13 17:44:15', 'actFee': 0.01, 'actFeeF': 1, 'orderId': 6542028, 'memberShipID': None, 'orderBusinessType': None, 'orderBusinessTypeName': None, 'sLocation': '猪八戒网总部大厦', 'eLocation': '康庄(地铁站)'}, {'businessTypeName': '快车', 'orderType': None, 'orderTypeName': None, 'createDate': '2019-11-13 16:04:41', 'actFee': 0.01, 'actFeeF': 1, 'orderId': 6541978, 'memberShipID': None, 'orderBusinessType': None, 'orderBusinessTypeName': None, 'sLocation': '重庆市渝北区康美街道重庆春之翼信息科技有限公司', 'eLocation': '重庆市渝中区解放碑街道步行街解放碑步行街'}, {'businessTypeName': '快车', 'orderType': None, 'orderTypeName': None, 'createDate': '2019-11-13 15:50:03', 'actFee': 0.01, 'actFeeF': 1, 'orderId': 6541973, 'memberShipID': None, 'orderBusinessType': None, 'orderBusinessTypeName': None, 'sLocation': '渝北区康美街道壹小碗', 'eLocation': '渝中区朝天门街道打铜街解放碑步行街'}, {'businessTypeName': '快车', 'orderType': None, 'orderTypeName': None, 'createDate': '2019-11-13 15:40:21', 'actFee': 0.01, 'actFeeF': 1, 'orderId': 6541964, 'memberShipID': None, 'orderBusinessType': None, 'orderBusinessTypeName': None, 'sLocation': '渝北区康美街道壹小碗', 'eLocation': '渝中区朝天门街道打铜街解放碑步行街'}, {'businessTypeName': '快车', 'orderType': None, 'orderTypeName': None, 'createDate': '2019-11-13 15:17:51', 'actFee': 0.01, 'actFeeF': 1, 'orderId': 6541958, 'memberShipID': None, 'orderBusinessType': None, 'orderBusinessTypeName': None, 'sLocation': '重庆市渝北区康美街道重庆春之翼信息科技有限公司猪八戒网总部大厦', 'eLocation': '重庆市渝中区解放碑街道青年路14国泰广场'}, {'businessTypeName': '专车', 'orderType': None, 'orderTypeName': None, 'createDate': '2019-11-13 15:01:10', 'actFee': 0.01, 'actFeeF': 1, 'orderId': 6541955, 'memberShipID': None, 'orderBusinessType': None, 'orderBusinessTypeName': None, 'sLocation': '竹林公园', 'eLocation': '宇豪小区'}, {'businessTypeName': '专车', 'orderType': None, 'orderTypeName': None, 'createDate': '2019-11-13 14:53:24', 'actFee': 0.01, 'actFeeF': 1, 'orderId': 6541952, 'memberShipID': None, 'orderBusinessType': None, 'orderBusinessTypeName': None, 'sLocation': '重庆江北国际机场', 'eLocation': '龙头寺(地铁站)'}, {'businessTypeName': '专车', 'orderType': None, 'orderTypeName': None, 'createDate': '2019-11-13 14:45:36', 'actFee': 0.01, 'actFeeF': 1, 'orderId': 6541949, 'memberShipID': None, 'orderBusinessType': None, 'orderBusinessTypeName': None, 'sLocation': '大竹林(地铁站)', 'eLocation': '重庆江北国际机场'}, {'businessTypeName': '专车', 'orderType': None, 'orderTypeName': None, 'createDate': '2019-11-13 14:34:35', 'actFee': 0.01, 'actFeeF': 1, 'orderId': 6541947, 'memberShipID': None, 'orderBusinessType': None, 'orderBusinessTypeName': None, 'sLocation': '猪八戒网总部大厦', 'eLocation': '人民解放纪念碑'}, {'businessTypeName': '快车', 'orderType': None, 'orderTypeName': None, 'createDate': '2019-10-31 17:58:43', 'actFee': 0.01, 'actFeeF': 1, 'orderId': 6541804, 'memberShipID': None, 'orderBusinessType': None, 'orderBusinessTypeName': None, 'sLocation': '壹小碗', 'eLocation': '人民解放纪念碑'}, {'businessTypeName': '专车', 'orderType': None, 'orderTypeName': None, 'createDate': '2019-10-24 21:54:12', 'actFee': 0.01, 'actFeeF': 1, 'orderId': 6541767, 'memberShipID': None, 'orderBusinessType': None, 'orderBusinessTypeName': None, 'sLocation': '壹小碗', 'eLocation': '花卉园(地铁站)'}]}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.26' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_26_listInvoiceByMemberId</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.26')" >
+        通过</a>
+    <div id='div_pt1.26' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.26').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.26: 初始化数据
+开始test_26_listInvoiceByMemberId接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/pk/listInvoiceByMemberId
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575857549476,"dataMap":{},"data":null}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971239140, 'dataMap': {}, 'currentPage': 1, 'pages': 7, 'total': 91, 'data': [{'id': 1024, 'invoiceMembershipid': 21421, 'invoiceName': '王承印', 'invoiceNsrsbh': '500382199112029079', 'invoiceContactInformation': '', 'invoiceYhzh': '', 'invoiceEmail': '510961914@qq.com', 'invoiceMoney': 0.01, 'invoiceStatus': 1, 'invoiceCreatedatetime': '2019-12-10 11:20:07'}, {'id': 1023, 'invoiceMembershipid': 21421, 'invoiceName': '王承印', 'invoiceNsrsbh': '500382199112029079', 'invoiceContactInformation': '', 'invoiceYhzh': '', 'invoiceEmail': '510961914@qq.com', 'invoiceMoney': 0.01, 'invoiceStatus': 1, 'invoiceCreatedatetime': '2019-12-10 11:03:59'}, {'id': 1022, 'invoiceMembershipid': 21421, 'invoiceName': '王承印', 'invoiceNsrsbh': '500382199112029079', 'invoiceContactInformation': '', 'invoiceYhzh': '', 'invoiceEmail': '510961914@qq.com', 'invoiceMoney': 0.01, 'invoiceStatus': 1, 'invoiceCreatedatetime': '2019-12-10 10:48:02'}, {'id': 1021, 'invoiceMembershipid': 21421, 'invoiceName': '王承印', 'invoiceNsrsbh': '500382199112029079', 'invoiceContactInformation': '', 'invoiceYhzh': '', 'invoiceEmail': '510961914@qq.com', 'invoiceMoney': 0.01, 'invoiceStatus': 1, 'invoiceCreatedatetime': '2019-12-10 10:41:19'}, {'id': 1019, 'invoiceMembershipid': 21421, 'invoiceName': '王承印', 'invoiceNsrsbh': '500382199112029079', 'invoiceContactInformation': '', 'invoiceYhzh': '', 'invoiceEmail': '510961914@qq.com', 'invoiceMoney': 0.01, 'invoiceStatus': 1, 'invoiceCreatedatetime': '2019-12-09 10:48:28'}, {'id': 1016, 'invoiceMembershipid': 21421, 'invoiceName': '王承印', 'invoiceNsrsbh': '500382199112029079', 'invoiceContactInformation': '', 'invoiceYhzh': '', 'invoiceEmail': '510961914@qq.com', 'invoiceMoney': 0.01, 'invoiceStatus': 0, 'invoiceCreatedatetime': '2019-11-19 14:28:17'}, {'id': 1009, 'invoiceMembershipid': 21421, 'invoiceName': '王承印', 'invoiceNsrsbh': '500382199112029079', 'invoiceContactInformation': '', 'invoiceYhzh': '', 'invoiceEmail': '510961914@qq.com', 'invoiceMoney': 6.0, 'invoiceStatus': 0, 'invoiceCreatedatetime': '2019-11-15 10:29:51'}, {'id': 1008, 'invoiceMembershipid': 21421, 'invoiceName': '王承印', 'invoiceNsrsbh': '500382199112029079', 'invoiceContactInformation': '', 'invoiceYhzh': '', 'invoiceEmail': '510961914@qq.com', 'invoiceMoney': 0.01, 'invoiceStatus': 0, 'invoiceCreatedatetime': '2019-11-15 10:22:39'}, {'id': 1000, 'invoiceMembershipid': 21421, 'invoiceName': '王承印', 'invoiceNsrsbh': '500382199112029079', 'invoiceContactInformation': '重庆市人民政府,15703034351', 'invoiceYhzh': '中国建设银行,6217003760028865848', 'invoiceEmail': '510961914@qq.com', 'invoiceMoney': 0.02, 'invoiceStatus': 1, 'invoiceCreatedatetime': '2019-11-13 10:51:18'}, {'id': 980, 'invoiceMembershipid': 21421, 'invoiceName': '王承印', 'invoiceNsrsbh': '500382199112029079', 'invoiceContactInformation': '重庆市渝北区,02342608865', 'invoiceYhzh': '中国建设银行,6217003760028865848', 'invoiceEmail': '510961914@qq.com', 'invoiceMoney': 0.01, 'invoiceStatus': 0, 'invoiceCreatedatetime': '2019-10-31 15:36:17'}, {'id': 979, 'invoiceMembershipid': 21421, 'invoiceName': '王承印', 'invoiceNsrsbh': '500382199112029079', 'invoiceContactInformation': '重庆市渝北区,02342608865', 'invoiceYhzh': '中国建设银行,6217003760028865848', 'invoiceEmail': '510961914@qq.com', 'invoiceMoney': 0.01, 'invoiceStatus': 0, 'invoiceCreatedatetime': '2019-10-31 15:34:15'}, {'id': 978, 'invoiceMembershipid': 21421, 'invoiceName': '王承印', 'invoiceNsrsbh': '500382199112029079', 'invoiceContactInformation': '重庆市渝北区,02342608865', 'invoiceYhzh': '中国建设银行,6217003760028865848', 'invoiceEmail': '510961914@qq.com', 'invoiceMoney': 0.01, 'invoiceStatus': 0, 'invoiceCreatedatetime': '2019-10-31 14:31:32'}, {'id': 977, 'invoiceMembershipid': 21421, 'invoiceName': '王承印', 'invoiceNsrsbh': '500382199112029079', 'invoiceContactInformation': '重庆市渝北区,02342608865', 'invoiceYhzh': '中国建设银行,6217003760028865848', 'invoiceEmail': '510961914@qq.com', 'invoiceMoney': 0.01, 'invoiceStatus': 0, 'invoiceCreatedatetime': '2019-10-31 14:28:23'}, {'id': 972, 'invoiceMembershipid': 21421, 'invoiceName': '王承印', 'invoiceNsrsbh': '500382199112029079', 'invoiceContactInformation': '重庆市渝北区,02342608865', 'invoiceYhzh': '中国建设银行,6217003760028865848', 'invoiceEmail': '510961914@qq.com', 'invoiceMoney': 0.01, 'invoiceStatus': 0, 'invoiceCreatedatetime': '2019-10-08 12:27:30'}, {'id': 971, 'invoiceMembershipid': 21421, 'invoiceName': '王承印', 'invoiceNsrsbh': '500382199112029079', 'invoiceContactInformation': '重庆市渝北区,02342608865', 'invoiceYhzh': '中国建设银行,6217003760028865848', 'invoiceEmail': '510961914@qq.com', 'invoiceMoney': 0.01, 'invoiceStatus': 0, 'invoiceCreatedatetime': '2019-09-29 10:15:28'}]}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.27' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_27_getInvoiceDetailInfo</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.27')" >
+        通过</a>
+    <div id='div_pt1.27' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.27').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.27: 初始化数据
+开始test_27_getInvoiceDetailInfo接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/pk/getInvoiceDetailInfo
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575857549476,"dataMap":{},"data":null}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971239287, 'dataMap': {}, 'data': {'id': 1016, 'invoiceName': '王承印', 'invoiceCategory': '2', 'invoiceNsrsbh': '500382199112029079', 'invoiceStatus': 0, 'invoiceContent': '客运服务费', 'invoiceBz': None, 'invoiceContactInformation': '', 'invoiceYhzh': '', 'invoiceEmail': '510961914@qq.com', 'invoiceMoney': 0.01, 'orderCount': 1}}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.28' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_28_getInvoiceOrderInfo</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.28')" >
+        通过</a>
+    <div id='div_pt1.28' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.28').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.28: 初始化数据
+开始test_28_getInvoiceOrderInfo接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/trip/getInvoiceOrderInfo
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575857549476,"dataMap":{},"data":null}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应不正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': False, 'ts': 1575971239400, 'dataMap': {}, 'currentPage': 1, 'pages': 1, 'total': 1, 'data': [{'businessTypeName': None, 'createDate': '2019-11-19 14:28:18', 'actFee': 0.01, 'actFeeF': 1, 'orderId': '6542300', 'memberShipID': '21421', 'eLocation': '邹容路44解放碑步行街', 'sLocation': '中国联合网络通信有限公司重庆分公司办公大楼'}]}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.29' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_29_invoice</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.29')" >
+        通过</a>
+    <div id='div_pt1.29' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.29').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.29: 初始化数据
+开始test_29_invoice接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/pk/orderListInvoiceByMemberId
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575857549476,"dataMap":{},"data":null}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应正确
+完整URL：http://shuitupaycallbackpre.callme.work/api/pk/invoice
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575857549476,"dataMap":{},"data":null}
+当前token为：s5e0fa5945d1cb081
+开始post请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971239620, 'dataMap': {}, 'data': None}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.30' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_30_unReadfind</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.30')" >
+        通过</a>
+    <div id='div_pt1.30' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.30').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.30: 初始化数据
+开始test_30_unReadfind接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/pk/message/unRead/find
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575874978561,"dataMap":{},"data":{"sysCount":7,"actCount":12}}
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971239936, 'dataMap': {}, 'data': {'sysCount': 6, 'actCount': 12}}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.31' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_31_systemfind</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.31')" >
+        通过</a>
+    <div id='div_pt1.31' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.31').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.31: 初始化数据
+开始test_31_systemfind接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/pk/message/system/find
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575857549476,"dataMap":{},"data":null}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971240146, 'dataMap': {}, 'currentPage': 1, 'pages': 2, 'total': 23, 'data': [{'userMessageId': '7108_21421_0_1544499011843', 'isRead': True, 'coverPic': '2018/12/1f6161aa412241cea40d7c1907401fdc.PNG', 'coverPicURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2018/12/1f6161aa412241cea40d7c1907401fdc.PNG&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE4LzEyLzFmNjE2MWFhNDEyMjQxY2VhNDBkN2MxOTA3NDAxZmRjLlBOR1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDQwMTI2LCJpYXQiOjE1NzU5NzEyNDAxMjZ9.LxW32FodI7JCiEtglbNGy1Axb4DMDrjd5zf4Odi7RDI', 'title': '测试消息1211', 'description': '测试消息1211测试消息1211测试消息1211测试消息1211', 'h5Url': '', 'timeTip': '2018年12月11日', 'createTime': '2018-12-11T03:30:25.000+0000', 'messageType': 1, 'content': '测试消息1211测试消息1211测试消息1211测试消息1211测试消息1211测试消息1211测试消息1211测试消息1211测试消息1211测试消息1211测试消息1211测试消息1211测试消息1211测试消息1211'}, {'userMessageId': '3819_21421_0_1534166029340', 'isRead': True, 'coverPic': '2018/08/1507be58990649269184179063adec35.jpg', 'coverPicURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2018/08/1507be58990649269184179063adec35.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE4LzA4LzE1MDdiZTU4OTkwNjQ5MjY5MTg0MTc5MDYzYWRlYzM1LmpwZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDQwMTI3LCJpYXQiOjE1NzU5NzEyNDAxMjd9.-Cy3Rw94P97qPpFoOQ7-6Swa_H5Mslz3K8r4q6J-jCg', 'title': '张馨予结婚后首现身，礼服得体秀钻戒，获赞军嫂就该这样', 'description': '张馨予结婚后首现身，礼服得体秀钻戒，获赞军嫂就该这样', 'h5Url': '', 'timeTip': '2018年8月13日', 'createTime': '2018-08-13T13:13:49.000+0000', 'messageType': 1, 'content': '8月11日，张馨予现身某品牌活动。活动中，张馨予一身粉色系披肩斗篷式长款礼服，显得非常得体。与以往处处秀性感不同的是，张馨予这一次上上下下都围得严严实实，非常庄重、得体。毕竟是结了婚的女人，而且是嫁给了军人，成为了军嫂，所以在形象上得更加的注意有分寸。而张馨予的这身打扮也赢得了不少的好评，不少网友点赞称张馨予既有小女人的妩媚，又有大女人的温婉。更有网友认为军嫂就该这个样。\r\n\r\n活动期间，张馨予不时露出甜美的笑容，刚刚结了婚的女人的喜悦心情和幸福甜美的味道，都溢于言表。\r\n\r\n而她一个抚发撩发的动作更在不经意间小秀了一把手上的钻戒，真真的女人味十足。\r\n\r\n张馨予出席某品牌活动，为该品宣传造势。'}, {'userMessageId': '3817_21421_0_1534156051317', 'isRead': True, 'coverPic': '', 'coverPicURL': None, 'title': 'test', 'description': 'test', 'h5Url': '', 'timeTip': '2018年8月13日', 'createTime': '2018-08-13T10:27:32.000+0000', 'messageType': 1, 'content': 'test'}, {'userMessageId': '3718_21421_0_1533872150086', 'isRead': True, 'coverPic': '2018/08/ea9fc09e58064bf983800c639d823469.jpg', 'coverPicURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2018/08/ea9fc09e58064bf983800c639d823469.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE4LzA4L2VhOWZjMDllNTgwNjRiZjk4MzgwMGM2MzlkODIzNDY5LmpwZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDQwMTI3LCJpYXQiOjE1NzU5NzEyNDAxMjd9.sALsjCAI5WZ1p9GELCQt26J-kS3e5m8i6cejNtI8Ke4', 'title': '公积金购房迎三大变化！这些人要哭，这些人最受益！', 'description': '最近，多个城市出台住房公积金新政，打击用住房公积金炒房的投机行为，异地购房、离婚购房、离职提取住房公积金的条件将更为严格！\r\n\r\n想要通过骗提套取住房公积金来炒房的人，恐怕要哭了。', 'h5Url': '', 'timeTip': '2018年8月10日', 'createTime': '2018-08-10T03:35:51.000+0000', 'messageType': 1, 'content': '资料图：北京通州房产业务员通宵排队办公积金贷款。图片来源：CFP视觉中国\r\n\r\n异地买房提取公积金或被拒\r\n\r\n近来，包括广东省、杭州市、天津市、内蒙古自治区等多地陆续收紧住房公积金提取政策。\r\n\r\n广东提出，不允许提取住房公积金用于炒房投机。\r\n\r\n对于异地购房尤其是非户籍地非缴存地购房、非配偶或非直系亲属共同购房等申请提取住房公积金的情况，各地可结合自身实际情况阶段性停止实施该类型提取政策。'}, {'userMessageId': '3690_21421_0_1533799714195', 'isRead': True, 'coverPic': '2018/08/21bb25bff17a411fab86c484c2cd1af0.jpg', 'coverPicURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2018/08/21bb25bff17a411fab86c484c2cd1af0.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE4LzA4LzIxYmIyNWJmZjE3YTQxMWZhYjg2YzQ4NGMyY2QxYWYwLmpwZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDQwMTI3LCJpYXQiOjE1NzU5NzEyNDAxMjd9.bQNSGdBjHTMS5jNbpCExFX9d3Z_cVLHhr3334AJ4rKE', 'title': '喇叭响起来，党员站出来喇叭响起来，党员站出来', 'description': '位于吕梁山南段的黎掌村曾是个富裕村。村子附近有铁矿、煤矿，村民靠挖矿、跑大车、做生意，日子过得很滋润。10多年前，小矿陆续被取缔，黎掌村闲了下来，村里各种“事儿”多了起来。\r\n\r\n70岁的村民焦银全回忆：“以前村里到处是噼里啪啦的麻将声。”1000余口人的村子，自动麻将桌近20台，“', 'h5Url': '', 'timeTip': '2018年8月9日', 'createTime': '2018-08-09T07:28:35.000+0000', 'messageType': 1, 'content': '黎掌村第一书记郭伟在村委会通过广播向村民宣传农业政策（7月17日摄，视频截图）。 新华社记者 徐伟 摄\r\n\r\n2015年8月的一天清晨，村民们忽然被嘹亮的歌曲《没有共产党就没有新中国》从睡梦中唤醒。群山之间，旋律激昂，久违的大喇叭又响了！\r\n\r\n原来，几天前“80后”郭伟被派到这个软弱涣散村当第一书记。他从库房里扒拉出布满灰尘的大喇叭，将它安在村口的老柳树旁。\r\n\r\n“喇叭响起来，是告诉村民，党支部在这儿；告诉党员，组织在这儿！”晒得一脸黝黑的郭伟说。\r\n\r\n党员站出来了。郭伟带头重新收拾了村“两委”大院，建成全镇最大的村级党员活动中心。“这就是咱党员的阵地啦！”郭伟擦把汗，笑着说，村干部每天到办公室轮流值班，“坚守阵地嘛！”2015年第一次开会时，全村29名党员只到了9人。现在，每天晚上9点，全村党员准时集中学习，一人不落。\r\n\r\n45岁的预备党员焦虎奎很感慨：“以前，村里卫生全靠钱来搞，不给钱，连自家门口都不扫。现在，每周一次义务劳动，党员群众齐上阵，不用一分钱，村子干干净净。”\r\n\r\n“黎掌好人”评选出来了。为了扭转村风民风，2017年、2018年黎掌村评选出了两届“黎掌好人”。“以前，小商贩编了个段子‘莫上黎掌坡，偷的比卖的多’。大家都觉得黎掌没好人。”郭伟不服气地说，“我们要挖掘好人好事，弘扬正气才能压倒邪气。”\r\n\r\n这样，一些默默无闻的老实人成名了。悉心照顾公婆的被评为“好儿媳”，路见不平的被评为“公道人”……当选的“黎掌好人”在全村人面前戴红花、领奖状、上电视。“人们看得起我了！”当选首届“黎掌好人”后，一辈子受冷落的残疾人席记锁激动地流下了眼泪。'}, {'userMessageId': '3689_21421_0_1533799332126', 'isRead': True, 'coverPic': '2018/08/bd1b06e456c2442f9fa593eba91898e7.jpg', 'coverPicURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2018/08/bd1b06e456c2442f9fa593eba91898e7.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE4LzA4L2JkMWIwNmU0NTZjMjQ0MmY5ZmE1OTNlYmE5MTg5OGU3LmpwZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDQwMTI4LCJpYXQiOjE1NzU5NzEyNDAxMjh9.ELgwAkCBShrQrUZ5kcPH3ytoDG4McQh0uqj-nl2A3uw', 'title': '加拿大欲化解外交争端 沙特外交大臣：没有调解余地', 'description': '加拿大欲化解外交争端 沙特外交大臣：没有调解余地加拿大欲化解外交争端 沙特外交大臣：没有调解余地', 'h5Url': '', 'timeTip': '2018年8月9日', 'createTime': '2018-08-09T07:22:12.000+0000', 'messageType': 1, 'content': '【环球网报道 记者 朱梦颖】沙特阿拉伯似乎铁了心要和加拿大“杠”下去。据德国《明镜》周刊8日报道，沙特阿拉伯外交大臣朱拜尔表示，沙特与加拿大之间的外交风波没有调解余地，正考虑对加采取进一步措施。而在此前以前，有美媒称，加拿大为缓和与沙特冲突，将向阿联酋和英国求助。\r\n\r\n“没有调节余地”，朱拜尔说，“加拿大犯下了严重错误，这个错误应该被纠正。渥太华知道应该如何去做以改正错误。”他还补充说，沙特正在考虑对加拿大采取进一步行动。\r\n\r\n在朱拜尔作出上述表态前一天，有消息人士向英国路透社表示，加拿大计划向阿拉伯联合酋长国和英国寻求帮助，以化解与沙特阿拉伯不断升级的争端。但美国明确表示不会卷入其中。'}, {'userMessageId': '3681_21421_0_1533796163712', 'isRead': True, 'coverPic': '2018/08/7db1b24c6cfb4f828feb63f978d4158e.jpg', 'coverPicURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2018/08/7db1b24c6cfb4f828feb63f978d4158e.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE4LzA4LzdkYjFiMjRjNmNmYjRmODI4ZmViNjNmOTc4ZDQxNThlLmpwZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDQwMTI4LCJpYXQiOjE1NzU5NzEyNDAxMjh9.1f8hufS7ZGxHr3UBbl1nJ2GyVIiRmdXHeyrJX8Zvq-k', 'title': '重温习近平的全民健身寄语重温习近平的全民健身寄语重温习近平的', 'description': '2018年7月5日，河北省沧县天狮中学足球队的学生参加暑假校园足球特色培训班训练。新华社记者牟宇摄2018年7月5日，河北省沧县天狮中学足球队的学生参加暑假校园足球特色培训班训练。新华社记者牟宇摄2018年7月5日，河北省沧县天狮中学足球队的学生参加暑假校园足球特色培训班训练。新', 'h5Url': '', 'timeTip': '2018年8月9日', 'createTime': '2018-08-09T06:29:24.000+0000', 'messageType': 1, 'content': '2018年6月18日，龙舟队员在浙江杭州西溪湿地举行的蒋村龙舟胜会上划龙舟。新华社记者黄宗治摄2018年6月18日，龙舟队员在浙江杭州西溪湿地举行的蒋村龙舟胜会上划龙舟。新华社记者黄宗治摄2018年6月18日，龙舟队员在浙江杭州西溪湿地举行的蒋村龙舟胜会上划龙舟。新华社记者黄宗治摄2018年6月18日，龙舟队员在浙江杭州西溪湿地举行的蒋村龙舟胜会上划龙舟。新华社记者黄宗治摄2018年6月18日，龙舟队员在浙江杭州西溪湿地举行的蒋村龙舟胜会上划龙舟。新华社记者黄宗治摄2018年6月18日，龙舟队员在浙江杭州西溪湿地举行的蒋村龙舟胜会上划龙舟。新华社记者黄宗治摄2018年6月18日，龙舟队员在浙江杭州西溪湿地举行的蒋村龙舟胜会上划龙舟。新华社记者黄宗治摄2018年6月18日，龙舟队员在浙江杭州西溪湿地举行的蒋村龙舟胜会上划龙舟。新华社记者黄宗治摄2018年6月18日，龙舟队员在浙江杭州西溪湿地举行的蒋村龙舟胜会上划龙舟。新华社记者黄宗治摄2018年6月18日，龙舟队员在浙江杭州西溪湿地举行的蒋村龙舟胜会上划龙舟。新华社记者黄宗治摄2018年6月18日，龙舟队员在浙江杭州西溪湿地举行的蒋村龙舟胜会上划龙舟。新华社记者黄宗治摄2018年6月18日，龙舟队员在浙江杭州西溪湿地举行的蒋村龙舟胜会上划龙舟。新华社记者黄宗治摄2018年6月18日，龙舟队员在浙江杭州西溪湿地举行的蒋村龙舟胜会上划龙舟。新华社记者黄宗治摄2018年6月18日，龙舟队员在浙江杭州西溪湿地举行的蒋村龙舟胜会上划龙舟。新华社记者黄宗治摄2018年6月18日，龙舟队员在浙江杭州西溪湿地举行的蒋村龙舟胜会上划龙舟。新华社记者黄宗治摄'}, {'userMessageId': '3680_21421_0_1533794757823', 'isRead': True, 'coverPic': '', 'coverPicURL': None, 'title': '针对新用户，完善实名认证奖励！', 'description': '各位用户您好！凡是完善实名认证的信息，将奖励20通用优惠券。请知晓~~', 'h5Url': '', 'timeTip': '2018年8月9日', 'createTime': '2018-08-09T06:05:59.000+0000', 'messageType': 1, 'content': '各位用户您好！凡是完善实名认证的信息，将奖励20通用优惠券。请知晓~'}, {'userMessageId': '3660_21421_0_1533717443700', 'isRead': True, 'coverPic': '2018/08/ae863d74a2474571a7f409b7395fa51a.png', 'coverPicURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2018/08/ae863d74a2474571a7f409b7395fa51a.png&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE4LzA4L2FlODYzZDc0YTI0NzQ1NzFhN2Y0MDliNzM5NWZhNTFhLnBuZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDQwMTI4LCJpYXQiOjE1NzU5NzEyNDAxMjh9.VjtnA-NfDxS1kMR0de3_xKEqt7_w92j2D-2nlGNNVkg', 'title': '重庆大渡口、沙坪坝、合川等地事业单位公招233人重庆大渡口、', 'description': '重庆大渡口、沙坪坝、合川等地事业单位公招233人重庆大渡口、沙坪坝、合川等地事业单位公招233人重庆大渡口、沙坪坝、合川等地事业单位公招233人重庆大渡口、沙坪坝、合川等地事业单位公招233人重庆大渡口、沙坪坝、合川等地事业单位公招233人', 'h5Url': '', 'timeTip': '2018年8月8日', 'createTime': '2018-08-08T08:37:25.000+0000', 'messageType': 1, 'content': '重庆大渡口、沙坪坝、合川等地事业单位公招233人重庆大渡口、沙坪坝、合川等地事业单位公招233人重庆大渡口、沙坪坝、合川等地事业单位公招233人重庆大渡口、沙坪坝、合川等地事业单位公招233人重庆大渡口、沙坪坝、合川等地事业单位公招233人重庆大渡口、沙坪坝、合川等地事业单位公招233人'}, {'userMessageId': '3651_21421_0_1533635445477', 'isRead': True, 'coverPic': '', 'coverPicURL': None, 'title': '公告测试', 'description': '11111111111111111111111', 'h5Url': '', 'timeTip': '2018年8月7日', 'createTime': '2018-08-07T09:50:46.000+0000', 'messageType': 1, 'content': '撒大声地舍不得你辅导班的发布的白癜风费大幅度发大幅度并不能大部分餐补呢撒大声地舍不得你辅导班的发布的白癜风费大幅度发大幅度并不能大部分餐补呢撒大声地舍不得你辅导班的发布的白癜风费大幅度发大幅度并不能大部分餐补呢v'}, {'userMessageId': '2348_21421_0_1532027010509', 'isRead': True, 'coverPic': '', 'coverPicURL': None, 'title': '金丹渡劫', 'description': '金丹渡劫', 'h5Url': '', 'timeTip': '2018年7月20日', 'createTime': '2018-07-19T19:03:31.000+0000', 'messageType': 1, 'content': '金丹渡劫'}, {'userMessageId': '2347_21421_0_1532026898859', 'isRead': True, 'coverPic': '', 'coverPicURL': None, 'title': '金丹渡劫', 'description': '金丹渡劫', 'h5Url': '', 'timeTip': '2018年7月20日', 'createTime': '2018-07-19T19:01:41.000+0000', 'messageType': 1, 'content': '金丹渡劫'}, {'userMessageId': '445_21421_0_1526976317914', 'isRead': True, 'coverPic': '2018/05/c262dbd893134705a2400007b9bcead7.jpg', 'coverPicURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2018/05/c262dbd893134705a2400007b9bcead7.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE4LzA1L2MyNjJkYmQ4OTMxMzQ3MDVhMjQwMDAwN2I5YmNlYWQ3LmpwZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDQwMTI4LCJpYXQiOjE1NzU5NzEyNDAxMjh9.uID56Q8XKIEgynqXc_MVKVG00KUYQ2ChfpGPnsSBh_Y', 'title': 'node2消息-乘客-定时', 'description': '*摘要*摘要*摘要*摘要*摘要*摘要*摘要*摘要*摘要*摘要', 'h5Url': '', 'timeTip': '2018年5月22日', 'createTime': '2018-05-22T08:05:19.000+0000', 'messageType': 1, 'content': '*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容'}, {'userMessageId': '445_21421_0_1526976307695', 'isRead': True, 'coverPic': '2018/05/c262dbd893134705a2400007b9bcead7.jpg', 'coverPicURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2018/05/c262dbd893134705a2400007b9bcead7.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE4LzA1L2MyNjJkYmQ4OTMxMzQ3MDVhMjQwMDAwN2I5YmNlYWQ3LmpwZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDQwMTI4LCJpYXQiOjE1NzU5NzEyNDAxMjh9.uID56Q8XKIEgynqXc_MVKVG00KUYQ2ChfpGPnsSBh_Y', 'title': 'node2消息-乘客-定时', 'description': '*摘要*摘要*摘要*摘要*摘要*摘要*摘要*摘要*摘要*摘要', 'h5Url': '', 'timeTip': '2018年5月22日', 'createTime': '2018-05-22T08:05:07.000+0000', 'messageType': 1, 'content': '*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容*消息内容'}, {'userMessageId': '370_21421_0_1525855885956', 'isRead': True, 'coverPic': '', 'coverPicURL': None, 'title': 'test推送', 'description': 'test推送', 'h5Url': '', 'timeTip': '2018年5月9日', 'createTime': '2018-05-09T08:51:26.000+0000', 'messageType': 1, 'content': 'test推送'}, {'userMessageId': '369_21421_0_1525855462925', 'isRead': True, 'coverPic': '', 'coverPicURL': None, 'title': '推送测试是是是', 'description': '少时诵诗书', 'h5Url': '', 'timeTip': '2018年5月9日', 'createTime': '2018-05-09T08:44:23.000+0000', 'messageType': 1, 'content': '少时诵诗书所'}, {'userMessageId': '368_21421_0_1525855363937', 'isRead': True, 'coverPic': '', 'coverPicURL': None, 'title': '推送测试111', 'description': '推送测试111', 'h5Url': '', 'timeTip': '2018年5月9日', 'createTime': '2018-05-09T08:42:43.000+0000', 'messageType': 1, 'content': '推送测试111'}, {'userMessageId': '367_21421_0_1525848903734', 'isRead': False, 'coverPic': '', 'coverPicURL': None, 'title': 'ddddd', 'description': 'dddddd', 'h5Url': '', 'timeTip': '2018年5月9日', 'createTime': '2018-05-09T06:55:03.000+0000', 'messageType': 1, 'content': 'dddddd'}, {'userMessageId': '366_21421_0_1525847288571', 'isRead': False, 'coverPic': '', 'coverPicURL': None, 'title': '221', 'description': '221', 'h5Url': '', 'timeTip': '2018年5月9日', 'createTime': '2018-05-09T06:28:08.000+0000', 'messageType': 1, 'content': '221'}, {'userMessageId': '364_21421_0_1525846805913', 'isRead': False, 'coverPic': '', 'coverPicURL': None, 'title': 'sss', 'description': 'sss', 'h5Url': '', 'timeTip': '2018年5月9日', 'createTime': '2018-05-09T06:20:06.000+0000', 'messageType': 1, 'content': 'ssss'}]}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.32' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_32_activityfind</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.32')" >
+        通过</a>
+    <div id='div_pt1.32' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.32').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.32: 初始化数据
+开始test_32_activityfind接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/pk/message/activity/find
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575857549476,"dataMap":{},"data":null}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971240281, 'dataMap': {}, 'currentPage': 1, 'pages': 2, 'total': 34, 'data': [{'userMessageId': '126_21421_0_1525845398045', 'isRead': True, 'coverPic': '2018/05/ff0b5bd401bc4516aa3be7a9c2770426.jpg', 'coverPicURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2018/05/ff0b5bd401bc4516aa3be7a9c2770426.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE4LzA1L2ZmMGI1YmQ0MDFiYzQ1MTZhYTNiZTdhOWMyNzcwNDI2LmpwZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDQwMjc0LCJpYXQiOjE1NzU5NzEyNDAyNzR9.ztncDUVANT-aF4pKv_YKZ6LIWKrNpavmBPXBpwk7lbY', 'title': '活动立即发布所有乘客', 'description': '活动立即发布所有乘客', 'h5Url': 'http://www.baidu.com/', 'activityBeginTime': '2018-04-30T16:00:00.000+0000', 'activityEndTime': '2018-04-30T16:00:00.000+0000', 'expire': True}, {'userMessageId': '132_21421_0_1525847282795', 'isRead': True, 'coverPic': '', 'coverPicURL': None, 'title': 'test', 'description': 'test', 'h5Url': '', 'activityBeginTime': '2018-05-16T16:00:00.000+0000', 'activityEndTime': '2018-05-16T16:00:00.000+0000', 'expire': True}, {'userMessageId': '132_21421_0_1525847290423', 'isRead': True, 'coverPic': '', 'coverPicURL': None, 'title': 'test', 'description': 'test', 'h5Url': '', 'activityBeginTime': '2018-05-16T16:00:00.000+0000', 'activityEndTime': '2018-05-16T16:00:00.000+0000', 'expire': True}, {'userMessageId': '134_21421_0_1525856464675', 'isRead': True, 'coverPic': '', 'coverPicURL': None, 'title': 'test推送1700', 'description': '啊啊啊啊啊啊', 'h5Url': '', 'activityBeginTime': '2018-05-07T16:00:00.000+0000', 'activityEndTime': '2018-05-07T16:00:00.000+0000', 'expire': True}, {'userMessageId': '135_21421_0_1525856603264', 'isRead': True, 'coverPic': '', 'coverPicURL': None, 'title': '11111', 'description': '111111', 'h5Url': '', 'activityBeginTime': '2018-05-06T16:00:00.000+0000', 'activityEndTime': '2018-05-06T16:00:00.000+0000', 'expire': True}, {'userMessageId': '136_21421_0_1525856674200', 'isRead': True, 'coverPic': '', 'coverPicURL': None, 'title': '12222222222222', 'description': '柔柔弱弱若若若若若若若若', 'h5Url': '', 'activityBeginTime': '2018-05-06T16:00:00.000+0000', 'activityEndTime': '2018-05-06T16:00:00.000+0000', 'expire': True}, {'userMessageId': '137_21421_0_1525857089580', 'isRead': True, 'coverPic': '', 'coverPicURL': None, 'title': '哈哈哈哈', 'description': '33333333333333', 'h5Url': '', 'activityBeginTime': '2018-04-29T16:00:00.000+0000', 'activityEndTime': '2018-04-29T16:00:00.000+0000', 'expire': True}, {'userMessageId': '138_21421_0_1526970856417', 'isRead': False, 'coverPic': '2018/05/8410fd2c513d484ba8da2f6ab0842231.jpg', 'coverPicURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2018/05/8410fd2c513d484ba8da2f6ab0842231.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE4LzA1Lzg0MTBmZDJjNTEzZDQ4NGJhOGRhMmY2YWIwODQyMjMxLmpwZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDQwMjc0LCJpYXQiOjE1NzU5NzEyNDAyNzR9.qT7NK3g_WObKlqSn-UZVDRx_xZqlzQXimejdruyFLgM', 'title': 'node2测试活动主流程', 'description': '*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述*描述', 'h5Url': 'http://node2.huwochuxing.com/index', 'activityBeginTime': '2018-05-22T06:34:07.000+0000', 'activityEndTime': '2018-05-22T06:34:07.000+0000', 'expire': True}, {'userMessageId': '139_21421_0_1526972105899', 'isRead': False, 'coverPic': '2018/05/e6351903169b46e6927f0e71c0534903.jpg', 'coverPicURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2018/05/e6351903169b46e6927f0e71c0534903.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE4LzA1L2U2MzUxOTAzMTY5YjQ2ZTY5MjdmMGU3MWMwNTM0OTAzLmpwZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDQwMjc1LCJpYXQiOjE1NzU5NzEyNDAyNzV9.mr8Uz-NYljSNZZcVWA4lqkbLu55S200T42Z90Z6Zvng', 'title': 'node2活动立即发布乘客', 'description': '描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述', 'h5Url': 'http://node2.huwochuxing.com/index', 'activityBeginTime': '2018-05-21T16:00:00.000+0000', 'activityEndTime': '2018-05-21T16:00:00.000+0000', 'expire': True}, {'userMessageId': '141_21421_0_1526973968736', 'isRead': False, 'coverPic': '2018/05/ad879e2b537f4f1d971c7e03fe45c8b3.jpg', 'coverPicURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2018/05/ad879e2b537f4f1d971c7e03fe45c8b3.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE4LzA1L2FkODc5ZTJiNTM3ZjRmMWQ5NzFjN2UwM2ZlNDVjOGIzLmpwZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDQwMjc1LCJpYXQiOjE1NzU5NzEyNDAyNzV9.IZDB4Vhr9u8jA9Q0tjvhrhGgXe9qmH0fcoyT-ySxK1g', 'title': 'node2定时发布所有乘客', 'description': 'node2定时发布所有乘客node2定时发布所有乘客node2定时发布所有乘客node2定时发布所有乘客node2定时发布所有乘客node2定时发布所有乘客node2定时发布所有乘客node2定时发布所有乘客node2定时发布所有乘客node2定时发布所有乘客node2定时发布所', 'h5Url': 'http://bug.huwochuxing.com:8888/bug-create-6-0-moduleID=0.html', 'activityBeginTime': '2018-05-22T16:00:00.000+0000', 'activityEndTime': '2018-05-22T16:00:00.000+0000', 'expire': True}, {'userMessageId': '141_21421_0_1526973982427', 'isRead': False, 'coverPic': '2018/05/ad879e2b537f4f1d971c7e03fe45c8b3.jpg', 'coverPicURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2018/05/ad879e2b537f4f1d971c7e03fe45c8b3.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE4LzA1L2FkODc5ZTJiNTM3ZjRmMWQ5NzFjN2UwM2ZlNDVjOGIzLmpwZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDQwMjc1LCJpYXQiOjE1NzU5NzEyNDAyNzV9.IZDB4Vhr9u8jA9Q0tjvhrhGgXe9qmH0fcoyT-ySxK1g', 'title': 'node2定时发布所有乘客', 'description': 'node2定时发布所有乘客node2定时发布所有乘客node2定时发布所有乘客node2定时发布所有乘客node2定时发布所有乘客node2定时发布所有乘客node2定时发布所有乘客node2定时发布所有乘客node2定时发布所有乘客node2定时发布所有乘客node2定时发布所', 'h5Url': 'http://bug.huwochuxing.com:8888/bug-create-6-0-moduleID=0.html', 'activityBeginTime': '2018-05-22T16:00:00.000+0000', 'activityEndTime': '2018-05-22T16:00:00.000+0000', 'expire': True}, {'userMessageId': '143_21421_0_1529909493984', 'isRead': True, 'coverPic': '', 'coverPicURL': None, 'title': '1111', 'description': '11111', 'h5Url': '', 'activityBeginTime': '2018-06-26T16:00:00.000+0000', 'activityEndTime': '2018-06-26T16:00:00.000+0000', 'expire': True}, {'userMessageId': '144_21421_0_1530288069435', 'isRead': True, 'coverPic': '', 'coverPicURL': None, 'title': '111111111111', 'description': '11111111111111', 'h5Url': '', 'activityBeginTime': '2018-06-27T16:00:00.000+0000', 'activityEndTime': '2018-06-27T16:00:00.000+0000', 'expire': True}, {'userMessageId': '144_21421_0_1530288080908', 'isRead': True, 'coverPic': '', 'coverPicURL': None, 'title': '111111111111', 'description': '11111111111111', 'h5Url': '', 'activityBeginTime': '2018-06-27T16:00:00.000+0000', 'activityEndTime': '2018-06-27T16:00:00.000+0000', 'expire': True}, {'userMessageId': '145_21421_0_1529999048341', 'isRead': True, 'coverPic': '', 'coverPicURL': None, 'title': '优惠活动', 'description': '乘客优惠与司机优惠', 'h5Url': '', 'activityBeginTime': '2018-06-26T16:00:00.000+0000', 'activityEndTime': '2018-06-26T16:00:00.000+0000', 'expire': True}, {'userMessageId': '145_21421_0_1529999060234', 'isRead': True, 'coverPic': '', 'coverPicURL': None, 'title': '优惠活动', 'description': '乘客优惠与司机优惠', 'h5Url': '', 'activityBeginTime': '2018-06-26T16:00:00.000+0000', 'activityEndTime': '2018-06-26T16:00:00.000+0000', 'expire': True}, {'userMessageId': '146_21421_0_1530775244708', 'isRead': True, 'coverPic': '2018/07/de72230034e945cbb80ca24c03997bb1.jpg', 'coverPicURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2018/07/de72230034e945cbb80ca24c03997bb1.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE4LzA3L2RlNzIyMzAwMzRlOTQ1Y2JiODBjYTI0YzAzOTk3YmIxLmpwZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDQwMjc1LCJpYXQiOjE1NzU5NzEyNDAyNzV9.aNMe0hTHR2fKpThAIXtfkQcEXEGcPCVpGZh8XwYC5a4', 'title': '活动活动', 'description': '活动活动活动活动活动活动活动活动活动活动', 'h5Url': '', 'activityBeginTime': '2018-07-05T07:20:57.000+0000', 'activityEndTime': '2018-07-05T07:20:57.000+0000', 'expire': True}, {'userMessageId': '147_21421_0_1533629367853', 'isRead': True, 'coverPic': '2018/08/fc4a6e5da8a643a49c90990be7d3c5ce.jpg', 'coverPicURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2018/08/fc4a6e5da8a643a49c90990be7d3c5ce.jpg&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE4LzA4L2ZjNGE2ZTVkYThhNjQzYTQ5YzkwOTkwYmU3ZDNjNWNlLmpwZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDQwMjc2LCJpYXQiOjE1NzU5NzEyNDAyNzZ9.PjOjGIh0T72Z7xvbgNfk5tBh0cTOUofGOTfxm0SQJZ0', 'title': '测试测试8-7', 'description': '这就是一个测试', 'h5Url': '', 'activityBeginTime': '2018-08-05T16:00:00.000+0000', 'activityEndTime': '2018-08-05T16:00:00.000+0000', 'expire': True}, {'userMessageId': '148_21421_0_1533635070235', 'isRead': True, 'coverPic': '2018/08/2ab3b4440ac74c8caf4e2eca9f360235.png', 'coverPicURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2018/08/2ab3b4440ac74c8caf4e2eca9f360235.png&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE4LzA4LzJhYjNiNDQ0MGFjNzRjOGNhZjRlMmVjYTlmMzYwMjM1LnBuZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDQwMjc2LCJpYXQiOjE1NzU5NzEyNDAyNzZ9.EUAadaBYhI6dzmg0dcJaP3K8hGYEKpNV4f5ctKLmSmA', 'title': '活动消息！！！！\r\n测试8/7号发布', 'description': '123555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555', 'h5Url': '', 'activityBeginTime': '2018-08-06T16:00:00.000+0000', 'activityEndTime': '2018-08-06T16:00:00.000+0000', 'expire': True}, {'userMessageId': '149_21421_0_1533635206496', 'isRead': False, 'coverPic': '2018/08/49806adf606f4f91ba7ddcd8bb44d071.png', 'coverPicURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2018/08/49806adf606f4f91ba7ddcd8bb44d071.png&amp;access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE4LzA4LzQ5ODA2YWRmNjA2ZjRmOTFiYTdkZGNkOGJiNDRkMDcxLnBuZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc1OTczMDQwMjc2LCJpYXQiOjE1NzU5NzEyNDAyNzZ9.DWLhoEkIBq-JgzGdsurqzb2r5LK3iVH0SQwY5I531zs', 'title': '做了3年皇帝，故宫住过，大牢呆过，回到故宫他找到了一样东西', 'description': '做了3年皇帝，故宫住过，大牢呆过，回到故宫他找到了一样东西一般来说，童年的时光都是让我们非常怀念的，很多孩子正在玩耍的时候，末代皇帝的曲折历程已经开始了。在他三岁的时候，就被抱进了宫中。在那年，光绪帝死去，慈禧也死了，溥仪遵照慈禧的意思上了皇位，但是他毕竟还是一个孩子，什么也不懂', 'h5Url': 'https://www.2345.com/baidu/baidusearch.html', 'activityBeginTime': '2018-08-07T09:44:54.000+0000', 'activityEndTime': '2018-08-07T09:44:54.000+0000', 'expire': True}]}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.33' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_33_messageread</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.33')" >
+        通过</a>
+    <div id='div_pt1.33' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.33').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.33: 初始化数据
+开始test_33_messageread接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/pk/message/read
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575875654501,"dataMap":{},"data":null}
+当前token为：s5e0fa5945d1cb081
+开始post请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971240391, 'dataMap': {}, 'data': None}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.34' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_34_messagedelete</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.34')" >
+        通过</a>
+    <div id='div_pt1.34' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.34').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.34: 初始化数据
+开始test_34_messagedelete接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/pk/message/delete
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575875780504,"dataMap":{},"data":null}
+当前token为：s5e0fa5945d1cb081
+开始post请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971240478, 'dataMap': {}, 'data': None}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.35' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_35_ordersubmit</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.35')" >
+        通过</a>
+    <div id='div_pt1.35' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.35').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.35: 初始化数据
+开始test_35_ordersubmit接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/pk/comment/order/submit
+期望数据：{"sid":null,"code":0,"message":"评论成功","success":true,"ts":1575876364515,"dataMap":{},"data":null}
+当前token为：s5e0fa5945d1cb081
+开始post请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': '评论成功', 'success': True, 'ts': 1575971240611, 'dataMap': {}, 'data': None}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='pt1.36' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_36_commentget</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.36')" >
+        通过</a>
+    <div id='div_pt1.36' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.36').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.36: 初始化数据
+开始test_36_commentget接口
+完整URL：http://shuitupaycallbackpre.callme.work/api/pk/comment/get
+期望数据：{"sid":null,"code":0,"message":null,"success":true,"ts":1575876045536,"dataMap":{},"data":{"level":5.0,"type":1,"createDate":"2019-11-15T02:26:15.000+0000","description":"活地图认路准"}}
+当前token为：s5e0fa5945d1cb081
+开始get请求
+状态码为：200
+请求成功
+响应正确
+返回数据： {'sid': None, 'code': 0, 'message': None, 'success': True, 'ts': 1575971241692, 'dataMap': {}, 'data': {'level': 5.0, 'type': 1, 'createDate': '2019-11-15T02:26:15.000+0000', 'description': '活地图认路准'}}
+清理数据
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>总计</td>
+    <td>36</td>
+    <td>36</td>
+    <td>0</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+</body>
+</html>
