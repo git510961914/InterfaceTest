@@ -14,7 +14,9 @@ class LoginTest(unittest.TestCase):
         self.sheet_index = 0
         self.excel_data = excel_case_data.ExcelData()
         #excel文件位置
-        self.file_name = "D:\\Pycharm\\PycharmProject\\InterfaceTest\\data\\customer.xlsx"
+        #self.file_name = "D:\\Pycharm\\PycharmProject\\InterfaceTest\\data\\customer.xlsx"
+        rootpath = __file__.split('testcase')[0]
+        self.file_name = rootpath + r'data\customer.xlsx'
         self.dbEnv = 'Pre'
         logging.info("======This is setUp function======")
 
