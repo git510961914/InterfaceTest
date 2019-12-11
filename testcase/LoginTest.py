@@ -242,6 +242,31 @@ class LoginTest(unittest.TestCase):
         response_data = self.excel_data.get_case_data(self.file_name,35,1,content_type="application/json")
         print("返回数据：",response_data)
 
+    def test_37_cAuthCode(self):
+        print("开始test_37_cAuthCode接口")
+        response_data = self.excel_data.get_case_data(self.file_name,36,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_38_updateMemberInfo(self):
+        print("开始test_38_updateMemberInfo接口")
+        response_data = self.excel_data.get_case_data(self.file_name,37,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_39_updateAddressReq(self):
+        print("开始test_39_updateAddressReq接口")
+        response_data = self.excel_data.get_case_data(self.file_name,38,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_40_realNameAuth(self):
+        print("开始test_40_realNameAuth接口")
+        response_data = self.excel_data.get_case_data(self.file_name,39,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_41_userBindingList(self):
+        print("开始test_41_userBindingList接口")
+        response_data = self.excel_data.get_case_data(self.file_name,40,1,content_type="application/json")
+        print("返回数据：",response_data)
+
 
 if __name__ == '__main__':
     # runner = unittest.TestLoader().loadTestsFromTestCase(LoginTest)

@@ -184,3 +184,852 @@
 2019-12-11 12:33:23connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/comment/get?orderId=6542137&token=s241dbed02d2c5e2e HTTP/1.1" 200 None
 2019-12-11 12:33:23excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
 2019-12-11 12:33:23LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:23LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:23excel_case_data.pyget_case_data[line:52]INFO:{'loginName': '15703034351'}
+2019-12-11 15:39:23connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:23connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/membership/isMemberExist HTTP/1.1" 200 None
+2019-12-11 15:39:23excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:23LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:23LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:23excel_case_data.pyget_case_data[line:52]INFO:{'clientId': 'b7d0d62ea801c0056e41dc4c3dc9e706', 'loginType': 1, 'password': 'WgeliiPxirTeoOSMy2grSve5SYfMPzORlSLbSb6DM2BTiPFYEsF2dwCFnyO/zK3POWk2S1Q/NlH8ElIHWhmqFUTKWDjqPcgFWQmCyk8WBHOrVYJ/H+z4k9sP1RkKBGhLzRF5tca7SHGj9IG2f13my/x9m0iQAUbb2ebDxR4yOB0=', 'imei': '4A0E5A73-665E-495B-9E93-6BA72FFC7154', 'currLongitude': '106.491235', 'source': 1000012, 'currLatitude': '29.621850', 'mac': '02:00:00:00:00:00', 'loginName': '15703034351'}
+2019-12-11 15:39:23connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:24connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/membership/login HTTP/1.1" 200 None
+2019-12-11 15:39:24excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:24LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:24LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:24excel_case_data.pyget_case_data[line:52]INFO:
+2019-12-11 15:39:24connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:24connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/getMemberInfo HTTP/1.1" 200 None
+2019-12-11 15:39:24excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:24LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:24LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:24excel_case_data.pyget_case_data[line:52]INFO:{'type': 3, 'version': '3.6.0'}
+2019-12-11 15:39:24connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:24connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/version/checkAppVersion?type=3&version=3.6.0&token=s55a0e545d37670ff HTTP/1.1" 200 None
+2019-12-11 15:39:24excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:24LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:24LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:24excel_case_data.pyget_case_data[line:52]INFO:{'tel': 15703034351}
+2019-12-11 15:39:24connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:24connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/getNotFinishedOrder?tel=15703034351&token=s55a0e545d37670ff HTTP/1.1" 200 None
+2019-12-11 15:39:24excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:24LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:24LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:24excel_case_data.pyget_case_data[line:52]INFO:{'prov': '重庆市-重庆市-渝北区'}
+2019-12-11 15:39:24connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:24connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/depart/requirement?prov=%E9%87%8D%E5%BA%86%E5%B8%82-%E9%87%8D%E5%BA%86%E5%B8%82-%E6%B8%9D%E5%8C%97%E5%8C%BA&token=s55a0e545d37670ff HTTP/1.1" 200 None
+2019-12-11 15:39:24excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:24LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:24LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:24excel_case_data.pyget_case_data[line:52]INFO:{'imei': '4A0E5A73-665E-495B-9E93-6BA72FFC7154', 'lat': '29.62184082031251', 'lng': '106.4912483723958', 'type': 102}
+2019-12-11 15:39:24connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:25connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/ad/find?imei=4A0E5A73-665E-495B-9E93-6BA72FFC7154&lat=29.62184082031251&lng=106.4912483723958&type=102&token=s55a0e545d37670ff HTTP/1.1" 200 None
+2019-12-11 15:39:25excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:25LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:25LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:25excel_case_data.pyget_case_data[line:52]INFO:{'businessType': 11, 'searchType': 0, 'source': 0}
+2019-12-11 15:39:25connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:25connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/trip/bizCity/find?businessType=11&searchType=0&source=0&token=s55a0e545d37670ff HTTP/1.1" 200 None
+2019-12-11 15:39:25excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:25LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:25LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:25excel_case_data.pyget_case_data[line:52]INFO:{"Content-Disposition: form-data; name='eLatitude'": '29.557204', "Content-Disposition: form-data; name='eLongitude'": '106.577034', "Content-Disposition: form-data; name='latitude'": '29.62184082031251', "Content-Disposition: form-data; name='longitude'": '106.4912483723958'}
+2019-12-11 15:39:25connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:25connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /isEnableService HTTP/1.1" 200 None
+2019-12-11 15:39:25excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:25LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:25LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:25excel_case_data.pyget_case_data[line:52]INFO:{'eLatitude': '29.557204', 'eLongitude': '106.577034', 'endArea': '重庆市-重庆市-渝中区', 'sLatitude': '29.62190200000001', 'sLongitude': '106.4912350000001', 'startArea': '重庆市-重庆市-渝北区', 'version': '2.0'}
+2019-12-11 15:39:25connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:25connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/trip/findRecommendLine?eLatitude=29.557204&eLongitude=106.577034&endArea=%E9%87%8D%E5%BA%86%E5%B8%82-%E9%87%8D%E5%BA%86%E5%B8%82-%E6%B8%9D%E4%B8%AD%E5%8C%BA&sLatitude=29.62190200000001&sLongitude=106.4912350000001&startArea=%E9%87%8D%E5%BA%86%E5%B8%82-%E9%87%8D%E5%BA%86%E5%B8%82-%E6%B8%9D%E5%8C%97%E5%8C%BA&version=2.0&token=s55a0e545d37670ff HTTP/1.1" 200 None
+2019-12-11 15:39:25excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:25LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:25LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:25excel_case_data.pyget_case_data[line:52]INFO:{'lineId': 1100}
+2019-12-11 15:39:25connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:25connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/trip/listLineSameTime?lineId=1100&token=s55a0e545d37670ff HTTP/1.1" 200 None
+2019-12-11 15:39:25excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:25LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:25LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:25excel_case_data.pyget_case_data[line:52]INFO:
+2019-12-11 15:39:25connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:25connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/contracts/list HTTP/1.1" 200 None
+2019-12-11 15:39:25excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:25LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:25LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:25excel_case_data.pyget_case_data[line:52]INFO:{'isSelect': 1, 'orderArea': '重庆市-重庆市-渝北区', 'orderType': 2, 'showType': 1, 'lineId': 1100, 'appoint': 2}
+2019-12-11 15:39:25connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:26connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/coupon/find?isSelect=1&orderArea=%E9%87%8D%E5%BA%86%E5%B8%82-%E9%87%8D%E5%BA%86%E5%B8%82-%E6%B8%9D%E5%8C%97%E5%8C%BA&orderType=2&showType=1&lineId=1100&appoint=2&token=s55a0e545d37670ff HTTP/1.1" 200 None
+2019-12-11 15:39:26excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:26LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:26LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:26excel_case_data.pyget_case_data[line:52]INFO:{'appointDate': '2019-12-06 15:41:59', 'type': 2, 'carType': 3, 'sLatitude': '29.621902', 'calcTime': 0, 'orderPerson': 1, 'distance': 0, 'appoint': True, 'orderArea': '重庆市-重庆市-渝北区', 'sLongitude': '106.491235', 'lineId': '1100'}
+2019-12-11 15:39:26connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:26connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/trip/calcEstimatePrice HTTP/1.1" 200 None
+2019-12-11 15:39:26excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:26LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:26LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:26excel_case_data.pyget_case_data[line:52]INFO:
+2019-12-11 15:39:26connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:26connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/listDriversByMembershipID HTTP/1.1" 200 None
+2019-12-11 15:39:26excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:26LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:26LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:26excel_case_data.pyget_case_data[line:52]INFO:{'driverId ': '253774'}
+2019-12-11 15:39:26connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:26connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/cancelCollectionDrivers?driverId+=253774&token=s55a0e545d37670ff HTTP/1.1" 200 None
+2019-12-11 15:39:26excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:26LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:26LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:26excel_case_data.pyget_case_data[line:52]INFO:{'phoneNo': '15703034351'}
+2019-12-11 15:39:26connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:26connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/collectionDrivers?phoneNo=15703034351&token=s55a0e545d37670ff HTTP/1.1" 200 None
+2019-12-11 15:39:26excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:26LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:26LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:26excel_case_data.pyget_case_data[line:52]INFO:{'driverId': '253774'}
+2019-12-11 15:39:26connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:26connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/isCollection?driverId=253774&token=s55a0e545d37670ff HTTP/1.1" 200 None
+2019-12-11 15:39:26excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:26LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:26LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:27excel_case_data.pyget_case_data[line:52]INFO:{'currentPage': 1, 'isPage': 1, 'memberShipId': 21421, 'pageSize': 20, 'phoneNo': '15703034351', 'source': 0}
+2019-12-11 15:39:27connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:27connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/getTripList?currentPage=1&isPage=1&memberShipId=21421&pageSize=20&phoneNo=15703034351&source=0&token=s55a0e545d37670ff HTTP/1.1" 200 None
+2019-12-11 15:39:27excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:27LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:27LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:27excel_case_data.pyget_case_data[line:52]INFO:{'orderId': '6542509'}
+2019-12-11 15:39:27connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:28connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/trip/getPasOrderInfo?orderId=6542509&token=s55a0e545d37670ff HTTP/1.1" 200 None
+2019-12-11 15:39:28excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:28LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:28LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:28excel_case_data.pyget_case_data[line:52]INFO:{'driverId': '253774'}
+2019-12-11 15:39:28connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:28connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/driver/getDriverInfo?driverId=253774&token=s55a0e545d37670ff HTTP/1.1" 200 None
+2019-12-11 15:39:28excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:28LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:28LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:28excel_case_data.pyget_case_data[line:52]INFO:{'currentPage': 1, 'memberShipID': '21421', 'pageSize': 20}
+2019-12-11 15:39:28connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:28connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/orderListInvoiceByMemberId?currentPage=1&memberShipID=21421&pageSize=20&token=s55a0e545d37670ff HTTP/1.1" 200 None
+2019-12-11 15:39:28excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:28LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:28LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:28excel_case_data.pyget_case_data[line:52]INFO:{'currentPage': 1, 'memberShipID': '21421', 'pageSize': 20}
+2019-12-11 15:39:28connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:28connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/listInvoiceByMemberId?currentPage=1&memberShipID=21421&pageSize=20&token=s55a0e545d37670ff HTTP/1.1" 200 None
+2019-12-11 15:39:28excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:28LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:28LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:28excel_case_data.pyget_case_data[line:52]INFO:{'invoiceId': '1016'}
+2019-12-11 15:39:28connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:29connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/getInvoiceDetailInfo?invoiceId=1016&token=s55a0e545d37670ff HTTP/1.1" 200 None
+2019-12-11 15:39:29excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:29LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:29LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:29excel_case_data.pyget_case_data[line:52]INFO:{'invoiceOrderId': '1016', 'page': 1, 'pageSize': 20}
+2019-12-11 15:39:29connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:29connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/trip/getInvoiceOrderInfo?invoiceOrderId=1016&page=1&pageSize=20&token=s55a0e545d37670ff HTTP/1.1" 200 None
+2019-12-11 15:39:29excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:29LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:29LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:29excel_case_data.pyget_case_data[line:52]INFO:
+2019-12-11 15:39:29connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:29connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/message/unRead/find HTTP/1.1" 200 None
+2019-12-11 15:39:29excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:29LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:29LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:29excel_case_data.pyget_case_data[line:52]INFO:{'pageNum': 1, 'pageSize': 20}
+2019-12-11 15:39:29connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:29connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/message/system/find?pageNum=1&pageSize=20&token=s55a0e545d37670ff HTTP/1.1" 200 None
+2019-12-11 15:39:29excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:29LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:29LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:29excel_case_data.pyget_case_data[line:52]INFO:{'pageNum': 1, 'pageSize': 20}
+2019-12-11 15:39:29connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:29connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/message/activity/find?pageNum=1&pageSize=20&token=s55a0e545d37670ff HTTP/1.1" 200 None
+2019-12-11 15:39:29excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:29LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:29LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:29excel_case_data.pyget_case_data[line:52]INFO:{'id': '370_21421_0_1525855885956', 'type': 1}
+2019-12-11 15:39:29connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:29connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/pk/message/read HTTP/1.1" 200 None
+2019-12-11 15:39:29excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:29LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:29LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:29excel_case_data.pyget_case_data[line:52]INFO:{'id': '3818_21421_0_1534157646252', 'type': 1}
+2019-12-11 15:39:29connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:29connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/pk/message/delete HTTP/1.1" 200 None
+2019-12-11 15:39:29excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:29LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:29LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:30excel_case_data.pyget_case_data[line:52]INFO:{'orderId': 6542137}
+2019-12-11 15:39:30connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:30connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/comment/get?orderId=6542137&token=s55a0e545d37670ff HTTP/1.1" 200 None
+2019-12-11 15:39:30excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:30LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:30LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:30excel_case_data.pyget_case_data[line:52]INFO:{'msgType': 1, 'phoneNo': '15703034351'}
+2019-12-11 15:39:30connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:30connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/cAuthCode?msgType=1&phoneNo=15703034351&token=s55a0e545d37670ff HTTP/1.1" 200 None
+2019-12-11 15:39:30excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:30LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:30LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:30excel_case_data.pyget_case_data[line:52]INFO:{'gender': 1, 'icon': '2017/10/2017/10/_f0c465b8ed5946c8b95baca503200a2c.jpg', 'iconURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2017/10/2017/10/_f0c465b8ed5946c8b95baca503200a2c.jpg&access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE3LzEwLzIwMTcvMTAvX2YwYzQ2NWI4ZWQ1OTQ2YzhiOTViYWNhNTAzMjAwYTJjLmpwZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc2MDQ4MTc0MjI3LCJpYXQiOjE1NzYwNDYzNzQyMjd9.kUkBtXZ9FapFUjH7jWrLSVSXrmt5MIgXBoJGwxnZ2F0', 'birthday': '1992-09-02', 'job': '测试', 'description': '合川', 'nickName': '王承印帅哥'}
+2019-12-11 15:39:30connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:30connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/membership/updateMemberInfo HTTP/1.1" 200 None
+2019-12-11 15:39:30excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:30LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:30LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:30excel_case_data.pyget_case_data[line:52]INFO:{'homeLongitude': '106.508378', 'type': 2, 'homeLatitude': '29.579707', 'homeAddress': '宇豪小区'}
+2019-12-11 15:39:30connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.workapi
+2019-12-11 15:39:30requests_module.pyget_response[line:42]ERROR:网络连接失败或接口响应时间过长
+2019-12-11 15:39:30excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：None============
+2019-12-11 15:39:30LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:30LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:30excel_case_data.pyget_case_data[line:52]INFO:{'name': '王承印', 'identifierNo': '500382199112029079'}
+2019-12-11 15:39:30connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.workapi
+2019-12-11 15:39:30requests_module.pyget_response[line:42]ERROR:网络连接失败或接口响应时间过长
+2019-12-11 15:39:30excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：None============
+2019-12-11 15:39:30LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:39:30LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:39:31excel_case_data.pyget_case_data[line:52]INFO:
+2019-12-11 15:39:31connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:39:31connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/membership/userBindingList HTTP/1.1" 200 None
+2019-12-11 15:39:31excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:39:31LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:04LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:04excel_case_data.pyget_case_data[line:52]INFO:{'loginName': '15703034351'}
+2019-12-11 15:40:04connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:04connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/membership/isMemberExist HTTP/1.1" 200 None
+2019-12-11 15:40:04excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:04LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:04LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:04excel_case_data.pyget_case_data[line:52]INFO:{'clientId': 'b7d0d62ea801c0056e41dc4c3dc9e706', 'loginType': 1, 'password': 'WgeliiPxirTeoOSMy2grSve5SYfMPzORlSLbSb6DM2BTiPFYEsF2dwCFnyO/zK3POWk2S1Q/NlH8ElIHWhmqFUTKWDjqPcgFWQmCyk8WBHOrVYJ/H+z4k9sP1RkKBGhLzRF5tca7SHGj9IG2f13my/x9m0iQAUbb2ebDxR4yOB0=', 'imei': '4A0E5A73-665E-495B-9E93-6BA72FFC7154', 'currLongitude': '106.491235', 'source': 1000012, 'currLatitude': '29.621850', 'mac': '02:00:00:00:00:00', 'loginName': '15703034351'}
+2019-12-11 15:40:04connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:04connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/membership/login HTTP/1.1" 200 None
+2019-12-11 15:40:04excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:04LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:04LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:04excel_case_data.pyget_case_data[line:52]INFO:
+2019-12-11 15:40:04connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:04connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/getMemberInfo HTTP/1.1" 200 None
+2019-12-11 15:40:04excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:04LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:04LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:04excel_case_data.pyget_case_data[line:52]INFO:{'type': 3, 'version': '3.6.0'}
+2019-12-11 15:40:04connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:04connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/version/checkAppVersion?type=3&version=3.6.0&token=s532526d1f538d1ed HTTP/1.1" 200 None
+2019-12-11 15:40:04excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:04LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:04LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:04excel_case_data.pyget_case_data[line:52]INFO:{'tel': 15703034351}
+2019-12-11 15:40:04connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:04connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/getNotFinishedOrder?tel=15703034351&token=s532526d1f538d1ed HTTP/1.1" 200 None
+2019-12-11 15:40:04excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:04LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:04LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:04excel_case_data.pyget_case_data[line:52]INFO:{'prov': '重庆市-重庆市-渝北区'}
+2019-12-11 15:40:04connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:04connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/depart/requirement?prov=%E9%87%8D%E5%BA%86%E5%B8%82-%E9%87%8D%E5%BA%86%E5%B8%82-%E6%B8%9D%E5%8C%97%E5%8C%BA&token=s532526d1f538d1ed HTTP/1.1" 200 None
+2019-12-11 15:40:04excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:04LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:04LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:04excel_case_data.pyget_case_data[line:52]INFO:{'imei': '4A0E5A73-665E-495B-9E93-6BA72FFC7154', 'lat': '29.62184082031251', 'lng': '106.4912483723958', 'type': 102}
+2019-12-11 15:40:04connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:05connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/ad/find?imei=4A0E5A73-665E-495B-9E93-6BA72FFC7154&lat=29.62184082031251&lng=106.4912483723958&type=102&token=s532526d1f538d1ed HTTP/1.1" 200 None
+2019-12-11 15:40:05excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:05LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:05LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:05excel_case_data.pyget_case_data[line:52]INFO:{'businessType': 11, 'searchType': 0, 'source': 0}
+2019-12-11 15:40:05connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:05connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/trip/bizCity/find?businessType=11&searchType=0&source=0&token=s532526d1f538d1ed HTTP/1.1" 200 None
+2019-12-11 15:40:05excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:05LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:05LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:05excel_case_data.pyget_case_data[line:52]INFO:{"Content-Disposition: form-data; name='eLatitude'": '29.557204', "Content-Disposition: form-data; name='eLongitude'": '106.577034', "Content-Disposition: form-data; name='latitude'": '29.62184082031251', "Content-Disposition: form-data; name='longitude'": '106.4912483723958'}
+2019-12-11 15:40:05connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:05connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /isEnableService HTTP/1.1" 200 None
+2019-12-11 15:40:05excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:05LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:05LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:05excel_case_data.pyget_case_data[line:52]INFO:{'eLatitude': '29.557204', 'eLongitude': '106.577034', 'endArea': '重庆市-重庆市-渝中区', 'sLatitude': '29.62190200000001', 'sLongitude': '106.4912350000001', 'startArea': '重庆市-重庆市-渝北区', 'version': '2.0'}
+2019-12-11 15:40:05connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:05connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/trip/findRecommendLine?eLatitude=29.557204&eLongitude=106.577034&endArea=%E9%87%8D%E5%BA%86%E5%B8%82-%E9%87%8D%E5%BA%86%E5%B8%82-%E6%B8%9D%E4%B8%AD%E5%8C%BA&sLatitude=29.62190200000001&sLongitude=106.4912350000001&startArea=%E9%87%8D%E5%BA%86%E5%B8%82-%E9%87%8D%E5%BA%86%E5%B8%82-%E6%B8%9D%E5%8C%97%E5%8C%BA&version=2.0&token=s532526d1f538d1ed HTTP/1.1" 200 None
+2019-12-11 15:40:05excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:05LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:05LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:05excel_case_data.pyget_case_data[line:52]INFO:{'lineId': 1100}
+2019-12-11 15:40:05connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:05connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/trip/listLineSameTime?lineId=1100&token=s532526d1f538d1ed HTTP/1.1" 200 None
+2019-12-11 15:40:05excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:05LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:05LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:05excel_case_data.pyget_case_data[line:52]INFO:
+2019-12-11 15:40:05connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:05connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/contracts/list HTTP/1.1" 200 None
+2019-12-11 15:40:05excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:05LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:05LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:05excel_case_data.pyget_case_data[line:52]INFO:{'isSelect': 1, 'orderArea': '重庆市-重庆市-渝北区', 'orderType': 2, 'showType': 1, 'lineId': 1100, 'appoint': 2}
+2019-12-11 15:40:05connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:05connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/coupon/find?isSelect=1&orderArea=%E9%87%8D%E5%BA%86%E5%B8%82-%E9%87%8D%E5%BA%86%E5%B8%82-%E6%B8%9D%E5%8C%97%E5%8C%BA&orderType=2&showType=1&lineId=1100&appoint=2&token=s532526d1f538d1ed HTTP/1.1" 200 None
+2019-12-11 15:40:05excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:05LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:05LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:05excel_case_data.pyget_case_data[line:52]INFO:{'appointDate': '2019-12-06 15:41:59', 'type': 2, 'carType': 3, 'sLatitude': '29.621902', 'calcTime': 0, 'orderPerson': 1, 'distance': 0, 'appoint': True, 'orderArea': '重庆市-重庆市-渝北区', 'sLongitude': '106.491235', 'lineId': '1100'}
+2019-12-11 15:40:05connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:05connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/trip/calcEstimatePrice HTTP/1.1" 200 None
+2019-12-11 15:40:05excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:05LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:05LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:05excel_case_data.pyget_case_data[line:52]INFO:
+2019-12-11 15:40:05connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:06connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/listDriversByMembershipID HTTP/1.1" 200 None
+2019-12-11 15:40:06excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:06LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:06LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:06excel_case_data.pyget_case_data[line:52]INFO:{'driverId ': '253774'}
+2019-12-11 15:40:06connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:06connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/cancelCollectionDrivers?driverId+=253774&token=s532526d1f538d1ed HTTP/1.1" 200 None
+2019-12-11 15:40:06excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:06LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:06LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:06excel_case_data.pyget_case_data[line:52]INFO:{'phoneNo': '15703034351'}
+2019-12-11 15:40:06connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:06connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/collectionDrivers?phoneNo=15703034351&token=s532526d1f538d1ed HTTP/1.1" 200 None
+2019-12-11 15:40:06excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:06LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:06LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:06excel_case_data.pyget_case_data[line:52]INFO:{'driverId': '253774'}
+2019-12-11 15:40:06connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:06connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/isCollection?driverId=253774&token=s532526d1f538d1ed HTTP/1.1" 200 None
+2019-12-11 15:40:06excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:06LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:06LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:06excel_case_data.pyget_case_data[line:52]INFO:{'currentPage': 1, 'isPage': 1, 'memberShipId': 21421, 'pageSize': 20, 'phoneNo': '15703034351', 'source': 0}
+2019-12-11 15:40:06connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:06connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/getTripList?currentPage=1&isPage=1&memberShipId=21421&pageSize=20&phoneNo=15703034351&source=0&token=s532526d1f538d1ed HTTP/1.1" 200 None
+2019-12-11 15:40:06excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:06LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:06LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:06excel_case_data.pyget_case_data[line:52]INFO:{'orderId': '6542509'}
+2019-12-11 15:40:06connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:06connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/trip/getPasOrderInfo?orderId=6542509&token=s532526d1f538d1ed HTTP/1.1" 200 None
+2019-12-11 15:40:06excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:06LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:06LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:06excel_case_data.pyget_case_data[line:52]INFO:{'driverId': '253774'}
+2019-12-11 15:40:06connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:06connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/driver/getDriverInfo?driverId=253774&token=s532526d1f538d1ed HTTP/1.1" 200 None
+2019-12-11 15:40:06excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:06LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:06LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:07excel_case_data.pyget_case_data[line:52]INFO:{'currentPage': 1, 'memberShipID': '21421', 'pageSize': 20}
+2019-12-11 15:40:07connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:07connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/orderListInvoiceByMemberId?currentPage=1&memberShipID=21421&pageSize=20&token=s532526d1f538d1ed HTTP/1.1" 200 None
+2019-12-11 15:40:07excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:07LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:07LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:07excel_case_data.pyget_case_data[line:52]INFO:{'currentPage': 1, 'memberShipID': '21421', 'pageSize': 20}
+2019-12-11 15:40:07connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:07connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/listInvoiceByMemberId?currentPage=1&memberShipID=21421&pageSize=20&token=s532526d1f538d1ed HTTP/1.1" 200 None
+2019-12-11 15:40:07excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:07LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:07LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:07excel_case_data.pyget_case_data[line:52]INFO:{'invoiceId': '1016'}
+2019-12-11 15:40:07connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:07connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/getInvoiceDetailInfo?invoiceId=1016&token=s532526d1f538d1ed HTTP/1.1" 200 None
+2019-12-11 15:40:07excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:07LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:07LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:07excel_case_data.pyget_case_data[line:52]INFO:{'invoiceOrderId': '1016', 'page': 1, 'pageSize': 20}
+2019-12-11 15:40:07connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:07connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/trip/getInvoiceOrderInfo?invoiceOrderId=1016&page=1&pageSize=20&token=s532526d1f538d1ed HTTP/1.1" 200 None
+2019-12-11 15:40:07excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:07LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:07LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:07excel_case_data.pyget_case_data[line:52]INFO:
+2019-12-11 15:40:07connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:07connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/message/unRead/find HTTP/1.1" 200 None
+2019-12-11 15:40:07excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:07LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:07LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:07excel_case_data.pyget_case_data[line:52]INFO:{'pageNum': 1, 'pageSize': 20}
+2019-12-11 15:40:07connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:07connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/message/system/find?pageNum=1&pageSize=20&token=s532526d1f538d1ed HTTP/1.1" 200 None
+2019-12-11 15:40:07excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:07LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:07LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:07excel_case_data.pyget_case_data[line:52]INFO:{'pageNum': 1, 'pageSize': 20}
+2019-12-11 15:40:07connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:07connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/message/activity/find?pageNum=1&pageSize=20&token=s532526d1f538d1ed HTTP/1.1" 200 None
+2019-12-11 15:40:07excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:07LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:07LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:07excel_case_data.pyget_case_data[line:52]INFO:{'id': '370_21421_0_1525855885956', 'type': 1}
+2019-12-11 15:40:07connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:07connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/pk/message/read HTTP/1.1" 200 None
+2019-12-11 15:40:07excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:07LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:07LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:07excel_case_data.pyget_case_data[line:52]INFO:{'id': '3818_21421_0_1534157646252', 'type': 1}
+2019-12-11 15:40:07connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:08connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/pk/message/delete HTTP/1.1" 200 None
+2019-12-11 15:40:08excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:08LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:08LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:08excel_case_data.pyget_case_data[line:52]INFO:{'orderId': 6542137}
+2019-12-11 15:40:08connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:08connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/comment/get?orderId=6542137&token=s532526d1f538d1ed HTTP/1.1" 200 None
+2019-12-11 15:40:08excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:08LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:08LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:08excel_case_data.pyget_case_data[line:52]INFO:{'msgType': 1, 'phoneNo': '15703034351'}
+2019-12-11 15:40:08connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:08connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/cAuthCode?msgType=1&phoneNo=15703034351&token=s532526d1f538d1ed HTTP/1.1" 200 None
+2019-12-11 15:40:08excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:08LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:08LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:08excel_case_data.pyget_case_data[line:52]INFO:{'gender': 1, 'icon': '2017/10/2017/10/_f0c465b8ed5946c8b95baca503200a2c.jpg', 'iconURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2017/10/2017/10/_f0c465b8ed5946c8b95baca503200a2c.jpg&access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE3LzEwLzIwMTcvMTAvX2YwYzQ2NWI4ZWQ1OTQ2YzhiOTViYWNhNTAzMjAwYTJjLmpwZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc2MDQ4MTc0MjI3LCJpYXQiOjE1NzYwNDYzNzQyMjd9.kUkBtXZ9FapFUjH7jWrLSVSXrmt5MIgXBoJGwxnZ2F0', 'birthday': '1992-09-02', 'job': '测试', 'description': '合川', 'nickName': '王承印帅哥'}
+2019-12-11 15:40:08connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:08connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/membership/updateMemberInfo HTTP/1.1" 200 None
+2019-12-11 15:40:08excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:08LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:08LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:08excel_case_data.pyget_case_data[line:52]INFO:{'homeLongitude': '106.508378', 'type': 2, 'homeLatitude': '29.579707', 'homeAddress': '宇豪小区'}
+2019-12-11 15:40:08connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.workapi
+2019-12-11 15:40:08requests_module.pyget_response[line:42]ERROR:网络连接失败或接口响应时间过长
+2019-12-11 15:40:08excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：None============
+2019-12-11 15:40:08LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:08LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:08excel_case_data.pyget_case_data[line:52]INFO:{'name': '王承印', 'identifierNo': '500382199112029079'}
+2019-12-11 15:40:08connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.workapi
+2019-12-11 15:40:08requests_module.pyget_response[line:42]ERROR:网络连接失败或接口响应时间过长
+2019-12-11 15:40:08excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：None============
+2019-12-11 15:40:08LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:40:08LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:40:08excel_case_data.pyget_case_data[line:52]INFO:
+2019-12-11 15:40:08connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:40:08connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/membership/userBindingList HTTP/1.1" 200 None
+2019-12-11 15:40:08excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:40:08LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:41LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:41excel_case_data.pyget_case_data[line:52]INFO:{'loginName': '15703034351'}
+2019-12-11 15:43:41connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:41connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/membership/isMemberExist HTTP/1.1" 200 None
+2019-12-11 15:43:41excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:41LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:41LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:41excel_case_data.pyget_case_data[line:52]INFO:{'clientId': 'b7d0d62ea801c0056e41dc4c3dc9e706', 'loginType': 1, 'password': 'WgeliiPxirTeoOSMy2grSve5SYfMPzORlSLbSb6DM2BTiPFYEsF2dwCFnyO/zK3POWk2S1Q/NlH8ElIHWhmqFUTKWDjqPcgFWQmCyk8WBHOrVYJ/H+z4k9sP1RkKBGhLzRF5tca7SHGj9IG2f13my/x9m0iQAUbb2ebDxR4yOB0=', 'imei': '4A0E5A73-665E-495B-9E93-6BA72FFC7154', 'currLongitude': '106.491235', 'source': 1000012, 'currLatitude': '29.621850', 'mac': '02:00:00:00:00:00', 'loginName': '15703034351'}
+2019-12-11 15:43:41connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:42connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/membership/login HTTP/1.1" 200 None
+2019-12-11 15:43:42excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:42LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:42LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:42excel_case_data.pyget_case_data[line:52]INFO:
+2019-12-11 15:43:42connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:42connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/getMemberInfo HTTP/1.1" 200 None
+2019-12-11 15:43:42excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:42LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:42LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:42excel_case_data.pyget_case_data[line:52]INFO:{'type': 3, 'version': '3.6.0'}
+2019-12-11 15:43:42connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:42connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/version/checkAppVersion?type=3&version=3.6.0&token=s60e26f712c991e63 HTTP/1.1" 200 None
+2019-12-11 15:43:42excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:42LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:42LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:42excel_case_data.pyget_case_data[line:52]INFO:{'tel': 15703034351}
+2019-12-11 15:43:42connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:42connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/getNotFinishedOrder?tel=15703034351&token=s60e26f712c991e63 HTTP/1.1" 200 None
+2019-12-11 15:43:42excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:42LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:42LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:42excel_case_data.pyget_case_data[line:52]INFO:{'prov': '重庆市-重庆市-渝北区'}
+2019-12-11 15:43:42connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:42connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/depart/requirement?prov=%E9%87%8D%E5%BA%86%E5%B8%82-%E9%87%8D%E5%BA%86%E5%B8%82-%E6%B8%9D%E5%8C%97%E5%8C%BA&token=s60e26f712c991e63 HTTP/1.1" 200 None
+2019-12-11 15:43:42excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:42LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:42LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:42excel_case_data.pyget_case_data[line:52]INFO:{'imei': '4A0E5A73-665E-495B-9E93-6BA72FFC7154', 'lat': '29.62184082031251', 'lng': '106.4912483723958', 'type': 102}
+2019-12-11 15:43:42connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:42connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/ad/find?imei=4A0E5A73-665E-495B-9E93-6BA72FFC7154&lat=29.62184082031251&lng=106.4912483723958&type=102&token=s60e26f712c991e63 HTTP/1.1" 200 None
+2019-12-11 15:43:42excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:42LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:42LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:42excel_case_data.pyget_case_data[line:52]INFO:{'businessType': 11, 'searchType': 0, 'source': 0}
+2019-12-11 15:43:42connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:43connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/trip/bizCity/find?businessType=11&searchType=0&source=0&token=s60e26f712c991e63 HTTP/1.1" 200 None
+2019-12-11 15:43:43excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:43LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:43LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:43excel_case_data.pyget_case_data[line:52]INFO:{"Content-Disposition: form-data; name='eLatitude'": '29.557204', "Content-Disposition: form-data; name='eLongitude'": '106.577034', "Content-Disposition: form-data; name='latitude'": '29.62184082031251', "Content-Disposition: form-data; name='longitude'": '106.4912483723958'}
+2019-12-11 15:43:43connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:43connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /isEnableService HTTP/1.1" 200 None
+2019-12-11 15:43:43excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:43LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:43LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:43excel_case_data.pyget_case_data[line:52]INFO:{'eLatitude': '29.557204', 'eLongitude': '106.577034', 'endArea': '重庆市-重庆市-渝中区', 'sLatitude': '29.62190200000001', 'sLongitude': '106.4912350000001', 'startArea': '重庆市-重庆市-渝北区', 'version': '2.0'}
+2019-12-11 15:43:43connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:43connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/trip/findRecommendLine?eLatitude=29.557204&eLongitude=106.577034&endArea=%E9%87%8D%E5%BA%86%E5%B8%82-%E9%87%8D%E5%BA%86%E5%B8%82-%E6%B8%9D%E4%B8%AD%E5%8C%BA&sLatitude=29.62190200000001&sLongitude=106.4912350000001&startArea=%E9%87%8D%E5%BA%86%E5%B8%82-%E9%87%8D%E5%BA%86%E5%B8%82-%E6%B8%9D%E5%8C%97%E5%8C%BA&version=2.0&token=s60e26f712c991e63 HTTP/1.1" 200 None
+2019-12-11 15:43:43excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:43LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:43LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:43excel_case_data.pyget_case_data[line:52]INFO:{'lineId': 1100}
+2019-12-11 15:43:43connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:43connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/trip/listLineSameTime?lineId=1100&token=s60e26f712c991e63 HTTP/1.1" 200 None
+2019-12-11 15:43:43excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:43LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:43LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:43excel_case_data.pyget_case_data[line:52]INFO:
+2019-12-11 15:43:43connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:43connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/contracts/list HTTP/1.1" 200 None
+2019-12-11 15:43:43excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:43LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:43LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:43excel_case_data.pyget_case_data[line:52]INFO:{'isSelect': 1, 'orderArea': '重庆市-重庆市-渝北区', 'orderType': 2, 'showType': 1, 'lineId': 1100, 'appoint': 2}
+2019-12-11 15:43:43connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:43connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/coupon/find?isSelect=1&orderArea=%E9%87%8D%E5%BA%86%E5%B8%82-%E9%87%8D%E5%BA%86%E5%B8%82-%E6%B8%9D%E5%8C%97%E5%8C%BA&orderType=2&showType=1&lineId=1100&appoint=2&token=s60e26f712c991e63 HTTP/1.1" 200 None
+2019-12-11 15:43:43excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:43LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:43LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:44excel_case_data.pyget_case_data[line:52]INFO:{'appointDate': '2019-12-06 15:41:59', 'type': 2, 'carType': 3, 'sLatitude': '29.621902', 'calcTime': 0, 'orderPerson': 1, 'distance': 0, 'appoint': True, 'orderArea': '重庆市-重庆市-渝北区', 'sLongitude': '106.491235', 'lineId': '1100'}
+2019-12-11 15:43:44connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:44connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/trip/calcEstimatePrice HTTP/1.1" 200 None
+2019-12-11 15:43:44excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:44LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:44LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:44excel_case_data.pyget_case_data[line:52]INFO:
+2019-12-11 15:43:44connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:44connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/listDriversByMembershipID HTTP/1.1" 200 None
+2019-12-11 15:43:44excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:44LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:44LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:44excel_case_data.pyget_case_data[line:52]INFO:{'driverId ': '253774'}
+2019-12-11 15:43:44connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:44connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/cancelCollectionDrivers?driverId+=253774&token=s60e26f712c991e63 HTTP/1.1" 200 None
+2019-12-11 15:43:44excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:44LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:44LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:44excel_case_data.pyget_case_data[line:52]INFO:{'phoneNo': '15703034351'}
+2019-12-11 15:43:44connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:44connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/collectionDrivers?phoneNo=15703034351&token=s60e26f712c991e63 HTTP/1.1" 200 None
+2019-12-11 15:43:44excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:44LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:44LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:44excel_case_data.pyget_case_data[line:52]INFO:{'driverId': '253774'}
+2019-12-11 15:43:44connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:44connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/isCollection?driverId=253774&token=s60e26f712c991e63 HTTP/1.1" 200 None
+2019-12-11 15:43:44excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:44LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:44LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:44excel_case_data.pyget_case_data[line:52]INFO:{'currentPage': 1, 'isPage': 1, 'memberShipId': 21421, 'pageSize': 20, 'phoneNo': '15703034351', 'source': 0}
+2019-12-11 15:43:44connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:45connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/getTripList?currentPage=1&isPage=1&memberShipId=21421&pageSize=20&phoneNo=15703034351&source=0&token=s60e26f712c991e63 HTTP/1.1" 200 None
+2019-12-11 15:43:45excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:45LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:45LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:45excel_case_data.pyget_case_data[line:52]INFO:{'orderId': '6542509'}
+2019-12-11 15:43:45connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:45connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/trip/getPasOrderInfo?orderId=6542509&token=s60e26f712c991e63 HTTP/1.1" 200 None
+2019-12-11 15:43:45excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:45LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:45LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:45excel_case_data.pyget_case_data[line:52]INFO:{'driverId': '253774'}
+2019-12-11 15:43:45connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:45connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/driver/getDriverInfo?driverId=253774&token=s60e26f712c991e63 HTTP/1.1" 200 None
+2019-12-11 15:43:45excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:45LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:45LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:45excel_case_data.pyget_case_data[line:52]INFO:{'currentPage': 1, 'memberShipID': '21421', 'pageSize': 20}
+2019-12-11 15:43:45connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:45connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/orderListInvoiceByMemberId?currentPage=1&memberShipID=21421&pageSize=20&token=s60e26f712c991e63 HTTP/1.1" 200 None
+2019-12-11 15:43:45excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:45LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:45LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:45excel_case_data.pyget_case_data[line:52]INFO:{'currentPage': 1, 'memberShipID': '21421', 'pageSize': 20}
+2019-12-11 15:43:45connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:45connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/listInvoiceByMemberId?currentPage=1&memberShipID=21421&pageSize=20&token=s60e26f712c991e63 HTTP/1.1" 200 None
+2019-12-11 15:43:45excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:45LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:45LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:45excel_case_data.pyget_case_data[line:52]INFO:{'invoiceId': '1016'}
+2019-12-11 15:43:45connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:45connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/getInvoiceDetailInfo?invoiceId=1016&token=s60e26f712c991e63 HTTP/1.1" 200 None
+2019-12-11 15:43:46excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:46LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:46LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:46excel_case_data.pyget_case_data[line:52]INFO:{'invoiceOrderId': '1016', 'page': 1, 'pageSize': 20}
+2019-12-11 15:43:46connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:46connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/trip/getInvoiceOrderInfo?invoiceOrderId=1016&page=1&pageSize=20&token=s60e26f712c991e63 HTTP/1.1" 200 None
+2019-12-11 15:43:46excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:46LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:46LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:46excel_case_data.pyget_case_data[line:52]INFO:
+2019-12-11 15:43:46connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:46connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/message/unRead/find HTTP/1.1" 200 None
+2019-12-11 15:43:46excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:46LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:46LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:46excel_case_data.pyget_case_data[line:52]INFO:{'pageNum': 1, 'pageSize': 20}
+2019-12-11 15:43:46connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:46connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/message/system/find?pageNum=1&pageSize=20&token=s60e26f712c991e63 HTTP/1.1" 200 None
+2019-12-11 15:43:46excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:46LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:46LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:46excel_case_data.pyget_case_data[line:52]INFO:{'pageNum': 1, 'pageSize': 20}
+2019-12-11 15:43:46connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:46connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/message/activity/find?pageNum=1&pageSize=20&token=s60e26f712c991e63 HTTP/1.1" 200 None
+2019-12-11 15:43:46excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:46LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:46LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:46excel_case_data.pyget_case_data[line:52]INFO:{'id': '370_21421_0_1525855885956', 'type': 1}
+2019-12-11 15:43:46connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:46connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/pk/message/read HTTP/1.1" 200 None
+2019-12-11 15:43:46excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:46LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:46LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:46excel_case_data.pyget_case_data[line:52]INFO:{'id': '3818_21421_0_1534157646252', 'type': 1}
+2019-12-11 15:43:46connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:46connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/pk/message/delete HTTP/1.1" 200 None
+2019-12-11 15:43:46excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:46LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:46LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:46excel_case_data.pyget_case_data[line:52]INFO:{'orderId': 6542137}
+2019-12-11 15:43:46connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:47connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/comment/get?orderId=6542137&token=s60e26f712c991e63 HTTP/1.1" 200 None
+2019-12-11 15:43:47excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:47LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:47LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:47excel_case_data.pyget_case_data[line:52]INFO:{'msgType': 1, 'phoneNo': '15703034351'}
+2019-12-11 15:43:47connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:47connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/cAuthCode?msgType=1&phoneNo=15703034351&token=s60e26f712c991e63 HTTP/1.1" 200 None
+2019-12-11 15:43:47excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:47LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:47LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:43:47excel_case_data.pyget_case_data[line:52]INFO:{'gender': 1, 'icon': '2017/10/2017/10/_f0c465b8ed5946c8b95baca503200a2c.jpg', 'iconURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2017/10/2017/10/_f0c465b8ed5946c8b95baca503200a2c.jpg&access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE3LzEwLzIwMTcvMTAvX2YwYzQ2NWI4ZWQ1OTQ2YzhiOTViYWNhNTAzMjAwYTJjLmpwZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc2MDQ4MTc0MjI3LCJpYXQiOjE1NzYwNDYzNzQyMjd9.kUkBtXZ9FapFUjH7jWrLSVSXrmt5MIgXBoJGwxnZ2F0', 'birthday': '1992-09-02', 'job': '测试', 'description': '合川', 'nickName': '王承印帅哥'}
+2019-12-11 15:43:47connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:43:47connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/membership/updateMemberInfo HTTP/1.1" 200 None
+2019-12-11 15:43:47excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:43:47LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:43:47LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:44:15excel_case_data.pyget_case_data[line:52]INFO:{'homeLongitude': '106.508378', 'type': 2, 'homeLatitude': '29.579707', 'homeAddress': '宇豪小区'}
+2019-12-11 15:45:38connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.workapi
+2019-12-11 15:47:58LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:47:58excel_case_data.pyget_case_data[line:52]INFO:{'loginName': '15703034351'}
+2019-12-11 15:47:58connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:47:58connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/membership/isMemberExist HTTP/1.1" 200 None
+2019-12-11 15:47:58excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:47:58LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:47:58LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:47:58excel_case_data.pyget_case_data[line:52]INFO:{'clientId': 'b7d0d62ea801c0056e41dc4c3dc9e706', 'loginType': 1, 'password': 'WgeliiPxirTeoOSMy2grSve5SYfMPzORlSLbSb6DM2BTiPFYEsF2dwCFnyO/zK3POWk2S1Q/NlH8ElIHWhmqFUTKWDjqPcgFWQmCyk8WBHOrVYJ/H+z4k9sP1RkKBGhLzRF5tca7SHGj9IG2f13my/x9m0iQAUbb2ebDxR4yOB0=', 'imei': '4A0E5A73-665E-495B-9E93-6BA72FFC7154', 'currLongitude': '106.491235', 'source': 1000012, 'currLatitude': '29.621850', 'mac': '02:00:00:00:00:00', 'loginName': '15703034351'}
+2019-12-11 15:47:58connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:47:58connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/membership/login HTTP/1.1" 200 None
+2019-12-11 15:47:58excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:47:58LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:47:58LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:47:58excel_case_data.pyget_case_data[line:52]INFO:
+2019-12-11 15:47:58connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:47:58connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/getMemberInfo HTTP/1.1" 200 None
+2019-12-11 15:47:58excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:47:58LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:47:58LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:47:58excel_case_data.pyget_case_data[line:52]INFO:{'type': 3, 'version': '3.6.0'}
+2019-12-11 15:47:58connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:47:58connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/version/checkAppVersion?type=3&version=3.6.0&token=s710a9420a4e1602c HTTP/1.1" 200 None
+2019-12-11 15:47:58excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:47:58LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:47:58LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:47:59excel_case_data.pyget_case_data[line:52]INFO:{'tel': 15703034351}
+2019-12-11 15:47:59connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:47:59connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/getNotFinishedOrder?tel=15703034351&token=s710a9420a4e1602c HTTP/1.1" 200 None
+2019-12-11 15:47:59excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:47:59LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:47:59LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:47:59excel_case_data.pyget_case_data[line:52]INFO:{'prov': '重庆市-重庆市-渝北区'}
+2019-12-11 15:47:59connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:47:59connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/depart/requirement?prov=%E9%87%8D%E5%BA%86%E5%B8%82-%E9%87%8D%E5%BA%86%E5%B8%82-%E6%B8%9D%E5%8C%97%E5%8C%BA&token=s710a9420a4e1602c HTTP/1.1" 200 None
+2019-12-11 15:47:59excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:47:59LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:47:59LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:47:59excel_case_data.pyget_case_data[line:52]INFO:{'imei': '4A0E5A73-665E-495B-9E93-6BA72FFC7154', 'lat': '29.62184082031251', 'lng': '106.4912483723958', 'type': 102}
+2019-12-11 15:47:59connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:47:59connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/ad/find?imei=4A0E5A73-665E-495B-9E93-6BA72FFC7154&lat=29.62184082031251&lng=106.4912483723958&type=102&token=s710a9420a4e1602c HTTP/1.1" 200 None
+2019-12-11 15:47:59excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:47:59LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:47:59LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:47:59excel_case_data.pyget_case_data[line:52]INFO:{'businessType': 11, 'searchType': 0, 'source': 0}
+2019-12-11 15:47:59connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:47:59connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/trip/bizCity/find?businessType=11&searchType=0&source=0&token=s710a9420a4e1602c HTTP/1.1" 200 None
+2019-12-11 15:47:59excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:47:59LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:47:59LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:47:59excel_case_data.pyget_case_data[line:52]INFO:{"Content-Disposition: form-data; name='eLatitude'": '29.557204', "Content-Disposition: form-data; name='eLongitude'": '106.577034', "Content-Disposition: form-data; name='latitude'": '29.62184082031251', "Content-Disposition: form-data; name='longitude'": '106.4912483723958'}
+2019-12-11 15:47:59connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:47:59connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /isEnableService HTTP/1.1" 200 None
+2019-12-11 15:47:59excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:47:59LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:47:59LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:47:59excel_case_data.pyget_case_data[line:52]INFO:{'eLatitude': '29.557204', 'eLongitude': '106.577034', 'endArea': '重庆市-重庆市-渝中区', 'sLatitude': '29.62190200000001', 'sLongitude': '106.4912350000001', 'startArea': '重庆市-重庆市-渝北区', 'version': '2.0'}
+2019-12-11 15:47:59connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:47:59connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/trip/findRecommendLine?eLatitude=29.557204&eLongitude=106.577034&endArea=%E9%87%8D%E5%BA%86%E5%B8%82-%E9%87%8D%E5%BA%86%E5%B8%82-%E6%B8%9D%E4%B8%AD%E5%8C%BA&sLatitude=29.62190200000001&sLongitude=106.4912350000001&startArea=%E9%87%8D%E5%BA%86%E5%B8%82-%E9%87%8D%E5%BA%86%E5%B8%82-%E6%B8%9D%E5%8C%97%E5%8C%BA&version=2.0&token=s710a9420a4e1602c HTTP/1.1" 200 None
+2019-12-11 15:47:59excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:47:59LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:47:59LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:47:59excel_case_data.pyget_case_data[line:52]INFO:{'lineId': 1100}
+2019-12-11 15:47:59connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:47:59connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/trip/listLineSameTime?lineId=1100&token=s710a9420a4e1602c HTTP/1.1" 200 None
+2019-12-11 15:47:59excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:47:59LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:47:59LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:47:59excel_case_data.pyget_case_data[line:52]INFO:
+2019-12-11 15:47:59connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:47:59connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/contracts/list HTTP/1.1" 200 None
+2019-12-11 15:47:59excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:47:59LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:47:59LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:47:59excel_case_data.pyget_case_data[line:52]INFO:{'isSelect': 1, 'orderArea': '重庆市-重庆市-渝北区', 'orderType': 2, 'showType': 1, 'lineId': 1100, 'appoint': 2}
+2019-12-11 15:47:59connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:00connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/coupon/find?isSelect=1&orderArea=%E9%87%8D%E5%BA%86%E5%B8%82-%E9%87%8D%E5%BA%86%E5%B8%82-%E6%B8%9D%E5%8C%97%E5%8C%BA&orderType=2&showType=1&lineId=1100&appoint=2&token=s710a9420a4e1602c HTTP/1.1" 200 None
+2019-12-11 15:48:00excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:00LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:00LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:00excel_case_data.pyget_case_data[line:52]INFO:{'appointDate': '2019-12-06 15:41:59', 'type': 2, 'carType': 3, 'sLatitude': '29.621902', 'calcTime': 0, 'orderPerson': 1, 'distance': 0, 'appoint': True, 'orderArea': '重庆市-重庆市-渝北区', 'sLongitude': '106.491235', 'lineId': '1100'}
+2019-12-11 15:48:00connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:00connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/trip/calcEstimatePrice HTTP/1.1" 200 None
+2019-12-11 15:48:00excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:00LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:00LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:00excel_case_data.pyget_case_data[line:52]INFO:
+2019-12-11 15:48:00connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:00connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/listDriversByMembershipID HTTP/1.1" 200 None
+2019-12-11 15:48:00excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:00LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:00LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:00excel_case_data.pyget_case_data[line:52]INFO:{'driverId ': '253774'}
+2019-12-11 15:48:00connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:00connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/cancelCollectionDrivers?driverId+=253774&token=s710a9420a4e1602c HTTP/1.1" 200 None
+2019-12-11 15:48:00excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:00LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:00LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:00excel_case_data.pyget_case_data[line:52]INFO:{'phoneNo': '15703034351'}
+2019-12-11 15:48:00connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:00connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/collectionDrivers?phoneNo=15703034351&token=s710a9420a4e1602c HTTP/1.1" 200 None
+2019-12-11 15:48:00excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:00LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:00LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:01excel_case_data.pyget_case_data[line:52]INFO:{'driverId': '253774'}
+2019-12-11 15:48:01connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:01connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/isCollection?driverId=253774&token=s710a9420a4e1602c HTTP/1.1" 200 None
+2019-12-11 15:48:01excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:01LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:01LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:01excel_case_data.pyget_case_data[line:52]INFO:{'currentPage': 1, 'isPage': 1, 'memberShipId': 21421, 'pageSize': 20, 'phoneNo': '15703034351', 'source': 0}
+2019-12-11 15:48:01connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:01connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/getTripList?currentPage=1&isPage=1&memberShipId=21421&pageSize=20&phoneNo=15703034351&source=0&token=s710a9420a4e1602c HTTP/1.1" 200 None
+2019-12-11 15:48:01excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:01LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:01LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:01excel_case_data.pyget_case_data[line:52]INFO:{'orderId': '6542509'}
+2019-12-11 15:48:01connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:01connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/trip/getPasOrderInfo?orderId=6542509&token=s710a9420a4e1602c HTTP/1.1" 200 None
+2019-12-11 15:48:01excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:01LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:01LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:01excel_case_data.pyget_case_data[line:52]INFO:{'driverId': '253774'}
+2019-12-11 15:48:01connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:01connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/driver/getDriverInfo?driverId=253774&token=s710a9420a4e1602c HTTP/1.1" 200 None
+2019-12-11 15:48:01excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:01LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:01LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:01excel_case_data.pyget_case_data[line:52]INFO:{'currentPage': 1, 'memberShipID': '21421', 'pageSize': 20}
+2019-12-11 15:48:01connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:01connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/orderListInvoiceByMemberId?currentPage=1&memberShipID=21421&pageSize=20&token=s710a9420a4e1602c HTTP/1.1" 200 None
+2019-12-11 15:48:01excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:01LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:01LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:01excel_case_data.pyget_case_data[line:52]INFO:{'currentPage': 1, 'memberShipID': '21421', 'pageSize': 20}
+2019-12-11 15:48:01connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:01connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/listInvoiceByMemberId?currentPage=1&memberShipID=21421&pageSize=20&token=s710a9420a4e1602c HTTP/1.1" 200 None
+2019-12-11 15:48:01excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:01LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:01LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:01excel_case_data.pyget_case_data[line:52]INFO:{'invoiceId': '1016'}
+2019-12-11 15:48:01connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:01connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/getInvoiceDetailInfo?invoiceId=1016&token=s710a9420a4e1602c HTTP/1.1" 200 None
+2019-12-11 15:48:01excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:01LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:01LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:01excel_case_data.pyget_case_data[line:52]INFO:{'invoiceOrderId': '1016', 'page': 1, 'pageSize': 20}
+2019-12-11 15:48:01connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:01connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/trip/getInvoiceOrderInfo?invoiceOrderId=1016&page=1&pageSize=20&token=s710a9420a4e1602c HTTP/1.1" 200 None
+2019-12-11 15:48:01excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:01LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:01LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:02excel_case_data.pyget_case_data[line:52]INFO:
+2019-12-11 15:48:02connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:02connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/message/unRead/find HTTP/1.1" 200 None
+2019-12-11 15:48:02excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:02LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:02LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:02excel_case_data.pyget_case_data[line:52]INFO:{'pageNum': 1, 'pageSize': 20}
+2019-12-11 15:48:02connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:02connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/message/system/find?pageNum=1&pageSize=20&token=s710a9420a4e1602c HTTP/1.1" 200 None
+2019-12-11 15:48:02excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:02LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:02LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:02excel_case_data.pyget_case_data[line:52]INFO:{'pageNum': 1, 'pageSize': 20}
+2019-12-11 15:48:02connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:02connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/message/activity/find?pageNum=1&pageSize=20&token=s710a9420a4e1602c HTTP/1.1" 200 None
+2019-12-11 15:48:02excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:02LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:02LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:02excel_case_data.pyget_case_data[line:52]INFO:{'id': '370_21421_0_1525855885956', 'type': 1}
+2019-12-11 15:48:02connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:02connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/pk/message/read HTTP/1.1" 200 None
+2019-12-11 15:48:02excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:02LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:02LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:02excel_case_data.pyget_case_data[line:52]INFO:{'id': '3818_21421_0_1534157646252', 'type': 1}
+2019-12-11 15:48:02connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:02connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/pk/message/delete HTTP/1.1" 200 None
+2019-12-11 15:48:02excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:02LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:02LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:02excel_case_data.pyget_case_data[line:52]INFO:{'orderId': 6542137}
+2019-12-11 15:48:02connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:02connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/pk/comment/get?orderId=6542137&token=s710a9420a4e1602c HTTP/1.1" 200 None
+2019-12-11 15:48:02excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:02LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:02LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:02excel_case_data.pyget_case_data[line:52]INFO:{'msgType': 1, 'phoneNo': '15703034351'}
+2019-12-11 15:48:02connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:02connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "GET /api/membership/cAuthCode?msgType=1&phoneNo=15703034351&token=s710a9420a4e1602c HTTP/1.1" 200 None
+2019-12-11 15:48:02excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:02LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:02LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:02excel_case_data.pyget_case_data[line:52]INFO:{'gender': 1, 'icon': '2017/10/2017/10/_f0c465b8ed5946c8b95baca503200a2c.jpg', 'iconURL': 'http://fe-huwo-rs.test.huwo.io/fs/get?path=2017/10/2017/10/_f0c465b8ed5946c8b95baca503200a2c.jpg&access_token=eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiYXVkIjoiYm9zcyIsInN1YmplY3QiOiJ7XCJwXCI6XCIyMDE3LzEwLzIwMTcvMTAvX2YwYzQ2NWI4ZWQ1OTQ2YzhiOTViYWNhNTAzMjAwYTJjLmpwZ1wifSIsImlzcyI6Implc2lyIiwiZXhwIjoxNTc2MDQ4MTc0MjI3LCJpYXQiOjE1NzYwNDYzNzQyMjd9.kUkBtXZ9FapFUjH7jWrLSVSXrmt5MIgXBoJGwxnZ2F0', 'birthday': '1992-09-02', 'job': '测试', 'description': '合川', 'nickName': '王承印帅哥'}
+2019-12-11 15:48:02connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:03connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/membership/updateMemberInfo HTTP/1.1" 200 None
+2019-12-11 15:48:03excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:03LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:03LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:03excel_case_data.pyget_case_data[line:52]INFO:{'homeLongitude': '106.508378', 'type': 2, 'homeLatitude': '29.579707', 'homeAddress': '宇豪小区'}
+2019-12-11 15:48:03connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:03connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/membership/updateAddressReq HTTP/1.1" 200 None
+2019-12-11 15:48:03excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:03LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:03LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:03excel_case_data.pyget_case_data[line:52]INFO:{'name': '王承印', 'identifierNo': '500382199112029079'}
+2019-12-11 15:48:03connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:03connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/membership/realNameAuth HTTP/1.1" 200 None
+2019-12-11 15:48:03excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:03LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
+2019-12-11 15:48:03LoginTest.pysetUp[line:21]INFO:======This is setUp function======
+2019-12-11 15:48:03excel_case_data.pyget_case_data[line:52]INFO:
+2019-12-11 15:48:03connectionpool.py_new_conn[line:208]DEBUG:Starting new HTTP connection (1): shuitupaycallbackpre.callme.work
+2019-12-11 15:48:03connectionpool.py_make_request[line:396]DEBUG:http://shuitupaycallbackpre.callme.work:80 "POST /api/membership/userBindingList HTTP/1.1" 200 None
+2019-12-11 15:48:03excel_case_data.pyget_actual_data[line:135]DEBUG:===========实际返回的数据为：<Response [200]>============
+2019-12-11 15:48:03LoginTest.pytearDown[line:25]INFO:======This is tearDown function======
