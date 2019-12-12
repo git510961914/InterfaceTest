@@ -83,10 +83,11 @@ class ExcelData:
             res3 = self.get_actual_data(token)
             actual_res = res3.content
             actual_res = json.loads(actual_res)
-            if actual_res['success']:
-                print("响应正确")
-            else:
-                print("响应不正确")
+            if 'success' in actual_res.keys():
+                if actual_res['success']:
+                    print("响应正确")
+                else:
+                    print("响应不正确")
         return actual_res
 
     def get_case_input(self, file_name, sheet_index=0, row_id=0):

@@ -3,6 +3,7 @@
 import logging
 import unittest
 import datetime
+import time
 import os
 from common.service import excel_case_data
 from common.module import database
@@ -103,39 +104,39 @@ class LoginTest(unittest.TestCase):
         cashdata.ORDER['actualPayFee'] = data['actualPayFee']
         print("返回数据：",response_data)
 
-    def test_15_createH5APPOrder(self):
-        print("开始test_15_createH5APPOrder接口")
-        hour_stamp = datetime.datetime.now().replace(minute=0, second=0, microsecond=0) #获取当前时间整点时间戳
-        date_from = hour_stamp + datetime.timedelta(hours=24)
-        date_from = str(date_from)
-        date_to = hour_stamp + datetime.timedelta(hours=25)
-        date_to = str(date_to)
-        detailId = cashdata.ORDER['coupondetailId']
-        response_data = self.excel_data.get_case_data(self.file_name,14,1,content_type="application/json",dateFrom=date_from,dateTo=date_to,detailId=detailId)
-        data = response_data['data']
-        cashdata.ORDER['orderId'] = data['id']
-        print("当前订单Id为：orderId=",data['id'])
-        cashdata.ORDER['preFee'] = data['preFee']
-        print("返回数据：",response_data)
-
-    def test_16_calculatePCCoupon(self):
-        print("开始test_16_calculatePCCoupon接口")
-        id = cashdata.ORDER['orderId']
-        sql = "SELECT * FROM biz_coupondetail WHERE MemberId = 21421 AND CouponId = 132 AND isUser = 0 LIMIT 0,1000"
-        db = database.Database(self.dbEnv)
-        res = db.query(sql)
-        if len(res) <= 1:
-             print("优惠券不足了，请添加优惠券再测试")
-        else:
-            couponDetailId = res[1][0]
-            response_data = self.excel_data.get_case_data(self.file_name,15,1,content_type="application/json",couponDetailId=couponDetailId,id=id)
-            print("返回数据：",response_data)
-
-    def test_17_createPayment(self):
-        print("开始test_17_createPayment接口")
-        orderId = cashdata.ORDER['orderId']
-        response_data = self.excel_data.get_case_data(self.file_name,16,1,content_type="application/json",orderId=orderId)
-        print("返回数据：",response_data)
+    # def test_15_createH5APPOrder(self):
+    #     print("开始test_15_createH5APPOrder接口")
+    #     hour_stamp = datetime.datetime.now().replace(minute=0, second=0, microsecond=0) #获取当前时间整点时间戳
+    #     date_from = hour_stamp + datetime.timedelta(hours=24)
+    #     date_from = str(date_from)
+    #     date_to = hour_stamp + datetime.timedelta(hours=25)
+    #     date_to = str(date_to)
+    #     detailId = cashdata.ORDER['coupondetailId']
+    #     response_data = self.excel_data.get_case_data(self.file_name,14,1,content_type="application/json",dateFrom=date_from,dateTo=date_to,detailId=detailId)
+    #     data = response_data['data']
+    #     cashdata.ORDER['orderId'] = data['id']
+    #     print("当前订单Id为：orderId=",data['id'])
+    #     cashdata.ORDER['preFee'] = data['preFee']
+    #     print("返回数据：",response_data)
+    #
+    # def test_16_calculatePCCoupon(self):
+    #     print("开始test_16_calculatePCCoupon接口")
+    #     id = cashdata.ORDER['orderId']
+    #     sql = "SELECT * FROM biz_coupondetail WHERE MemberId = 21421 AND CouponId = 132 AND isUser = 0 LIMIT 0,1000"
+    #     db = database.Database(self.dbEnv)
+    #     res = db.query(sql)
+    #     if len(res) <= 1:
+    #          print("优惠券不足了，请添加优惠券再测试")
+    #     else:
+    #         couponDetailId = res[1][0]
+    #         response_data = self.excel_data.get_case_data(self.file_name,15,1,content_type="application/json",couponDetailId=couponDetailId,id=id)
+    #         print("返回数据：",response_data)
+    #
+    # def test_17_createPayment(self):
+    #     print("开始test_17_createPayment接口")
+    #     orderId = cashdata.ORDER['orderId']
+    #     response_data = self.excel_data.get_case_data(self.file_name,16,1,content_type="application/json",orderId=orderId)
+    #     print("返回数据：",response_data)
 
     def test_18_listDriversByMembershipID(self):
         print("开始test_18_listDriversByMembershipID接口")
@@ -192,13 +193,13 @@ class LoginTest(unittest.TestCase):
         response_data = self.excel_data.get_case_data(self.file_name,27,1,content_type="application/json")
         print("返回数据：",response_data)
 
-    def test_29_invoice(self):
-        print("开始test_29_invoice接口")
-        orderListInvoice = self.excel_data.get_case_data(self.file_name, 24, 1, content_type="application/json")
-        data = orderListInvoice['data']
-        orderId = data[0]['orderId']
-        response_data = self.excel_data.get_case_data(self.file_name,28,1,content_type="application/json",orderIdList=[orderId])
-        print("返回数据：",response_data)
+    # def test_29_invoice(self):
+    #     print("开始test_29_invoice接口")
+    #     orderListInvoice = self.excel_data.get_case_data(self.file_name,24,1,content_type="application/json")
+    #     data = orderListInvoice['data']
+    #     orderId = data[0]['orderId']
+    #     response_data = self.excel_data.get_case_data(self.file_name,28,1,content_type="application/json",orderIdList=[orderId])
+    #     print("返回数据：",response_data)
 
     def test_30_unReadfind(self):
         print("开始test_30_unReadfind接口")
@@ -225,17 +226,17 @@ class LoginTest(unittest.TestCase):
         response_data = self.excel_data.get_case_data(self.file_name,33,1,content_type="application/json")
         print("返回数据：",response_data)
 
-    def test_35_ordersubmit(self):
-        print("开始test_35_ordersubmit接口")
-        sql = "select * from biz_order WHERE MemberShipID=21421 and state=7 ORDER BY CreateDate DESC LIMIT 0,10"
-        db = database.Database(self.dbEnv)
-        res = db.query(sql)
-        if len(res) == '':
-            print("没有待评论的订单")
-        else:
-            orderId = res[0][0]
-            response_data = self.excel_data.get_case_data(self.file_name,34,1,content_type="application/json",id=orderId)
-            print("返回数据：",response_data)
+    # def test_35_ordersubmit(self):
+    #     print("开始test_35_ordersubmit接口")
+    #     sql = "select * from biz_order WHERE MemberShipID=21421 and state=7 ORDER BY CreateDate DESC LIMIT 0,10"
+    #     db = database.Database(self.dbEnv)
+    #     res = db.query(sql)
+    #     if len(res) == '':
+    #         print("没有待评论的订单")
+    #     else:
+    #         orderId = res[0][0]
+    #         response_data = self.excel_data.get_case_data(self.file_name,34,1,content_type="application/json",id=orderId)
+    #         print("返回数据：",response_data)
 
     def test_36_commentget(self):
         print("开始test_36_commentget接口")
@@ -265,6 +266,92 @@ class LoginTest(unittest.TestCase):
     def test_41_userBindingList(self):
         print("开始test_41_userBindingList接口")
         response_data = self.excel_data.get_case_data(self.file_name,40,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_42_unbundle(self):
+        print("开始test_42_unbundle接口")
+        bindList = self.excel_data.get_case_data(self.file_name,40,1,content_type="application/json")
+        if bindList['data'] == []:
+            print("您当前尚未绑定微信，请先绑定微信")
+        else:
+            data = bindList['data']
+            bindId = data[0]['id']
+            response_data = self.excel_data.get_case_data(self.file_name,41,1,content_type="application/json",id=bindId)
+            print("返回数据：",response_data)
+
+    def test_43_voiceset(self):
+        print("开始test_43_voiceset接口")
+        response_data = self.excel_data.get_case_data(self.file_name,42,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_44_creditget(self):
+        print("开始test_44_creditget接口")
+        response_data = self.excel_data.get_case_data(self.file_name,43,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_45_selectDriver(self):
+        print("开始test_45_selectDriver接口")
+        response_data = self.excel_data.get_case_data(self.file_name,44,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_46_flightget(self):
+        print("开始test_46_flightget接口")
+        today = datetime.date.today()   #当前时间日期2019-12-12
+        flightDateTime = today + datetime.timedelta(days=1)
+        response_data = self.excel_data.get_case_data(self.file_name,45,1,content_type="application/json",flightDateTime=flightDateTime)
+        print("返回数据：",response_data)
+
+    def test_47_contractssave(self):
+        print("开始test_47_contractssave接口")
+        response_data = self.excel_data.get_case_data(self.file_name,46,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_48_deleteHistoryOtherPassenger(self):
+        print("开始test_48_deleteHistoryOtherPassenger接口")
+        response_data = self.excel_data.get_case_data(self.file_name,47,1,content_type="application/json")
+        print("返回数据：",response_data)
+
+    def test_49_waitOrder(self):
+        print("开始test_49_waitOrder接口")
+        sql = "SELECT * FROM biz_coupondetail WHERE MemberId = 21421 AND CouponId = 132 AND isUser = 0 LIMIT 0,1000"
+        db = database.Database(self.dbEnv)
+        res = db.query(sql)
+        if len(res) <= 1:
+             print("优惠券不足了，请添加优惠券再测试")
+        else:
+            couponDetailId = res[1][0]
+            res_data = self.excel_data.get_case_data(self.file_name, 14, 1, content_type="application/json",appoint=False, \
+                                                          carType=4,couponFeeTotal=57.270000457763672,dateFrom='',dateTo='',\
+                                                          detailId=couponDetailId,distance=15273,fee=0.0099999997764825821,\
+                                                          lineId='',orderPerson=0,type=1,pickType=0)
+            RealtimeorderId = res_data['data']['id']
+            cashdata.ORDER['RealtimeorderId'] = RealtimeorderId
+            time.sleep(60)
+            response_data = self.excel_data.get_case_data(self.file_name,48,1,content_type="application/json",id=RealtimeorderId)
+            print("返回数据：",response_data)
+
+    def test_50_preCancelTrip(self):
+        print("开始test_50_preCancelTrip接口")
+        RealtimeorderId = cashdata.ORDER['RealtimeorderId']
+        response_data = self.excel_data.get_case_data(self.file_name,49,1,content_type="application/json",id=RealtimeorderId)
+        print("返回数据：",response_data)
+
+    def test_51_cancelTrip(self):
+        print("开始test_51_cancelTrip接口")
+        RealtimeorderId = cashdata.ORDER['RealtimeorderId']
+        response_data = self.excel_data.get_case_data(self.file_name,50,1,content_type="application/json",id=RealtimeorderId)
+        print("返回数据：",response_data)
+
+    def test_52_listCancelReason(self):
+        print("开始test_52_listCancelReason接口")
+        RealtimeorderId = cashdata.ORDER['RealtimeorderId']
+        response_data = self.excel_data.get_case_data(self.file_name,51,1,content_type="application/json",orderId=RealtimeorderId)
+        print("返回数据：",response_data)
+
+    def test_53_cancelTripReason(self):
+        print("开始test_53_cancelTripReason接口")
+        RealtimeorderId = cashdata.ORDER['RealtimeorderId']
+        response_data = self.excel_data.get_case_data(self.file_name,52,1,content_type="application/json",id=RealtimeorderId)
         print("返回数据：",response_data)
 
 
