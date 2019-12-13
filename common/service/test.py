@@ -5,6 +5,8 @@ import time
 import datetime
 import os
 import pymysql
+import redis
+import json
 
 # print(time.time())
 # print(datetime.datetime.now())
@@ -24,6 +26,14 @@ import pymysql
 # file1 = "./../data/customer.xlsx"
 # wholedir = os.path.abspath(file1)
 # print(wholedir)
-root = __file__.split('common')[0]
-rootpath = root + 'data\\customer.xlsx'
-print(rootpath)
+# root = __file__.split('common')[0]
+# rootpath = root + 'data\\customer.xlsx'
+# print(rootpath)
+redis = redis.Redis(host='172.29.0.237',port=6379,password='huwoRadis')
+list = redis.get('S_15703034351')
+list = str(list, encoding="utf-8")
+json.loads(list,encoding='utf-8')
+print(list)
+code = list['r']
+print(code)
+

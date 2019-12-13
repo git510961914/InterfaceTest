@@ -5,9 +5,12 @@ import unittest
 import datetime
 import time
 import os
+import redis
+import json
 from common.service import excel_case_data
 from common.module import database
 from common.temp import cashdata
+
 
 class LoginTest(unittest.TestCase):
     def setUp(self):
@@ -104,39 +107,39 @@ class LoginTest(unittest.TestCase):
         cashdata.ORDER['actualPayFee'] = data['actualPayFee']
         print("返回数据：",response_data)
 
-    # def test_15_createH5APPOrder(self):
-    #     print("开始test_15_createH5APPOrder接口")
-    #     hour_stamp = datetime.datetime.now().replace(minute=0, second=0, microsecond=0) #获取当前时间整点时间戳
-    #     date_from = hour_stamp + datetime.timedelta(hours=24)
-    #     date_from = str(date_from)
-    #     date_to = hour_stamp + datetime.timedelta(hours=25)
-    #     date_to = str(date_to)
-    #     detailId = cashdata.ORDER['coupondetailId']
-    #     response_data = self.excel_data.get_case_data(self.file_name,14,1,content_type="application/json",dateFrom=date_from,dateTo=date_to,detailId=detailId)
-    #     data = response_data['data']
-    #     cashdata.ORDER['orderId'] = data['id']
-    #     print("当前订单Id为：orderId=",data['id'])
-    #     cashdata.ORDER['preFee'] = data['preFee']
-    #     print("返回数据：",response_data)
-    #
-    # def test_16_calculatePCCoupon(self):
-    #     print("开始test_16_calculatePCCoupon接口")
-    #     id = cashdata.ORDER['orderId']
-    #     sql = "SELECT * FROM biz_coupondetail WHERE MemberId = 21421 AND CouponId = 132 AND isUser = 0 LIMIT 0,1000"
-    #     db = database.Database(self.dbEnv)
-    #     res = db.query(sql)
-    #     if len(res) <= 1:
-    #          print("优惠券不足了，请添加优惠券再测试")
-    #     else:
-    #         couponDetailId = res[1][0]
-    #         response_data = self.excel_data.get_case_data(self.file_name,15,1,content_type="application/json",couponDetailId=couponDetailId,id=id)
-    #         print("返回数据：",response_data)
-    #
-    # def test_17_createPayment(self):
-    #     print("开始test_17_createPayment接口")
-    #     orderId = cashdata.ORDER['orderId']
-    #     response_data = self.excel_data.get_case_data(self.file_name,16,1,content_type="application/json",orderId=orderId)
-    #     print("返回数据：",response_data)
+    def test_15_createH5APPOrder(self):
+        print("开始test_15_createH5APPOrder接口")
+        hour_stamp = datetime.datetime.now().replace(minute=0, second=0, microsecond=0) #获取当前时间整点时间戳
+        date_from = hour_stamp + datetime.timedelta(hours=24)
+        date_from = str(date_from)
+        date_to = hour_stamp + datetime.timedelta(hours=25)
+        date_to = str(date_to)
+        detailId = cashdata.ORDER['coupondetailId']
+        response_data = self.excel_data.get_case_data(self.file_name,14,1,content_type="application/json",dateFrom=date_from,dateTo=date_to,detailId=detailId)
+        data = response_data['data']
+        cashdata.ORDER['orderId'] = data['id']
+        print("当前订单Id为：orderId=",data['id'])
+        cashdata.ORDER['preFee'] = data['preFee']
+        print("返回数据：",response_data)
+
+    def test_16_calculatePCCoupon(self):
+        print("开始test_16_calculatePCCoupon接口")
+        id = cashdata.ORDER['orderId']
+        sql = "SELECT * FROM biz_coupondetail WHERE MemberId = 21421 AND CouponId = 132 AND isUser = 0 LIMIT 0,1000"
+        db = database.Database(self.dbEnv)
+        res = db.query(sql)
+        if len(res) <= 1:
+             print("优惠券不足了，请添加优惠券再测试")
+        else:
+            couponDetailId = res[1][0]
+            response_data = self.excel_data.get_case_data(self.file_name,15,1,content_type="application/json",couponDetailId=couponDetailId,id=id)
+            print("返回数据：",response_data)
+
+    def test_17_createPayment(self):
+        print("开始test_17_createPayment接口")
+        orderId = cashdata.ORDER['orderId']
+        response_data = self.excel_data.get_case_data(self.file_name,16,1,content_type="application/json",orderId=orderId)
+        print("返回数据：",response_data)
 
     def test_18_listDriversByMembershipID(self):
         print("开始test_18_listDriversByMembershipID接口")
@@ -193,13 +196,13 @@ class LoginTest(unittest.TestCase):
         response_data = self.excel_data.get_case_data(self.file_name,27,1,content_type="application/json")
         print("返回数据：",response_data)
 
-    # def test_29_invoice(self):
-    #     print("开始test_29_invoice接口")
-    #     orderListInvoice = self.excel_data.get_case_data(self.file_name,24,1,content_type="application/json")
-    #     data = orderListInvoice['data']
-    #     orderId = data[0]['orderId']
-    #     response_data = self.excel_data.get_case_data(self.file_name,28,1,content_type="application/json",orderIdList=[orderId])
-    #     print("返回数据：",response_data)
+    def test_29_invoice(self):
+        print("开始test_29_invoice接口")
+        orderListInvoice = self.excel_data.get_case_data(self.file_name,24,1,content_type="application/json")
+        data = orderListInvoice['data']
+        orderId = data[0]['orderId']
+        response_data = self.excel_data.get_case_data(self.file_name,28,1,content_type="application/json",orderIdList=[orderId])
+        print("返回数据：",response_data)
 
     def test_30_unReadfind(self):
         print("开始test_30_unReadfind接口")
@@ -226,27 +229,28 @@ class LoginTest(unittest.TestCase):
         response_data = self.excel_data.get_case_data(self.file_name,33,1,content_type="application/json")
         print("返回数据：",response_data)
 
-    # def test_35_ordersubmit(self):
-    #     print("开始test_35_ordersubmit接口")
-    #     sql = "select * from biz_order WHERE MemberShipID=21421 and state=7 ORDER BY CreateDate DESC LIMIT 0,10"
-    #     db = database.Database(self.dbEnv)
-    #     res = db.query(sql)
-    #     if len(res) == '':
-    #         print("没有待评论的订单")
-    #     else:
-    #         orderId = res[0][0]
-    #         response_data = self.excel_data.get_case_data(self.file_name,34,1,content_type="application/json",id=orderId)
-    #         print("返回数据：",response_data)
+    def test_35_ordersubmit(self):
+        print("开始test_35_ordersubmit接口")
+        sql = "select * from biz_order WHERE MemberShipID=21421 and state=7 ORDER BY CreateDate DESC LIMIT 0,10"
+        db = database.Database(self.dbEnv)
+        res = db.query(sql)
+        if len(res) == '':
+            print("没有待评论的订单")
+        else:
+            orderId = res[0][0]
+            response_data = self.excel_data.get_case_data(self.file_name,34,1,content_type="application/json",id=orderId)
+            print("返回数据：",response_data)
 
     def test_36_commentget(self):
         print("开始test_36_commentget接口")
         response_data = self.excel_data.get_case_data(self.file_name,35,1,content_type="application/json")
         print("返回数据：",response_data)
 
-    def test_37_cAuthCode(self):
-        print("开始test_37_cAuthCode接口")
-        response_data = self.excel_data.get_case_data(self.file_name,36,1,content_type="application/json")
-        print("返回数据：",response_data)
+    # def test_37_syncPaySucState(self):
+    #     print("开始test_37_syncPaySucState接口")
+    #     orderId = cashdata.ORDER['orderId']
+    #     response_data = self.excel_data.get_case_data(self.file_name,36,1,content_type="application/json",id=orderId)
+    #     print("返回数据：",response_data)
 
     def test_38_updateMemberInfo(self):
         print("开始test_38_updateMemberInfo接口")
@@ -320,7 +324,7 @@ class LoginTest(unittest.TestCase):
              print("优惠券不足了，请添加优惠券再测试")
         else:
             couponDetailId = res[1][0]
-            res_data = self.excel_data.get_case_data(self.file_name, 14, 1, content_type="application/json",appoint=False, \
+            res_data = self.excel_data.get_case_data(self.file_name,14,1,content_type="application/json",appoint=False, \
                                                           carType=4,couponFeeTotal=57.270000457763672,dateFrom='',dateTo='',\
                                                           detailId=couponDetailId,distance=15273,fee=0.0099999997764825821,\
                                                           lineId='',orderPerson=0,type=1,pickType=0)
@@ -330,28 +334,71 @@ class LoginTest(unittest.TestCase):
             response_data = self.excel_data.get_case_data(self.file_name,48,1,content_type="application/json",id=RealtimeorderId)
             print("返回数据：",response_data)
 
-    def test_50_preCancelTrip(self):
-        print("开始test_50_preCancelTrip接口")
-        RealtimeorderId = cashdata.ORDER['RealtimeorderId']
-        response_data = self.excel_data.get_case_data(self.file_name,49,1,content_type="application/json",id=RealtimeorderId)
+    def test_50_queryHistoryBindPhone(self):
+        print("开始test_50_queryHistoryBindPhone接口")
+        response_data = self.excel_data.get_case_data(self.file_name,49,1,content_type="application/json")
         print("返回数据：",response_data)
 
-    def test_51_cancelTrip(self):
-        print("开始test_51_cancelTrip接口")
+    def test_51_callDriverFromMembership(self):
+        print("开始test_51_callDriverFromMembership接口")
         RealtimeorderId = cashdata.ORDER['RealtimeorderId']
-        response_data = self.excel_data.get_case_data(self.file_name,50,1,content_type="application/json",id=RealtimeorderId)
+        response_data = self.excel_data.get_case_data(self.file_name,50,1,content_type="application/json",orderId=RealtimeorderId)
         print("返回数据：",response_data)
 
-    def test_52_listCancelReason(self):
-        print("开始test_52_listCancelReason接口")
+    def test_52_preCancelTrip(self):
+        print("开始test_52_preCancelTrip接口")
         RealtimeorderId = cashdata.ORDER['RealtimeorderId']
-        response_data = self.excel_data.get_case_data(self.file_name,51,1,content_type="application/json",orderId=RealtimeorderId)
+        response_data = self.excel_data.get_case_data(self.file_name,51,1,content_type="application/json",id=RealtimeorderId)
         print("返回数据：",response_data)
 
-    def test_53_cancelTripReason(self):
-        print("开始test_53_cancelTripReason接口")
+    def test_53_cancelTrip(self):
+        print("开始test_53_cancelTrip接口")
         RealtimeorderId = cashdata.ORDER['RealtimeorderId']
         response_data = self.excel_data.get_case_data(self.file_name,52,1,content_type="application/json",id=RealtimeorderId)
+        print("返回数据：",response_data)
+
+    def test_54_listCancelReason(self):
+        print("开始test_54_listCancelReason接口")
+        RealtimeorderId = cashdata.ORDER['RealtimeorderId']
+        response_data = self.excel_data.get_case_data(self.file_name,53,1,content_type="application/json",orderId=RealtimeorderId)
+        print("返回数据：",response_data)
+
+    def test_55_cancelTripReason(self):
+        print("开始test_55_cancelTripReason接口")
+        RealtimeorderId = cashdata.ORDER['RealtimeorderId']
+        response_data = self.excel_data.get_case_data(self.file_name,54,1,content_type="application/json",id=RealtimeorderId)
+        print("返回数据：",response_data)
+
+    def test_56_cAuthCode(self):
+        print("开始test_56_cAuthCode接口")
+        response_data = self.excel_data.get_case_data(self.file_name,55,1,content_type="application/json")
+        red = redis.Redis(host='172.29.0.237', port=6379, password='huwoRadis')
+        redisByte = red.get('S_15703034351')
+        redisString = str(redisByte, encoding="utf-8")
+        redisList = json.loads(redisString, encoding='utf-8')
+        cashdata.Redis['smsCode'] = redisList['r']
+        print("返回数据：",response_data)
+
+    def test_57_resetcheckSmsCode(self):
+        print("开始test_57_resetcheckSmsCode接口")
+        smsCode = cashdata.Redis['smsCode']
+        response_data = self.excel_data.get_case_data(self.file_name,56,1,content_type="application/json",smsCode=smsCode)
+        cashdata.Redis['secretKey'] = response_data['data']['secretKey']
+        print("返回数据：",response_data)
+
+    def test_58_passwordAndLogin(self):
+        print("开始test_58_passwordAndLogin接口")
+        secretKey = cashdata.Redis['secretKey']
+        response_data = self.excel_data.get_case_data(self.file_name,57,1,content_type="application/json",secretKey=secretKey)
+        data = response_data['data']
+        token = data['token']
+        print("最新token：" + token)
+        self.excel_data.set_token(token)
+        print("返回数据：",response_data)
+
+    def test_59_logout(self):
+        print("开始test_59_logout接口")
+        response_data = self.excel_data.get_case_data(self.file_name,58,1,content_type="application/json")
         print("返回数据：",response_data)
 
 

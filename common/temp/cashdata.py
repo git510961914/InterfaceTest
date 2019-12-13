@@ -8,3 +8,6 @@ import inspect
 
 #订单数据
 ORDER = {}
+
+#redis数据
+Redis = {}
