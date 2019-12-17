@@ -7,10 +7,12 @@ from common.module import environment_module
 class Database:
     def __init__(self,env):
         self.env = env
+        self.conn= None
 
     def connect(self):
         db = environment_module.EnvironmentModule().get_database(self.env)
         conn = pymysql.connect(host=db['host'],port=db['port'],user=db['username'],password=db['password'],database=db['database'])
+        self.conn = conn
         cursor = conn.cursor()  #獲取操作游標
         return  cursor
 
@@ -23,9 +25,10 @@ class Database:
             cursor.commit()
         except:
             # 如果发生错误则回滚
-            cursor.rollback()
+            self.conn.rollback()
         # 关闭数据库连接
         cursor.close()
+        self.conn.close()
 
     def delete(self,sql):
         cursor = self.connect()
@@ -36,9 +39,10 @@ class Database:
             cursor.commit()
         except:
             # 发生错误时回滚
-            cursor.rollback()
+            self.conn.rollback()
         # 关闭连接
         cursor.close()
+        self.conn.close()
 
     def update(self,sql):
         cursor = self.connect()
@@ -49,9 +53,10 @@ class Database:
             cursor.commit()
         except:
             # 发生错误时回滚
-            cursor.rollback()
+            self.conn.rollback()
         # 关闭连接
         cursor.close()
+        self.conn.close()
 
     def query(self,sql):
         cursor = self.connect()
@@ -65,6 +70,7 @@ class Database:
             print("Error: unable to fetch data")
         # 关闭数据库连接
         cursor.close()
+        self.conn.close()
         # fetchone():该方法获取下一个查询结果集。结果集是一个对象
         # fetchmany():取出一定数量的数据
         # fetchall():接收全部的返回结果行

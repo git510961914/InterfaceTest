@@ -7,7 +7,6 @@ import time
 import inspect
 
 #Log日志设置
-
 #获取当前文件路径
 file_path = inspect.stack()[0][1]
 cwd = os.path.split(file_path)[0]
